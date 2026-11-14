@@ -3,46 +3,43 @@
 :root{--ink:#1f2937;--dim:#6b7280;--line:#e5e7eb;--bg:#fbfbfd;--blue:#1f3864;--hot:#c00000;--fh:0px;--gold:#f59e0b}
 *{box-sizing:border-box}
 body{margin:0;font:15px/1.6 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg)}
-header{padding:20px 24px 6px;max-width:1300px;margin:0 auto} h1{margin:0 0 4px;font-size:21px}
+header{padding:20px 24px 6px;max-width:1340px;margin:0 auto} h1{margin:0 0 4px;font-size:21px}
 .sub{margin:0 0 10px;color:var(--dim);font-size:12.5px}
+.tabs{display:flex;gap:6px;margin:0 0 8px}
+.tab{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 16px;font-size:13.5px;cursor:pointer;color:var(--dim);font-weight:600}
+.tab.on{background:var(--blue);color:#fff;border-color:var(--blue)}
 .fb{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);transition:box-shadow .18s}
 .fb.stuck{box-shadow:0 4px 12px -8px rgba(0,0,0,.45)}
-.fbin{max-width:1300px;margin:0 auto;padding:8px 24px 7px}
+.fbin{max-width:1340px;margin:0 auto;padding:8px 24px 7px}
 .fbrow{display:flex;gap:8px;align-items:center;flex-wrap:nowrap}
 input#q{flex:1 1 auto;min-width:0;padding:7px 11px;border:1px solid var(--line);border-radius:8px;font-size:13.5px;background:#fff}
 input#q:focus{outline:2px solid #c7d2fe;border-color:#a5b4fc}
 .count{font-size:12px;color:var(--dim);white-space:nowrap}
 .tog,.mkt{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 11px;font-size:12.5px;cursor:pointer;color:var(--ink);white-space:nowrap}
 .tog.open{background:var(--blue);color:#fff;border-color:var(--blue)}
-.mkt .c{color:var(--gold);font-weight:700}
-.mkt.on{background:var(--gold);border-color:var(--gold);color:#fff}
-.mkt.on .c{color:#fff}
+.mkt .c{color:var(--gold);font-weight:700} .mkt.on{background:var(--gold);border-color:var(--gold);color:#fff} .mkt.on .c{color:#fff}
 .clr{border:1px solid #fecaca;background:#fff;border-radius:8px;padding:6px 11px;font-size:12.5px;cursor:pointer;color:#b91c1c;white-space:nowrap;display:none}
 .actbar{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-top:6px}
 .actbar .lbl{font-size:11px;color:#9ca3af}
 .atag{display:inline-flex;align-items:center;gap:2px;background:var(--blue);color:#fff;border-radius:999px;padding:2px 3px 2px 8px;font-size:11.5px;white-space:nowrap}
 .atag .kind{opacity:.6;font-size:10px;margin-right:2px}
 .atag button{background:none;border:0;color:#cbd5e1;cursor:pointer;font-size:14px;line-height:1;padding:0 4px}
-.atag button:hover{color:#fff}
 .chips{max-height:0;overflow:hidden;transition:max-height .2s ease}
-.fb.open .chips{max-height:620px;overflow:auto;padding-top:8px;margin-top:6px;border-top:1px dashed var(--line)}
+.fb.open .chips{max-height:700px;overflow:auto;padding-top:8px;margin-top:6px;border-top:1px dashed var(--line)}
 .grp{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:5px}
 .glab{font-size:11px;color:#9ca3af;min-width:34px}
 .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 9px;font-size:12px;cursor:pointer;color:var(--dim);white-space:nowrap}
-.chip:hover{border-color:#94a3b8}
 .chip.on{background:var(--blue);color:#fff;border-color:var(--blue);font-weight:600}
 .chip.on::before{content:"✓ ";font-size:11px}
-nav.toc{max-width:1300px;margin:0 auto;padding:12px 24px 8px}
+nav.toc{max-width:1340px;margin:0 auto;padding:12px 24px 8px}
 table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 thead th{background:var(--blue);color:#fff;font-weight:600;font-size:12px;text-align:left;padding:9px 8px}
 tbody tr.tocrow{cursor:pointer;border-top:1px solid var(--line)} tbody tr.tocrow:hover{background:#eef2ff}
-tbody tr.tocrow.marked{background:#fffbeb} tbody tr.tocrow.marked:hover{background:#fef3c7}
+tbody tr.tocrow.marked{background:#fffbeb}
 tbody tr.tocrow td{padding:6px 8px;vertical-align:middle}
-td.mkcell{width:34px;text-align:center;padding-right:0}
+td.mkcell{width:32px;text-align:center;padding-right:0}
 .star{background:none;border:0;cursor:pointer;font-size:16px;line-height:1;color:#cbd5e1;padding:2px 3px;border-radius:6px;transition:.12s}
-.star:hover{color:var(--gold);transform:scale(1.15)}
-.star.on{color:var(--gold)}
-.star.big{font-size:22px;margin-right:2px}
+.star:hover{color:var(--gold);transform:scale(1.15)} .star.on{color:var(--gold)} .star.big{font-size:22px;margin-right:2px}
 td.nm{font-weight:600} td.nm.hot{color:var(--hot)} td.dim{color:var(--dim);font-size:12px}
 td.go{color:#4f46e5;font-size:11.5px;white-space:nowrap;text-align:right;padding-right:12px}
 .pill{display:inline-block;min-width:38px;text-align:center;padding:1px 6px;border-radius:999px;font-size:11px;font-weight:700}
@@ -52,517 +49,999 @@ td.go{color:#4f46e5;font-size:11.5px;white-space:nowrap;text-align:right;padding
 .t比赛{background:#deeaf6;color:#1e3a8a} .t训练营{background:#d9ead3;color:#1e4d1e} .t活动{background:#fce5cd;color:#7c3f00} .t信息差{background:#e4dfec;color:#4c1d95}
 .reg{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;background:#f3f4f6;color:#4b5563;white-space:nowrap}
 .r湖南{background:#ffe8cc;color:#8a4b00;font-weight:600}
+.dir{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:600;white-space:nowrap}
+.d算法{background:#deeaf6;color:#1e3a8a} .d系统{background:#d9ead3;color:#1e4d1e} .dAI{background:#e4dfec;color:#4c1d95}
+.d硬件{background:#fce5cd;color:#7c3f00} .d机器人{background:#fff2cc;color:#7a5c00} .d应用{background:#e2efda;color:#375623}
+.d数学{background:#f4f4f4;color:#4b5563} .d通用{background:#f2f2f2;color:#6b7280}
 .stg{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;background:#eef2f7;color:#334155;font-weight:600;white-space:nowrap}
 .cst{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;background:#f7f7fa;color:#64748b;white-space:nowrap}
-main{max-width:1300px;margin:0 auto;padding:6px 24px 80px}
+.cp{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11.5px;font-weight:700;white-space:nowrap}
+.cp.tA{background:#c6e0b4;color:#1e4d1e} .cp.tB{background:#e2efda;color:#375623} .cp.tC{background:#fff2cc;color:#7a5c00}
+.cp.tD{background:#fce4d6;color:#8c3a00} .cp.tE{background:#f4cccc;color:#8b1a1a}
+.tierTag{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
+.tierTag.tA{background:#c6e0b4;color:#1e4d1e} .tierTag.tB{background:#e2efda;color:#375623} .tierTag.tC{background:#fff2cc;color:#7a5c00}
+.tierTag.tD{background:#fce4d6;color:#8c3a00} .tierTag.tE{background:#f4cccc;color:#8b1a1a}
+main{max-width:1340px;margin:0 auto;padding:6px 24px 80px}
 .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0;scroll-margin-top:calc(var(--fh) + 12px);box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .card.marked{border-color:#fcd34d;background:#fffdf5}
 .card.flash{animation:fl 1.6s ease} @keyframes fl{0%{background:#fff7d6;border-color:#f0c000}100%{background:#fff;border-color:var(--line)}}
-.cardhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.cardhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
 .cardtitle{margin:0;font-size:17px} .cardtitle.hot{color:var(--hot)}
 .back{margin-left:auto;font-size:12.5px;color:#4f46e5;text-decoration:none;border:1px solid #dbeafe;padding:3px 10px;border-radius:999px}
+.caps{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 10px 2px}
+.cap{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;background:#f1f5f9;color:#334155;border:1px solid #e2e8f0}
+.meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:8px 10px;margin:0 0 12px;background:#f8fafc;border:1px solid #eef2f7;border-radius:9px;font-size:12px;color:#475569}
+.meta b{color:var(--ink)}
+.mi.use{flex:1 1 100%;color:#64748b;font-size:11.5px}
 dl{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;margin:0}
 dt{color:var(--dim);font-size:12.5px;padding-top:2px} dd{margin:0} dd.long{font-size:14.5px;line-height:1.75}
+/* 性价比榜 */
+.cptable tbody tr{cursor:pointer;border-top:1px solid var(--line)}
+.cptable tbody tr:hover{background:#eef2ff}
+.cptable td{padding:7px 8px;vertical-align:middle}
+.cptable td.rk{font-weight:700;color:var(--dim);text-align:center;width:40px}
+.cptable td.num{text-align:center;font-variant-numeric:tabular-nums}
+.cptable td.num.b{font-weight:700}
+.cptable td.use{color:#64748b;font-size:11.5px}
+.cptable td.nm{font-weight:600}
+.note{max-width:1340px;margin:10px auto 0;padding:0 24px;font-size:12.5px;color:var(--dim);line-height:1.7}
 .hide{display:none!important}
-@media (max-width:820px){
- header,.fbin,nav.toc,main{padding-left:12px;padding-right:12px}
- table{font-size:12px} td.dim,td.go{display:none}
+@media (max-width:900px){
+ header,.fbin,nav.toc,main,.note{padding-left:12px;padding-right:12px}
+ table{font-size:12px} td.go{display:none}
  thead th:nth-child(6),tbody td:nth-child(6){display:none}
- dl{grid-template-columns:1fr} dt{margin-top:8px} h1{font-size:18px}
- .count{display:none}
+ dl{grid-template-columns:1fr} dt{margin-top:8px} h1{font-size:18px} .count{display:none}
+ .cptable td.use{display:none}
 }
 </style></head><body>
 <header><h1>竞赛与信息差 · 总表</h1>
-<p class="sub">共 49 条 · 点 ☆ 标记重点，标记会保存在本机 · 筛选栏固定在顶部</p></header>
+<p class="sub">共 49 条 · 两种看法：按目录浏览 · 按性价比排序</p>
+<div class="tabs"><button class="tab on" data-v="list">目录</button><button class="tab" data-v="cp">性价比榜</button></div>
+</header>
 <div class="fb" id="fb"><div class="fbin">
   <div class="fbrow">
-    <input id="q" placeholder="搜索名称、时间、关键词…">
+    <input id="q" placeholder="搜索名称、方向、能力、关键词…">
     <span class="count" id="cnt"></span>
     <button class="mkt" id="mkt">★ 重点 <span class="c" id="mkn">0</span></button>
     <button class="clr" id="clear">清空</button>
     <button class="tog" id="tog">筛选 ▾</button>
   </div>
   <div class="actbar" id="actbar" style="display:none"><span class="lbl">已选</span><span id="tags" style="display:contents"></span></div>
-  <div class="chips" id="chips"><div class="grp"><span class="glab">类型</span><button class="chip" data-k="typ" data-v="比赛">比赛</button><button class="chip" data-k="typ" data-v="训练营">训练营</button><button class="chip" data-k="typ" data-v="活动">活动</button><button class="chip" data-k="typ" data-v="信息差">信息差</button></div><div class="grp"><span class="glab">地区</span><button class="chip" data-k="reg" data-v="全国">全国</button><button class="chip" data-k="reg" data-v="湖南">湖南</button><button class="chip" data-k="reg" data-v="国际">国际</button></div><div class="grp"><span class="glab">阶段</span><button class="chip" data-k="st" data-v="大一上">大一上</button><button class="chip" data-k="st" data-v="大一下">大一下</button><button class="chip" data-k="st" data-v="大二">大二</button><button class="chip" data-k="st" data-v="大三">大三</button><button class="chip" data-k="st" data-v="全年滚动">全年滚动</button></div><div class="grp"><span class="glab">自学</span><button class="chip" data-k="cost" data-v="0">0</button><button class="chip" data-k="cost" data-v="1–3 月">1–3 月</button><button class="chip" data-k="cost" data-v="3–6 月">3–6 月</button><button class="chip" data-k="cost" data-v="6–12 月">6–12 月</button><button class="chip" data-k="cost" data-v="12 月+">12 月+</button><button class="chip" data-k="cost" data-v="—">—</button></div><div class="grp"><span class="glab">优先级</span><button class="chip" data-k="pri" data-v="P0">P0</button><button class="chip" data-k="pri" data-v="P1">P1</button><button class="chip" data-k="pri" data-v="P2">P2</button><button class="chip" data-k="pri" data-v="P3">P3</button><button class="chip" data-k="pri" data-v="P4">P4</button></div></div>
+  <div class="chips" id="chips"><div class="grp"><span class="glab">方向</span><button class="chip" data-k="dir" data-v="系统与底层">系统与底层</button><button class="chip" data-k="dir" data-v="AI / 机器学习">AI / 机器学习</button><button class="chip" data-k="dir" data-v="算法">算法</button><button class="chip" data-k="dir" data-v="硬件与芯片">硬件与芯片</button><button class="chip" data-k="dir" data-v="机器人与具身">机器人与具身</button><button class="chip" data-k="dir" data-v="应用与产品">应用与产品</button><button class="chip" data-k="dir" data-v="数学基础">数学基础</button><button class="chip" data-k="dir" data-v="通用 / 资源">通用 / 资源</button></div><div class="grp"><span class="glab">类型</span><button class="chip" data-k="typ" data-v="比赛">比赛</button><button class="chip" data-k="typ" data-v="训练营">训练营</button><button class="chip" data-k="typ" data-v="活动">活动</button><button class="chip" data-k="typ" data-v="信息差">信息差</button></div><div class="grp"><span class="glab">地区</span><button class="chip" data-k="reg" data-v="全国">全国</button><button class="chip" data-k="reg" data-v="湖南">湖南</button><button class="chip" data-k="reg" data-v="国际">国际</button></div><div class="grp"><span class="glab">阶段</span><button class="chip" data-k="st" data-v="大一上">大一上</button><button class="chip" data-k="st" data-v="大一下">大一下</button><button class="chip" data-k="st" data-v="大二">大二</button><button class="chip" data-k="st" data-v="大三">大三</button><button class="chip" data-k="st" data-v="全年滚动">全年滚动</button></div><div class="grp"><span class="glab">自学</span><button class="chip" data-k="cost" data-v="0">0</button><button class="chip" data-k="cost" data-v="1–3 月">1–3 月</button><button class="chip" data-k="cost" data-v="3–6 月">3–6 月</button><button class="chip" data-k="cost" data-v="6–12 月">6–12 月</button><button class="chip" data-k="cost" data-v="12 月+">12 月+</button><button class="chip" data-k="cost" data-v="—">—</button></div><div class="grp"><span class="glab">优先级</span><button class="chip" data-k="pri" data-v="P0">P0</button><button class="chip" data-k="pri" data-v="P1">P1</button><button class="chip" data-k="pri" data-v="P2">P2</button><button class="chip" data-k="pri" data-v="P3">P3</button><button class="chip" data-k="pri" data-v="P4">P4</button></div></div>
 </div></div>
+<div id="view-list">
 <nav class="toc" id="tocTop"><table>
-<thead><tr><th style="width:34px"></th><th style="width:56px">优先级</th><th style="width:60px">类型</th><th style="width:52px">地区</th><th style="width:70px">可做阶段</th><th style="width:70px">自学</th><th>名称</th><th style="width:210px">奖金 / 报酬</th><th style="width:56px"></th></tr></thead>
-<tbody><tr class="tocrow" data-id="c0" data-name="全国大学生数学竞赛" data-typ="比赛" data-pri="P0" data-reg="全国" data-st="大一上" data-cost="1–3 月" data-text="全国大学生数学竞赛 每年 11 月（国赛）；省赛同期 无现金奖金。证书 + 保研加分（各院细则不同） 全国 大一上 1–3 月">
+<thead><tr><th style="width:30px"></th><th style="width:52px">优先级</th><th style="width:56px">类型</th><th style="width:48px">地区</th><th style="width:100px">主方向</th><th style="width:60px">阶段</th><th>名称</th><th style="width:66px">性价比</th><th style="width:52px"></th></tr></thead>
+<tbody><tr class="tocrow" data-id="c0" data-name="全国大学生数学竞赛" data-typ="比赛" data-pri="P0" data-reg="全国" data-dir="数学基础" data-st="大一上" data-cost="1–3 月" data-cpb="3" data-text="全国大学生数学竞赛 数学基础 数学推导 · 闭卷计算 每年 11 月（国赛）；省赛同期 无现金奖金。证书 + 保研加分（各院细则不同） 全国 大一上 1–3 月">
 <td class="mkcell"><button class="star" data-name="全国大学生数学竞赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP0">P0</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一上</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">全国大学生数学竞赛</td><td class="dim">无现金奖金。证书 + 保研加分（各院细则不同）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c1" data-name="湖南省大学生数学竞赛" data-typ="比赛" data-pri="P0" data-reg="湖南" data-st="大一上" data-cost="1–3 月" data-text="湖南省大学生数学竞赛 每年 11 月，与国赛衔接 无现金。证书为主 湖南 大一上 1–3 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d数学">数学基础</span></td>
+<td><span class="stg">大一上</span></td>
+<td class="nm">全国大学生数学竞赛</td>
+<td><span class="cp tC">3.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c1" data-name="湖南省大学生数学竞赛" data-typ="比赛" data-pri="P0" data-reg="湖南" data-dir="数学基础" data-st="大一上" data-cost="1–3 月" data-cpb="2.5" data-text="湖南省大学生数学竞赛 数学基础 数学推导 · 闭卷计算 每年 11 月，与国赛衔接 无现金。证书为主 湖南 大一上 1–3 月">
 <td class="mkcell"><button class="star" data-name="湖南省大学生数学竞赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP0">P0</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一上</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">湖南省大学生数学竞赛</td><td class="dim">无现金。证书为主</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c2" data-name="ACM-ICPC" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大一上" data-cost="6–12 月" data-text="acm-icpc 赛区赛 10–12 月；总决赛次年 赛区奖金少，以荣誉为主；部分学校有专项奖励 全国 大一上 6–12 月">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d数学">数学基础</span></td>
+<td><span class="stg">大一上</span></td>
+<td class="nm">湖南省大学生数学竞赛</td>
+<td><span class="cp tC">2.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c2" data-name="ACM-ICPC" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="算法" data-st="大一上" data-cost="6–12 月" data-cpb="0.67" data-text="acm-icpc 算法 算法设计 · 复杂度分析 · c++ 实现 · 团队协作 赛区赛 10–12 月；总决赛次年 赛区奖金少，以荣誉为主；部分学校有专项奖励 全国 大一上 6–12 月">
 <td class="mkcell"><button class="star" data-name="ACM-ICPC" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一上</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">ACM-ICPC</td><td class="dim">赛区奖金少，以荣誉为主；部分学校有专项奖励</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c3" data-name="中国机器人大赛暨 RoboCup 中国赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="6–12 月" data-text="中国机器人大赛暨 robocup 中国赛 每年 5–6 月（含区域选拔） 有奖金；赛事级别高，部分赛道有企业赞助 全国 大一下 6–12 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d算法">算法</span></td>
+<td><span class="stg">大一上</span></td>
+<td class="nm">ACM-ICPC</td>
+<td><span class="cp tE">0.7</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c3" data-name="中国机器人大赛暨 RoboCup 中国赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="机器人与具身" data-st="大一下" data-cost="6–12 月" data-cpb="0.78" data-text="中国机器人大赛暨 robocup 中国赛 机器人与具身 强化学习 · 多智能体 · 仿真训练 · 策略设计 每年 5–6 月（含区域选拔） 有奖金；赛事级别高，部分赛道有企业赞助 全国 大一下 6–12 月">
 <td class="mkcell"><button class="star" data-name="中国机器人大赛暨 RoboCup 中国赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">中国机器人大赛暨 RoboCup 中国赛</td><td class="dim">有奖金；赛事级别高，部分赛道有企业赞助</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c4" data-name="ASC 世界大学生超级计算机竞赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大二" data-cost="6–12 月" data-text="asc 世界大学生超级计算机竞赛 报名 11 月–次年 1 月；初赛 1–3 月；决赛 5 月（2026 年为 5/16–20，无锡学院） 有奖金 + 企业关注。2026 冠军北大、亚军清华 全国 大二 6–12 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d机器人">机器人与具身</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">中国机器人大赛暨 RoboCup 中国赛</td>
+<td><span class="cp tD">0.8</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c4" data-name="ASC 世界大学生超级计算机竞赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="6–12 月" data-cpb="1" data-text="asc 世界大学生超级计算机竞赛 系统与底层 集群部署 · mpi/openmp · 性能调优 · 功耗约束 报名 11 月–次年 1 月；初赛 1–3 月；决赛 5 月（2026 年为 5/16–20，无锡学院） 有奖金 + 企业关注。2026 冠军北大、亚军清华 全国 大二 6–12 月">
 <td class="mkcell"><button class="star" data-name="ASC 世界大学生超级计算机竞赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">ASC 世界大学生超级计算机竞赛</td><td class="dim">有奖金 + 企业关注。2026 冠军北大、亚军清华</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c5" data-name="全国大学生计算机系统能力大赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大二" data-cost="6–12 月" data-text="全国大学生计算机系统能力大赛 各赛道 3–8 月（2026：os 报名 3/18–5/28；编译 4 月启动；小米杯 3/9–5/27） 有奖金；已列入中国高等教育学会榜单竞赛 全国 大二 6–12 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">ASC 世界大学生超级计算机竞赛</td>
+<td><span class="cp tD">1.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c5" data-name="全国大学生计算机系统能力大赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="6–12 月" data-cpb="1" data-text="全国大学生计算机系统能力大赛 系统与底层 os 内核 · 编译器 · 数据库内核 · cpu 设计 各赛道 3–8 月（2026：os 报名 3/18–5/28；编译 4 月启动；小米杯 3/9–5/27） 有奖金；已列入中国高等教育学会榜单竞赛 全国 大二 6–12 月">
 <td class="mkcell"><button class="star" data-name="全国大学生计算机系统能力大赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">全国大学生计算机系统能力大赛</td><td class="dim">有奖金；已列入中国高等教育学会榜单竞赛</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c6" data-name="全国大学生集成电路创新创业大赛" data-typ="比赛" data-pri="—" data-reg="全国" data-st="大二" data-cost="12 月+" data-text="全国大学生集成电路创新创业大赛 每年 4–8 月 有奖金 全国 大二 12 月+">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">全国大学生计算机系统能力大赛</td>
+<td><span class="cp tD">1.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c6" data-name="全国大学生集成电路创新创业大赛" data-typ="比赛" data-pri="—" data-reg="全国" data-dir="硬件与芯片" data-st="大二" data-cost="12 月+" data-cpb="0.53" data-text="全国大学生集成电路创新创业大赛 硬件与芯片 数字电路 · verilog · eda · 流片流程 每年 4–8 月 有奖金 全国 大二 12 月+">
 <td class="mkcell"><button class="star" data-name="全国大学生集成电路创新创业大赛" title="标记为重点">☆</button></td>
 <td><span class="pill p—">—</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">12 月+</span></td>
-<td class="nm">全国大学生集成电路创新创业大赛</td><td class="dim">有奖金</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c7" data-name="全国大学生数学建模竞赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="全国大学生数学建模竞赛 每年 9 月（国赛 3 天）；省赛 5–6 月 无现金奖金。证书 + 保研认可度极高 全国 大一下 1–3 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d硬件">硬件与芯片</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">全国大学生集成电路创新创业大赛</td>
+<td><span class="cp tE">0.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c7" data-name="全国大学生数学建模竞赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="数学基础" data-st="大一下" data-cost="1–3 月" data-cpb="2.5" data-text="全国大学生数学建模竞赛 数学基础 建模 · 数值方法 · 论文写作 每年 9 月（国赛 3 天）；省赛 5–6 月 无现金奖金。证书 + 保研认可度极高 全国 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="全国大学生数学建模竞赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">全国大学生数学建模竞赛</td><td class="dim">无现金奖金。证书 + 保研认可度极高</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c8" data-name="中国高校计算机大赛·大数据挑战赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="中国高校计算机大赛·大数据挑战赛 每年 4–8 月 有奖金（企业赞助） 全国 大二 3–6 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d数学">数学基础</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">全国大学生数学建模竞赛</td>
+<td><span class="cp tC">2.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c8" data-name="中国高校计算机大赛·大数据挑战赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-dir="AI / 机器学习" data-st="大二" data-cost="3–6 月" data-cpb="1.33" data-text="中国高校计算机大赛·大数据挑战赛 ai / 机器学习 特征工程 · 模型调优 · 榜单竞争 每年 4–8 月 有奖金（企业赞助） 全国 大二 3–6 月">
 <td class="mkcell"><button class="star" data-name="中国高校计算机大赛·大数据挑战赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm">中国高校计算机大赛·大数据挑战赛</td><td class="dim">有奖金（企业赞助）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c9" data-name="华为软件精英挑战赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大二" data-cost="6–12 月" data-text="华为软件精英挑战赛 每年 3–5 月 奖金较高 + 决赛常有实习/校招绿色通道 全国 大二 6–12 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">中国高校计算机大赛·大数据挑战赛</td>
+<td><span class="cp tD">1.3</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c9" data-name="华为软件精英挑战赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="算法" data-st="大二" data-cost="6–12 月" data-cpb="0.78" data-text="华为软件精英挑战赛 算法 算法设计 · 工程实现 · 性能优化 每年 3–5 月 奖金较高 + 决赛常有实习/校招绿色通道 全国 大二 6–12 月">
 <td class="mkcell"><button class="star" data-name="华为软件精英挑战赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">华为软件精英挑战赛</td><td class="dim">奖金较高 + 决赛常有实习/校招绿色通道</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c10" data-name="百度之星程序设计大赛" data-typ="比赛" data-pri="P3" data-reg="全国" data-st="大一下" data-cost="3–6 月" data-text="百度之星程序设计大赛 每年 5–7 月 有奖金 全国 大一下 3–6 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d算法">算法</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">华为软件精英挑战赛</td>
+<td><span class="cp tD">0.8</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c10" data-name="百度之星程序设计大赛" data-typ="比赛" data-pri="P3" data-reg="全国" data-dir="算法" data-st="大一下" data-cost="3–6 月" data-cpb="1.11" data-text="百度之星程序设计大赛 算法 算法设计 · 编码速度 每年 5–7 月 有奖金 全国 大一下 3–6 月">
 <td class="mkcell"><button class="star" data-name="百度之星程序设计大赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP3">P3</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm">百度之星程序设计大赛</td><td class="dim">有奖金</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c11" data-name="Kaggle 竞赛" data-typ="比赛" data-pri="P2" data-reg="国际" data-st="大一下" data-cost="3–6 月" data-text="kaggle 竞赛 全年滚动 奖金池大（美元）；部分赛有奖牌体系 国际 大一下 3–6 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d算法">算法</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">百度之星程序设计大赛</td>
+<td><span class="cp tD">1.1</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c11" data-name="Kaggle 竞赛" data-typ="比赛" data-pri="P2" data-reg="国际" data-dir="AI / 机器学习" data-st="大一下" data-cost="3–6 月" data-cpb="1.33" data-text="kaggle 竞赛 ai / 机器学习 特征工程 · 模型集成 · 实验管理 全年滚动 奖金池大（美元）；部分赛有奖牌体系 国际 大一下 3–6 月">
 <td class="mkcell"><button class="star" data-name="Kaggle 竞赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r国际">国际</span></td><td><span class="stg">大一下</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm">Kaggle 竞赛</td><td class="dim">奖金池大（美元）；部分赛有奖牌体系</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c12" data-name="26 小时 AI 闪电黑客松（各类）" data-typ="比赛" data-pri="P2" data-reg="湖南" data-st="大一上" data-cost="0" data-text="26 小时 ai 闪电黑客松（各类） 不定期（如 11/19–20 长沙） 真金白银：如某场总奖金 10 万，一等奖 3 万×1 队、二等奖 2 万×2 队、三等奖 1 万×3 队（6 队获奖） 湖南 大一上 0">
+<td><span class="reg r国际">国际</span></td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">Kaggle 竞赛</td>
+<td><span class="cp tD">1.3</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c12" data-name="26 小时 AI 闪电黑客松（各类）" data-typ="比赛" data-pri="P2" data-reg="湖南" data-dir="应用与产品" data-st="大一上" data-cost="0" data-cpb="40" data-text="26 小时 ai 闪电黑客松（各类） 应用与产品 快速原型 · api 调用 · demo 交付 不定期（如 11/19–20 长沙） 真金白银：如某场总奖金 10 万，一等奖 3 万×1 队、二等奖 2 万×2 队、三等奖 1 万×3 队（6 队获奖） 湖南 大一上 0">
 <td class="mkcell"><button class="star" data-name="26 小时 AI 闪电黑客松（各类）" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一上</span></td><td><span class="cst">0</span></td>
-<td class="nm">26 小时 AI 闪电黑客松（各类）</td><td class="dim">真金白银：如某场总奖金 10 万，一等奖 3 万×1 队、二等奖 2 万×2 队、三等奖 1 万×3 队（6 队获奖）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c13" data-name="开源之夏 OSPP" data-typ="训练营" data-pri="P0" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="开源之夏 ospp 2026 起各阶段持续开放报名（不再固定窗口） **税前 3500 / 5000 元（经典模式：基础/进阶）；6000 / 8000 / 10000 元（领航模式：基础/进阶/挑战）**，另有结项证书 全国 大一下 1–3 月">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d应用">应用与产品</span></td>
+<td><span class="stg">大一上</span></td>
+<td class="nm">26 小时 AI 闪电黑客松（各类）</td>
+<td><span class="cp tA">40.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c13" data-name="开源之夏 OSPP" data-typ="训练营" data-pri="P0" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="1–3 月" data-cpb="4.5" data-text="开源之夏 ospp 系统与底层 开源协作 · 真实项目贡献 · git 工作流 2026 起各阶段持续开放报名（不再固定窗口） **税前 3500 / 5000 元（经典模式：基础/进阶）；6000 / 8000 / 10000 元（领航模式：基础/进阶/挑战）**，另有结项证书 全国 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="开源之夏 OSPP" title="标记为重点">☆</button></td>
 <td><span class="pill pP0">P0</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm hot">开源之夏 OSPP</td><td class="dim">**税前 3500 / 5000 元（经典模式：基础/进阶）；6000 / 8000 / 10000 元（领航模式：基础/进阶/挑战）**，另有结项证书</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c14" data-name="Google Summer of Code" data-typ="训练营" data-pri="P2" data-reg="国际" data-st="大二" data-cost="6–12 月" data-text="google summer of code 3–4 月申请，5–8 月开发 约 $1500–3300 stipend 国际 大二 6–12 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm hot">开源之夏 OSPP</td>
+<td><span class="cp tB">4.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c14" data-name="Google Summer of Code" data-typ="训练营" data-pri="P2" data-reg="国际" data-dir="应用与产品" data-st="大二" data-cost="6–12 月" data-cpb="0.89" data-text="google summer of code 应用与产品 开源协作 · 英文沟通 · 远程交付 3–4 月申请，5–8 月开发 约 $1500–3300 stipend 国际 大二 6–12 月">
 <td class="mkcell"><button class="star" data-name="Google Summer of Code" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r国际">国际</span></td><td><span class="stg">大二</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">Google Summer of Code</td><td class="dim">约 $1500–3300 stipend</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c15" data-name="InfiniTensor 大模型与人工智能系统训练营" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="infinitensor 大模型与人工智能系统训练营 夏季（每年一期） 免费 全国 大一下 1–3 月">
+<td><span class="reg r国际">国际</span></td><td><span class="dir d应用">应用与产品</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">Google Summer of Code</td>
+<td><span class="cp tD">0.9</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c15" data-name="InfiniTensor 大模型与人工智能系统训练营" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="AI / 机器学习" data-st="大一下" data-cost="1–3 月" data-cpb="3" data-text="infinitensor 大模型与人工智能系统训练营 ai / 机器学习 大模型系统 · 训练框架 · 分布式训练 夏季（每年一期） 免费 全国 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="InfiniTensor 大模型与人工智能系统训练营" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">InfiniTensor 大模型与人工智能系统训练营</td><td class="dim">免费</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c16" data-name="昇腾 CANN 训练营" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="昇腾 cann 训练营 常年多期 免费 全国 大一下 1–3 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">InfiniTensor 大模型与人工智能系统训练营</td>
+<td><span class="cp tC">3.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c16" data-name="昇腾 CANN 训练营" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="1–3 月" data-cpb="2.5" data-text="昇腾 cann 训练营 系统与底层 算子开发 · npu 适配 · 推理优化 常年多期 免费 全国 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="昇腾 CANN 训练营" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">昇腾 CANN 训练营</td><td class="dim">免费</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c17" data-name="沐曦 Transformer 实战营" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="沐曦 transformer 实战营 8 月报名，21 天 免费 全国 大一下 1–3 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">昇腾 CANN 训练营</td>
+<td><span class="cp tC">2.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c17" data-name="沐曦 Transformer 实战营" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="AI / 机器学习" data-st="大一下" data-cost="1–3 月" data-cpb="2.5" data-text="沐曦 transformer 实战营 ai / 机器学习 大模型训练 · 国产 gpu 适配 8 月报名，21 天 免费 全国 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="沐曦 Transformer 实战营" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">沐曦 Transformer 实战营</td><td class="dim">免费</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c18" data-name="开源智算训练营 / ParkHack 青年 AI 闪电营" data-typ="活动" data-pri="P2" data-reg="湖南" data-st="大一上" data-cost="0" data-text="开源智算训练营 / parkhack 青年 ai 闪电营 11/19–20，长沙国际会议中心（世界计算大会同期） 总奖金 10 万：第一名 1 队共 3 万、第二名 2 队共 4 万、第三名 3 队共 3 万（6 队获奖）。现场提供算力与食宿，不用自带设备 湖南 大一上 0">
+<td><span class="reg r全国">全国</span></td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">沐曦 Transformer 实战营</td>
+<td><span class="cp tC">2.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c18" data-name="开源智算训练营 / ParkHack 青年 AI 闪电营" data-typ="活动" data-pri="P2" data-reg="湖南" data-dir="应用与产品" data-st="大一上" data-cost="0" data-cpb="40" data-text="开源智算训练营 / parkhack 青年 ai 闪电营 应用与产品 agent 开发 · demo 交付 · 产品化 11/19–20，长沙国际会议中心（世界计算大会同期） 总奖金 10 万：第一名 1 队共 3 万、第二名 2 队共 4 万、第三名 3 队共 3 万（6 队获奖）。现场提供算力与食宿，不用自带设备 湖南 大一上 0">
 <td class="mkcell"><button class="star" data-name="开源智算训练营 / ParkHack 青年 AI 闪电营" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t活动">活动</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一上</span></td><td><span class="cst">0</span></td>
-<td class="nm">开源智算训练营 / ParkHack 青年 AI 闪电营</td><td class="dim">总奖金 10 万：第一名 1 队共 3 万、第二名 2 队共 4 万、第三名 3 队共 3 万（6 队获奖）。现场提供算力与食宿，不用自带设备</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c19" data-name="各类 AI 黑客松（支付宝 PAYATHON 等）" data-typ="活动" data-pri="P3" data-reg="全国" data-st="全年滚动" data-cost="0" data-text="各类 ai 黑客松（支付宝 payathon 等） 不定期 奖金池 20 万级（如支付宝 payathon） 全国 全年滚动 0">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d应用">应用与产品</span></td>
+<td><span class="stg">大一上</span></td>
+<td class="nm">开源智算训练营 / ParkHack 青年 AI 闪电营</td>
+<td><span class="cp tA">40.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c19" data-name="各类 AI 黑客松（支付宝 PAYATHON 等）" data-typ="活动" data-pri="P3" data-reg="全国" data-dir="应用与产品" data-st="全年滚动" data-cost="0" data-cpb="40" data-text="各类 ai 黑客松（支付宝 payathon 等） 应用与产品 大模型应用 · 产品化 · 快速落地 不定期 奖金池 20 万级（如支付宝 payathon） 全国 全年滚动 0">
 <td class="mkcell"><button class="star" data-name="各类 AI 黑客松（支付宝 PAYATHON 等）" title="标记为重点">☆</button></td>
 <td><span class="pill pP3">P3</span></td><td><span class="tag t活动">活动</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">全年滚动</span></td><td><span class="cst">0</span></td>
-<td class="nm">各类 AI 黑客松（支付宝 PAYATHON 等）</td><td class="dim">奖金池 20 万级（如支付宝 PAYATHON）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c20" data-name="CCF CSP 认证" data-typ="信息差" data-pri="P0" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="ccf csp 认证 每年 3 月 / 9 月 / 12 月 报名费（约几百元，各考点不同） 全国 大一下 1–3 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d应用">应用与产品</span></td>
+<td><span class="stg">全年滚动</span></td>
+<td class="nm">各类 AI 黑客松（支付宝 PAYATHON 等）</td>
+<td><span class="cp tA">40.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c20" data-name="CCF CSP 认证" data-typ="信息差" data-pri="P0" data-reg="全国" data-dir="算法" data-st="大一下" data-cost="1–3 月" data-cpb="3.5" data-text="ccf csp 认证 算法 算法设计 · 编码速度 · 工程规范 每年 3 月 / 9 月 / 12 月 报名费（约几百元，各考点不同） 全国 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="CCF CSP 认证" title="标记为重点">☆</button></td>
 <td><span class="pill pP0">P0</span></td><td><span class="tag t信息差">信息差</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm hot">CCF CSP 认证</td><td class="dim">报名费（约几百元，各考点不同）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c21" data-name="PAT 浙大计算机能力测试" data-typ="信息差" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="pat 浙大计算机能力测试 多期（春/秋） 报名费 全国 大一下 1–3 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d算法">算法</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm hot">CCF CSP 认证</td>
+<td><span class="cp tC">3.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c21" data-name="PAT 浙大计算机能力测试" data-typ="信息差" data-pri="P2" data-reg="全国" data-dir="算法" data-st="大一下" data-cost="1–3 月" data-cpb="2" data-text="pat 浙大计算机能力测试 算法 算法设计 · 调试能力 多期（春/秋） 报名费 全国 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="PAT 浙大计算机能力测试" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t信息差">信息差</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">PAT 浙大计算机能力测试</td><td class="dim">报名费</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c22" data-name="目标院校夏令营时间线" data-typ="信息差" data-pri="P0" data-reg="全国" data-st="大三" data-cost="—" data-text="目标院校夏令营时间线 每年 5–7 月（预推免 9 月） 免费 全国 大三 —">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d算法">算法</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">PAT 浙大计算机能力测试</td>
+<td><span class="cp tC">2.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c22" data-name="目标院校夏令营时间线" data-typ="信息差" data-pri="P0" data-reg="全国" data-dir="通用 / 资源" data-st="大三" data-cost="—" data-cpb="45" data-text="目标院校夏令营时间线 通用 / 资源 信息搜集 · 时间规划 每年 5–7 月（预推免 9 月） 免费 全国 大三 —">
 <td class="mkcell"><button class="star" data-name="目标院校夏令营时间线" title="标记为重点">☆</button></td>
 <td><span class="pill pP0">P0</span></td><td><span class="tag t信息差">信息差</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大三</span></td><td><span class="cst">—</span></td>
-<td class="nm">目标院校夏令营时间线</td><td class="dim">免费</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c23" data-name="会议 student volunteer / travel grant" data-typ="信息差" data-pri="P4" data-reg="国际" data-st="大三" data-cost="—" data-text="会议 student volunteer / travel grant 提前 3–6 个月申请 免注册费 / 差旅资助 国际 大三 —">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d通用">通用 / 资源</span></td>
+<td><span class="stg">大三</span></td>
+<td class="nm">目标院校夏令营时间线</td>
+<td><span class="cp tA">45.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c23" data-name="会议 student volunteer / travel grant" data-typ="信息差" data-pri="P4" data-reg="国际" data-dir="通用 / 资源" data-st="大三" data-cost="—" data-cpb="30" data-text="会议 student volunteer / travel grant 通用 / 资源 学术网络 · 会议参与 提前 3–6 个月申请 免注册费 / 差旅资助 国际 大三 —">
 <td class="mkcell"><button class="star" data-name="会议 student volunteer / travel grant" title="标记为重点">☆</button></td>
 <td><span class="pill pP4">P4</span></td><td><span class="tag t信息差">信息差</span></td>
-<td><span class="reg r国际">国际</span></td><td><span class="stg">大三</span></td><td><span class="cst">—</span></td>
-<td class="nm">会议 student volunteer / travel grant</td><td class="dim">免注册费 / 差旅资助</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c24" data-name="超算中心机时" data-typ="信息差" data-pri="P0" data-reg="湖南" data-st="大一下" data-cost="—" data-text="超算中心机时 常年（按年度申请） 若可申请则为免费资源 湖南 大一下 —">
+<td><span class="reg r国际">国际</span></td><td><span class="dir d通用">通用 / 资源</span></td>
+<td><span class="stg">大三</span></td>
+<td class="nm">会议 student volunteer / travel grant</td>
+<td><span class="cp tA">30.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c24" data-name="超算中心机时" data-typ="信息差" data-pri="P0" data-reg="湖南" data-dir="系统与底层" data-st="大一下" data-cost="—" data-cpb="75" data-text="超算中心机时 系统与底层 高性能计算 · 机时申请 · 资源调度 常年（按年度申请） 若可申请则为免费资源 湖南 大一下 —">
 <td class="mkcell"><button class="star" data-name="超算中心机时" title="标记为重点">☆</button></td>
 <td><span class="pill pP0">P0</span></td><td><span class="tag t信息差">信息差</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一下</span></td><td><span class="cst">—</span></td>
-<td class="nm hot">超算中心机时</td><td class="dim">若可申请则为免费资源</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c25" data-name="学院内网通知" data-typ="信息差" data-pri="P3" data-reg="湖南" data-st="大一上" data-cost="—" data-text="学院内网通知 常年 — 湖南 大一上 —">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm hot">超算中心机时</td>
+<td><span class="cp tA">75.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c25" data-name="学院内网通知" data-typ="信息差" data-pri="P3" data-reg="湖南" data-dir="通用 / 资源" data-st="大一上" data-cost="—" data-cpb="30" data-text="学院内网通知 通用 / 资源 信息获取 常年 — 湖南 大一上 —">
 <td class="mkcell"><button class="star" data-name="学院内网通知" title="标记为重点">☆</button></td>
 <td><span class="pill pP3">P3</span></td><td><span class="tag t信息差">信息差</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一上</span></td><td><span class="cst">—</span></td>
-<td class="nm">学院内网通知</td><td class="dim">—</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c26" data-name="辅导员年级群" data-typ="信息差" data-pri="P1" data-reg="湖南" data-st="大一上" data-cost="—" data-text="辅导员年级群 常年 — 湖南 大一上 —">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d通用">通用 / 资源</span></td>
+<td><span class="stg">大一上</span></td>
+<td class="nm">学院内网通知</td>
+<td><span class="cp tA">30.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c26" data-name="辅导员年级群" data-typ="信息差" data-pri="P1" data-reg="湖南" data-dir="通用 / 资源" data-st="大一上" data-cost="—" data-cpb="30" data-text="辅导员年级群 通用 / 资源 信息获取 常年 — 湖南 大一上 —">
 <td class="mkcell"><button class="star" data-name="辅导员年级群" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t信息差">信息差</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一上</span></td><td><span class="cst">—</span></td>
-<td class="nm">辅导员年级群</td><td class="dim">—</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c27" data-name="开源项目真实贡献（GitHub）" data-typ="信息差" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="3–6 月" data-text="开源项目真实贡献（github） 全年 无直接报酬（ospp 等有） 全国 大一下 3–6 月">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d通用">通用 / 资源</span></td>
+<td><span class="stg">大一上</span></td>
+<td class="nm">辅导员年级群</td>
+<td><span class="cp tA">30.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c27" data-name="开源项目真实贡献（GitHub）" data-typ="信息差" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="3–6 月" data-cpb="1.56" data-text="开源项目真实贡献（github） 系统与底层 开源协作 · 代码贡献 · 代码审查 全年 无直接报酬（ospp 等有） 全国 大一下 3–6 月">
 <td class="mkcell"><button class="star" data-name="开源项目真实贡献（GitHub）" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t信息差">信息差</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm">开源项目真实贡献（GitHub）</td><td class="dim">无直接报酬（OSPP 等有）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c28" data-name="一生一芯（ysyx）" data-typ="训练营" data-pri="P0" data-reg="全国" data-st="大一下" data-cost="3–6 月" data-text="一生一芯（ysyx） 常年开放，任何时间可报名 免费（部分阶段有企业奖学金） 全国 大一下 3–6 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">开源项目真实贡献（GitHub）</td>
+<td><span class="cp tC">1.6</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c28" data-name="一生一芯（ysyx）" data-typ="训练营" data-pri="P0" data-reg="全国" data-dir="硬件与芯片" data-st="大一下" data-cost="3–6 月" data-cpb="1.56" data-text="一生一芯（ysyx） 硬件与芯片 cpu 设计 · verilog · 体系结构 · 验证 常年开放，任何时间可报名 免费（部分阶段有企业奖学金） 全国 大一下 3–6 月">
 <td class="mkcell"><button class="star" data-name="一生一芯（ysyx）" title="标记为重点">☆</button></td>
 <td><span class="pill pP0">P0</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm hot">一生一芯（ysyx）</td><td class="dim">免费（部分阶段有企业奖学金）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c29" data-name="甲辰计划实习生" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="甲辰计划实习生 每年滚动开放 实习津贴（按岗位） 全国 大二 3–6 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d硬件">硬件与芯片</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm hot">一生一芯（ysyx）</td>
+<td><span class="cp tC">1.6</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c29" data-name="甲辰计划实习生" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-cpb="1.56" data-text="甲辰计划实习生 系统与底层 linux 内核 · risc-v · 系统开发 每年滚动开放 实习津贴（按岗位） 全国 大二 3–6 月">
 <td class="mkcell"><button class="star" data-name="甲辰计划实习生" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm">甲辰计划实习生</td><td class="dim">实习津贴（按岗位）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c30" data-name="开源操作系统训练营（opencamp）" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="开源操作系统训练营（opencamp） 每年多期，滚动开放 免费 全国 大一下 1–3 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">甲辰计划实习生</td>
+<td><span class="cp tC">1.6</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c30" data-name="开源操作系统训练营（opencamp）" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="1–3 月" data-cpb="2.5" data-text="开源操作系统训练营（opencamp） 系统与底层 os 内核 · rust/c 系统编程 每年多期，滚动开放 免费 全国 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="开源操作系统训练营（opencamp）" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">开源操作系统训练营（opencamp）</td><td class="dim">免费</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c31" data-name="腾讯犀牛鸟开源人才培养计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="腾讯犀牛鸟开源人才培养计划 每年一期（约 7 月截止） 奖金 + 实习机会 全国 大二 3–6 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">开源操作系统训练营（opencamp）</td>
+<td><span class="cp tC">2.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c31" data-name="腾讯犀牛鸟开源人才培养计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-cpb="1.33" data-text="腾讯犀牛鸟开源人才培养计划 系统与底层 开源协作 · 企业级项目 每年一期（约 7 月截止） 奖金 + 实习机会 全国 大二 3–6 月">
 <td class="mkcell"><button class="star" data-name="腾讯犀牛鸟开源人才培养计划" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm">腾讯犀牛鸟开源人才培养计划</td><td class="dim">奖金 + 实习机会</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c32" data-name="LFX Mentorship（Linux 基金会）" data-typ="训练营" data-pri="P2" data-reg="国际" data-st="大二" data-cost="6–12 月" data-text="lfx mentorship（linux 基金会） 每年 3 期（春/夏/秋） 有 stipend（约 $3000–6600 / 期，视项目） 国际 大二 6–12 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">腾讯犀牛鸟开源人才培养计划</td>
+<td><span class="cp tD">1.3</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c32" data-name="LFX Mentorship（Linux 基金会）" data-typ="训练营" data-pri="P2" data-reg="国际" data-dir="系统与底层" data-st="大二" data-cost="6–12 月" data-cpb="1" data-text="lfx mentorship（linux 基金会） 系统与底层 linux 内核 · 云原生 · 分布式系统 每年 3 期（春/夏/秋） 有 stipend（约 $3000–6600 / 期，视项目） 国际 大二 6–12 月">
 <td class="mkcell"><button class="star" data-name="LFX Mentorship（Linux 基金会）" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r国际">国际</span></td><td><span class="stg">大二</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">LFX Mentorship（Linux 基金会）</td><td class="dim">有 stipend（约 $3000–6600 / 期，视项目）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c33" data-name="天池 / DataFountain / 和鲸" data-typ="比赛" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="3–6 月" data-text="天池 / datafountain / 和鲸 全年滚动 有奖金（各平台不同） 全国 大一下 3–6 月">
+<td><span class="reg r国际">国际</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">LFX Mentorship（Linux 基金会）</td>
+<td><span class="cp tD">1.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c33" data-name="天池 / DataFountain / 和鲸" data-typ="比赛" data-pri="P2" data-reg="全国" data-dir="AI / 机器学习" data-st="大一下" data-cost="3–6 月" data-cpb="1.11" data-text="天池 / datafountain / 和鲸 ai / 机器学习 数据建模 · 特征工程 全年滚动 有奖金（各平台不同） 全国 大一下 3–6 月">
 <td class="mkcell"><button class="star" data-name="天池 / DataFountain / 和鲸" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm">天池 / DataFountain / 和鲸</td><td class="dim">有奖金（各平台不同）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c34" data-name="KDD Cup" data-typ="比赛" data-pri="P2" data-reg="国际" data-st="大三" data-cost="6–12 月" data-text="kdd cup 每年一届（通常 3–8 月） 有奖金 国际 大三 6–12 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">天池 / DataFountain / 和鲸</td>
+<td><span class="cp tD">1.1</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c34" data-name="KDD Cup" data-typ="比赛" data-pri="P2" data-reg="国际" data-dir="AI / 机器学习" data-st="大三" data-cost="6–12 月" data-cpb="0.67" data-text="kdd cup ai / 机器学习 数据挖掘 · 研究级建模 · 论文级实验 每年一届（通常 3–8 月） 有奖金 国际 大三 6–12 月">
 <td class="mkcell"><button class="star" data-name="KDD Cup" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r国际">国际</span></td><td><span class="stg">大三</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">KDD Cup</td><td class="dim">有奖金</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c35" data-name="嵌入式芯片与系统设计竞赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-st="大二" data-cost="6–12 月" data-text="嵌入式芯片与系统设计竞赛 应用赛道 3–8 月 / ic 设计 7–12 月 / fpga 8–12 月 有奖金 全国 大二 6–12 月">
+<td><span class="reg r国际">国际</span></td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td><span class="stg">大三</span></td>
+<td class="nm">KDD Cup</td>
+<td><span class="cp tE">0.7</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c35" data-name="嵌入式芯片与系统设计竞赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-dir="硬件与芯片" data-st="大二" data-cost="6–12 月" data-cpb="0.67" data-text="嵌入式芯片与系统设计竞赛 硬件与芯片 fpga · 嵌入式 · ic 设计 应用赛道 3–8 月 / ic 设计 7–12 月 / fpga 8–12 月 有奖金 全国 大二 6–12 月">
 <td class="mkcell"><button class="star" data-name="嵌入式芯片与系统设计竞赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">嵌入式芯片与系统设计竞赛</td><td class="dim">有奖金</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c36" data-name="开放原子开源大赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="开放原子开源大赛 不定期（生态多） 有奖金 全国 大二 3–6 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d硬件">硬件与芯片</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">嵌入式芯片与系统设计竞赛</td>
+<td><span class="cp tE">0.7</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c36" data-name="开放原子开源大赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-cpb="1.33" data-text="开放原子开源大赛 系统与底层 os · 数据库 · 编译器 不定期（生态多） 有奖金 全国 大二 3–6 月">
 <td class="mkcell"><button class="star" data-name="开放原子开源大赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm">开放原子开源大赛</td><td class="dim">有奖金</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c37" data-name="CCF CCSP（大学生计算机系统与程序设计竞赛）" data-typ="比赛" data-pri="P0" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="ccf ccsp（大学生计算机系统与程序设计竞赛） 每年 10 月（2026：10/21，成都西华大学；报名 9/9–10/11） 前 15 名现金或等额物质奖励；金银铜奖证书（获奖率约前 60%，不超 300 人） 全国 大二 3–6 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">开放原子开源大赛</td>
+<td><span class="cp tD">1.3</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c37" data-name="CCF CCSP（大学生计算机系统与程序设计竞赛）" data-typ="比赛" data-pri="P0" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-cpb="1.56" data-text="ccf ccsp（大学生计算机系统与程序设计竞赛） 系统与底层 系统能力 · 编程能力 · 性能分析 每年 10 月（2026：10/21，成都西华大学；报名 9/9–10/11） 前 15 名现金或等额物质奖励；金银铜奖证书（获奖率约前 60%，不超 300 人） 全国 大二 3–6 月">
 <td class="mkcell"><button class="star" data-name="CCF CCSP（大学生计算机系统与程序设计竞赛）" title="标记为重点">☆</button></td>
 <td><span class="pill pP0">P0</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm hot">CCF CCSP（大学生计算机系统与程序设计竞赛）</td><td class="dim">前 15 名现金或等额物质奖励；金银铜奖证书（获奖率约前 60%，不超 300 人）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c38" data-name="湖南省大学生计算机程序设计竞赛" data-typ="比赛" data-pri="P1" data-reg="湖南" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生计算机程序设计竞赛 每年一届（第 22 届为 2026）；校赛选拔 → 省赛 证书为主 湖南 大一下 1–3 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm hot">CCF CCSP（大学生计算机系统与程序设计竞赛）</td>
+<td><span class="cp tC">1.6</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c38" data-name="湖南省大学生计算机程序设计竞赛" data-typ="比赛" data-pri="P1" data-reg="湖南" data-dir="算法" data-st="大一下" data-cost="1–3 月" data-cpb="2" data-text="湖南省大学生计算机程序设计竞赛 算法 算法设计 · 编码速度 每年一届（第 22 届为 2026）；校赛选拔 → 省赛 证书为主 湖南 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="湖南省大学生计算机程序设计竞赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">湖南省大学生计算机程序设计竞赛</td><td class="dim">证书为主</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c39" data-name="湖南省大学生计算机创新作品赛" data-typ="比赛" data-pri="P2" data-reg="湖南" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生计算机创新作品赛 每年（“海峡两岸暨港澳地区大学生计算机创新作品赛”湖南省赛） 证书为主 湖南 大一下 1–3 月">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d算法">算法</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">湖南省大学生计算机程序设计竞赛</td>
+<td><span class="cp tC">2.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c39" data-name="湖南省大学生计算机创新作品赛" data-typ="比赛" data-pri="P2" data-reg="湖南" data-dir="应用与产品" data-st="大一下" data-cost="1–3 月" data-cpb="1" data-text="湖南省大学生计算机创新作品赛 应用与产品 作品开发 · 演示设计 每年（“海峡两岸暨港澳地区大学生计算机创新作品赛”湖南省赛） 证书为主 湖南 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="湖南省大学生计算机创新作品赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">湖南省大学生计算机创新作品赛</td><td class="dim">证书为主</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c40" data-name="湖南省大学生数学建模竞赛" data-typ="比赛" data-pri="P1" data-reg="湖南" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生数学建模竞赛 每年 5–6 月（国赛在 9 月） 证书为主 湖南 大一下 1–3 月">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d应用">应用与产品</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">湖南省大学生计算机创新作品赛</td>
+<td><span class="cp tD">1.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c40" data-name="湖南省大学生数学建模竞赛" data-typ="比赛" data-pri="P1" data-reg="湖南" data-dir="数学基础" data-st="大一下" data-cost="1–3 月" data-cpb="1.5" data-text="湖南省大学生数学建模竞赛 数学基础 建模 · 论文写作 每年 5–6 月（国赛在 9 月） 证书为主 湖南 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="湖南省大学生数学建模竞赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">湖南省大学生数学建模竞赛</td><td class="dim">证书为主</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c41" data-name="中国机器人及人工智能大赛（湖南省赛区）" data-typ="比赛" data-pri="P2" data-reg="湖南" data-st="大二" data-cost="6–12 月" data-text="中国机器人及人工智能大赛（湖南省赛区） 每年，省赛 → 国赛 证书 + 国赛资格 湖南 大二 6–12 月">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d数学">数学基础</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">湖南省大学生数学建模竞赛</td>
+<td><span class="cp tC">1.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c41" data-name="中国机器人及人工智能大赛（湖南省赛区）" data-typ="比赛" data-pri="P2" data-reg="湖南" data-dir="机器人与具身" data-st="大二" data-cost="6–12 月" data-cpb="0.56" data-text="中国机器人及人工智能大赛（湖南省赛区） 机器人与具身 机器人系统 · 控制 · 感知 每年，省赛 → 国赛 证书 + 国赛资格 湖南 大二 6–12 月">
 <td class="mkcell"><button class="star" data-name="中国机器人及人工智能大赛（湖南省赛区）" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大二</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">中国机器人及人工智能大赛（湖南省赛区）</td><td class="dim">证书 + 国赛资格</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c42" data-name="湖南省大学生物联网应用创新设计竞赛" data-typ="比赛" data-pri="P2" data-reg="湖南" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生物联网应用创新设计竞赛 每年（a 类清单内） 证书为主 湖南 大一下 1–3 月">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d机器人">机器人与具身</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">中国机器人及人工智能大赛（湖南省赛区）</td>
+<td><span class="cp tE">0.6</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c42" data-name="湖南省大学生物联网应用创新设计竞赛" data-typ="比赛" data-pri="P2" data-reg="湖南" data-dir="应用与产品" data-st="大一下" data-cost="1–3 月" data-cpb="1.5" data-text="湖南省大学生物联网应用创新设计竞赛 应用与产品 嵌入式开发 · 系统集成 每年（a 类清单内） 证书为主 湖南 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="湖南省大学生物联网应用创新设计竞赛" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t比赛">比赛</span></td>
-<td><span class="reg r湖南">湖南</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">湖南省大学生物联网应用创新设计竞赛</td><td class="dim">证书为主</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c43" data-name="openEuler 开源实习" data-typ="训练营" data-pri="P0" data-reg="全国" data-st="大一上" data-cost="1–3 月" data-text="openeuler 开源实习 随时报名；签 6 个月劳务合同，按积分结算 **积分制阶梯发放：10 分 ¥500 / 20 分 ¥1,000 / 30 分 ¥1,500 / 45 分 ¥2,750 / 60 分 ¥4,000 / 80 分 ¥6,000 / 100 分 ¥8,000**；6 个月内满 60 分可开实习证明 全国 大一上 1–3 月">
+<td><span class="reg r湖南">湖南</span></td><td><span class="dir d应用">应用与产品</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">湖南省大学生物联网应用创新设计竞赛</td>
+<td><span class="cp tC">1.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c43" data-name="openEuler 开源实习" data-typ="训练营" data-pri="P0" data-reg="全国" data-dir="系统与底层" data-st="大一上" data-cost="1–3 月" data-cpb="4.5" data-text="openeuler 开源实习 系统与底层 linux 内核 · 云原生 · 开源协作 随时报名；签 6 个月劳务合同，按积分结算 **积分制阶梯发放：10 分 ¥500 / 20 分 ¥1,000 / 30 分 ¥1,500 / 45 分 ¥2,750 / 60 分 ¥4,000 / 80 分 ¥6,000 / 100 分 ¥8,000**；6 个月内满 60 分可开实习证明 全国 大一上 1–3 月">
 <td class="mkcell"><button class="star" data-name="openEuler 开源实习" title="标记为重点">☆</button></td>
 <td><span class="pill pP0">P0</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一上</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm hot">openEuler 开源实习</td><td class="dim">**积分制阶梯发放：10 分 ¥500 / 20 分 ¥1,000 / 30 分 ¥1,500 / 45 分 ¥2,750 / 60 分 ¥4,000 / 80 分 ¥6,000 / 100 分 ¥8,000**；6 个月内满 60 分可开实习证明</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c44" data-name="openKylin 源动力实习生计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="openkylin 源动力实习生计划 滚动开放 现金激励（按任务结算） 全国 大一下 1–3 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大一上</span></td>
+<td class="nm hot">openEuler 开源实习</td>
+<td><span class="cp tB">4.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c44" data-name="openKylin 源动力实习生计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="1–3 月" data-cpb="2.5" data-text="openkylin 源动力实习生计划 系统与底层 桌面 os · linux 应用开发 滚动开放 现金激励（按任务结算） 全国 大一下 1–3 月">
 <td class="mkcell"><button class="star" data-name="openKylin 源动力实习生计划" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大一下</span></td><td><span class="cst">1–3 月</span></td>
-<td class="nm">openKylin 源动力实习生计划</td><td class="dim">现金激励（按任务结算）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c45" data-name="中国科学院“科创计划”（大学生创新实践训练计划）" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大二" data-cost="—" data-text="中国科学院“科创计划”（大学生创新实践训练计划） 每年秋季报名（软件所 2026 年为 10/28 发公告） 项目经费（中科院支持） 全国 大二 —">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大一下</span></td>
+<td class="nm">openKylin 源动力实习生计划</td>
+<td><span class="cp tC">2.5</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c45" data-name="中国科学院“科创计划”（大学生创新实践训练计划）" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="AI / 机器学习" data-st="大二" data-cost="—" data-cpb="135" data-text="中国科学院“科创计划”（大学生创新实践训练计划） ai / 机器学习 科研训练 · 实验设计 · 按课题定 每年秋季报名（软件所 2026 年为 10/28 发公告） 项目经费（中科院支持） 全国 大二 —">
 <td class="mkcell"><button class="star" data-name="中国科学院“科创计划”（大学生创新实践训练计划）" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">—</span></td>
-<td class="nm">中国科学院“科创计划”（大学生创新实践训练计划）</td><td class="dim">项目经费（中科院支持）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c46" data-name="国家自然科学基金 青年学生基础研究项目" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大三" data-cost="—" data-text="国家自然科学基金 青年学生基础研究项目 每年（由学校科研管理部门组织申报） 国自然资助（数万元级） 全国 大三 —">
+<td><span class="reg r全国">全国</span></td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">中国科学院“科创计划”（大学生创新实践训练计划）</td>
+<td><span class="cp tA">135.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c46" data-name="国家自然科学基金 青年学生基础研究项目" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="通用 / 资源" data-st="大三" data-cost="—" data-cpb="90" data-text="国家自然科学基金 青年学生基础研究项目 通用 / 资源 科研项目申报 · 学术写作 每年（由学校科研管理部门组织申报） 国自然资助（数万元级） 全国 大三 —">
 <td class="mkcell"><button class="star" data-name="国家自然科学基金 青年学生基础研究项目" title="标记为重点">☆</button></td>
 <td><span class="pill pP1">P1</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大三</span></td><td><span class="cst">—</span></td>
-<td class="nm">国家自然科学基金 青年学生基础研究项目</td><td class="dim">国自然资助（数万元级）</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c47" data-name="Outreachy" data-typ="训练营" data-pri="P2" data-reg="国际" data-st="大二" data-cost="6–12 月" data-text="outreachy 每年 2 期（约 5 月、12 月开放申请） **$7,000 stipend（约 ¥5 万）** 国际 大二 6–12 月">
+<td><span class="reg r全国">全国</span></td><td><span class="dir d通用">通用 / 资源</span></td>
+<td><span class="stg">大三</span></td>
+<td class="nm">国家自然科学基金 青年学生基础研究项目</td>
+<td><span class="cp tA">90.0</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c47" data-name="Outreachy" data-typ="训练营" data-pri="P2" data-reg="国际" data-dir="应用与产品" data-st="大二" data-cost="6–12 月" data-cpb="0.89" data-text="outreachy 应用与产品 开源协作 · 英文沟通 每年 2 期（约 5 月、12 月开放申请） **$7,000 stipend（约 ¥5 万）** 国际 大二 6–12 月">
 <td class="mkcell"><button class="star" data-name="Outreachy" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r国际">国际</span></td><td><span class="stg">大二</span></td><td><span class="cst">6–12 月</span></td>
-<td class="nm">Outreachy</td><td class="dim">**$7,000 stipend（约 ¥5 万）**</td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c48" data-name="昇腾众智计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="昇腾众智计划 滚动开放 悬赏制（按任务结算） 全国 大二 3–6 月">
+<td><span class="reg r国际">国际</span></td><td><span class="dir d应用">应用与产品</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">Outreachy</td>
+<td><span class="cp tD">0.9</span></td><td class="go">详情 ↓</td></tr><tr class="tocrow" data-id="c48" data-name="昇腾众智计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-cpb="1.33" data-text="昇腾众智计划 系统与底层 算子开发 · npu 适配 · 框架移植 滚动开放 悬赏制（按任务结算） 全国 大二 3–6 月">
 <td class="mkcell"><button class="star" data-name="昇腾众智计划" title="标记为重点">☆</button></td>
 <td><span class="pill pP2">P2</span></td><td><span class="tag t训练营">训练营</span></td>
-<td><span class="reg r全国">全国</span></td><td><span class="stg">大二</span></td><td><span class="cst">3–6 月</span></td>
-<td class="nm">昇腾众智计划</td><td class="dim">悬赏制（按任务结算）</td><td class="go">详情 ↓</td></tr></tbody></table></nav>
-<main><article class="card" id="c0" data-name="全国大学生数学竞赛" data-typ="比赛" data-pri="P0" data-reg="全国" data-st="大一上" data-cost="1–3 月" data-text="全国大学生数学竞赛 每年 11 月（国赛）；省赛同期 无现金奖金。证书 + 保研加分（各院细则不同） 闭卷、限时、手写、无网，ai 在赛制上完全无法介入——这是目前极少数还没被 ai 稀释的能力信号。对 ai 理论方向是硬底子，对夏令营简历是“数学没问题”的直接证明 全国 大一上 1–3 月">
-<div class="cardhead"><button class="star big" data-name="全国大学生数学竞赛" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大一上</span><span class="cst">1–3 月</span><h2 class="cardtitle">全国大学生数学竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<td><span class="reg r全国">全国</span></td><td><span class="dir d系统">系统与底层</span></td>
+<td><span class="stg">大二</span></td>
+<td class="nm">昇腾众智计划</td>
+<td><span class="cp tD">1.3</span></td><td class="go">详情 ↓</td></tr></tbody></table></nav>
+<main><article class="card" id="c0" data-name="全国大学生数学竞赛" data-typ="比赛" data-pri="P0" data-reg="全国" data-dir="数学基础" data-st="大一上" data-cost="1–3 月" data-text="全国大学生数学竞赛 数学基础 数学推导 · 闭卷计算 每年 11 月（国赛）；省赛同期 无现金奖金。证书 + 保研加分（各院细则不同） 闭卷、限时、手写、无网，ai 在赛制上完全无法介入——这是目前极少数还没被 ai 稀释的能力信号。对 ai 理论方向是硬底子，对夏令营简历是“数学没问题”的直接证明 全国 大一上 1–3 月">
+<div class="cardhead"><button class="star big" data-name="全国大学生数学竞赛" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d数学">数学基础</span><span class="stg">大一上</span><span class="cst">1–3 月</span><h2 class="cardtitle">全国大学生数学竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">数学推导</span><span class="cap">闭卷计算</span></div>
+<div class="meta"><span class="cp tC">性价比 3.0</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 4 · 能力 2 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年 11 月（国赛）；省赛同期</dd><dt>奖金 / 报酬</dt><dd>无现金奖金。证书 + 保研加分（各院细则不同）</dd>
 <dt>对你的价值</dt><dd class="long">闭卷、限时、手写、无网，AI 在赛制上完全无法介入——这是目前极少数还没被 AI 稀释的能力信号。对 AI 理论方向是硬底子，对夏令营简历是“数学没问题”的直接证明</dd><dt>自学门槛</dt><dd>2–3 个月｜跟着高数、线代、概率走，不需要额外教材</dd>
 <dt>入口 / 怎么报名</dt><dd>学校教务处/学院统一组织报名（不接受个人）。每年 9–10 月出通知</dd><dt>风险与代价</dt><dd>只有一次机会（每年一届）。纯笔试，不练工程能力</dd>
-<dt>什么时候做</dt><dd>大一 11 月就打。一次准备，国赛省赛通吃</dd></dl></article><article class="card" id="c1" data-name="湖南省大学生数学竞赛" data-typ="比赛" data-pri="P0" data-reg="湖南" data-st="大一上" data-cost="1–3 月" data-text="湖南省大学生数学竞赛 每年 11 月，与国赛衔接 无现金。证书为主 国赛的免费预演，同一套知识。获奖率高，是简历上第一块“数学”奖牌 湖南 大一上 1–3 月">
-<div class="cardhead"><button class="star big" data-name="湖南省大学生数学竞赛" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="stg">大一上</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生数学竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大一 11 月就打。一次准备，国赛省赛通吃</dd></dl></article><article class="card" id="c1" data-name="湖南省大学生数学竞赛" data-typ="比赛" data-pri="P0" data-reg="湖南" data-dir="数学基础" data-st="大一上" data-cost="1–3 月" data-text="湖南省大学生数学竞赛 数学基础 数学推导 · 闭卷计算 每年 11 月，与国赛衔接 无现金。证书为主 国赛的免费预演，同一套知识。获奖率高，是简历上第一块“数学”奖牌 湖南 大一上 1–3 月">
+<div class="cardhead"><button class="star big" data-name="湖南省大学生数学竞赛" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="dir d数学">数学基础</span><span class="stg">大一上</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生数学竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">数学推导</span><span class="cap">闭卷计算</span></div>
+<div class="meta"><span class="cp tC">性价比 2.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 3 · 能力 2 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年 11 月，与国赛衔接</dd><dt>奖金 / 报酬</dt><dd>无现金。证书为主</dd>
 <dt>对你的价值</dt><dd class="long">国赛的免费预演，同一套知识。获奖率高，是简历上第一块“数学”奖牌</dd><dt>自学门槛</dt><dd>2–3 个月｜与国赛共用</dd>
 <dt>入口 / 怎么报名</dt><dd>同国赛，学院统一报名</dd><dt>风险与代价</dt><dd>含金量低于国赛，不能替代</dd>
-<dt>什么时候做</dt><dd>大一下，和国赛一起准备</dd></dl></article><article class="card" id="c2" data-name="ACM-ICPC" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大一上" data-cost="6–12 月" data-text="acm-icpc 赛区赛 10–12 月；总决赛次年 赛区奖金少，以荣誉为主；部分学校有专项奖励 算法与工程能力的硬通货，面试机试直接对应。但必须说清楚：2025 年 icpc 已被 ai 打穿（gpt-5 满分夺冠），它的“能力证明”在贬值，“筛选信号”还在——保研和面试仍认 全国 大一上 6–12 月">
-<div class="cardhead"><button class="star big" data-name="ACM-ICPC" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大一上</span><span class="cst">6–12 月</span><h2 class="cardtitle">ACM-ICPC</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大一下，和国赛一起准备</dd></dl></article><article class="card" id="c2" data-name="ACM-ICPC" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="算法" data-st="大一上" data-cost="6–12 月" data-text="acm-icpc 算法 算法设计 · 复杂度分析 · c++ 实现 · 团队协作 赛区赛 10–12 月；总决赛次年 赛区奖金少，以荣誉为主；部分学校有专项奖励 算法与工程能力的硬通货，面试机试直接对应。但必须说清楚：2025 年 icpc 已被 ai 打穿（gpt-5 满分夺冠），它的“能力证明”在贬值，“筛选信号”还在——保研和面试仍认 全国 大一上 6–12 月">
+<div class="cardhead"><button class="star big" data-name="ACM-ICPC" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d算法">算法</span><span class="stg">大一上</span><span class="cst">6–12 月</span><h2 class="cardtitle">ACM-ICPC</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">算法设计</span><span class="cap">复杂度分析</span><span class="cap">C++ 实现</span><span class="cap">团队协作</span></div>
+<div class="meta"><span class="cp tE">性价比 0.7</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 4 · 能力 2 · 现金 0）</span><span class="mi tier tE">E 长期</span><span class="mi use">是决定上限的东西，不是性价比问题——按主线规划单独排</span></div>
 <dl><dt>时间</dt><dd>赛区赛 10–12 月；总决赛次年</dd><dt>奖金 / 报酬</dt><dd>赛区奖金少，以荣誉为主；部分学校有专项奖励</dd>
 <dt>对你的价值</dt><dd class="long">算法与工程能力的硬通货，面试机试直接对应。但必须说清楚：2025 年 ICPC 已被 AI 打穿（GPT-5 满分夺冠），它的“能力证明”在贬值，“筛选信号”还在——保研和面试仍认</dd><dt>自学门槛</dt><dd>6–12 个月｜刷题 300+ 才够赛区赛；需要长期队伍磨合</dd>
 <dt>入口 / 怎么报名</dt><dd>学校 ACM 队选拔（校赛/集训队），学院组织</dd><dt>风险与代价</dt><dd>投入极大，一年周期；组队依赖队友，容易因为队友退出而中断</dd>
-<dt>什么时候做</dt><dd>大一下进集训队，大二打赛区赛</dd></dl></article><article class="card" id="c3" data-name="中国机器人大赛暨 RoboCup 中国赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="6–12 月" data-text="中国机器人大赛暨 robocup 中国赛 每年 5–6 月（含区域选拔） 有奖金；赛事级别高，部分赛道有企业赞助 实体系统 + 现场调试，ai 在物理上进不去。具身智能是当前最热方向，大赛经历直接对口。**关键分岔：仿真组（robocup 2d/3d）是多智能体强化学习的大规模训练，跟“训练/infra”主线接壤；实体组偏机械与控制，是另一条线** 全国 大一下 6–12 月">
-<div class="cardhead"><button class="star big" data-name="中国机器人大赛暨 RoboCup 中国赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">6–12 月</span><h2 class="cardtitle">中国机器人大赛暨 RoboCup 中国赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大一下进集训队，大二打赛区赛</dd></dl></article><article class="card" id="c3" data-name="中国机器人大赛暨 RoboCup 中国赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="机器人与具身" data-st="大一下" data-cost="6–12 月" data-text="中国机器人大赛暨 robocup 中国赛 机器人与具身 强化学习 · 多智能体 · 仿真训练 · 策略设计 每年 5–6 月（含区域选拔） 有奖金；赛事级别高，部分赛道有企业赞助 实体系统 + 现场调试，ai 在物理上进不去。具身智能是当前最热方向，大赛经历直接对口。**关键分岔：仿真组（robocup 2d/3d）是多智能体强化学习的大规模训练，跟“训练/infra”主线接壤；实体组偏机械与控制，是另一条线** 全国 大一下 6–12 月">
+<div class="cardhead"><button class="star big" data-name="中国机器人大赛暨 RoboCup 中国赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d机器人">机器人与具身</span><span class="stg">大一下</span><span class="cst">6–12 月</span><h2 class="cardtitle">中国机器人大赛暨 RoboCup 中国赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">强化学习</span><span class="cap">多智能体</span><span class="cap">仿真训练</span><span class="cap">策略设计</span></div>
+<div class="meta"><span class="cp tD">性价比 0.8</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>7</b>/10（简历 3 · 能力 3 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>每年 5–6 月（含区域选拔）</dd><dt>奖金 / 报酬</dt><dd>有奖金；赛事级别高，部分赛道有企业赞助</dd>
 <dt>对你的价值</dt><dd class="long">实体系统 + 现场调试，AI 在物理上进不去。具身智能是当前最热方向，大赛经历直接对口。**关键分岔：仿真组（RoboCup 2D/3D）是多智能体强化学习的大规模训练，跟“训练/Infra”主线接壤；实体组偏机械与控制，是另一条线**</dd><dt>自学门槛</dt><dd>仿真组 6–12 个月（Python + RL + 多智能体）；实体组 6 个月+（C++/控制/嵌入式）</dd>
 <dt>入口 / 怎么报名</dt><dd>学院组队 + 指导老师；中国自动化学会机器人竞赛工作委员会官网</dd><dt>风险与代价</dt><dd>周期长，赛前集中调试强度大；实体组设备成本高</dd>
-<dt>什么时候做</dt><dd>大二。仿真组可早到大一下</dd></dl></article><article class="card" id="c4" data-name="ASC 世界大学生超级计算机竞赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大二" data-cost="6–12 月" data-text="asc 世界大学生超级计算机竞赛 报名 11 月–次年 1 月；初赛 1–3 月；决赛 5 月（2026 年为 5/16–20，无锡学院） 有奖金 + 企业关注。2026 冠军北大、亚军清华 集群部署、并行优化、功耗约束下的性能调优——这是“让一万张卡不崩”的缩小版演练。决赛硬约束：总功耗 ≤5 kw、单节点 ≤2 kw、≥3 个计算节点。湖大是国家超算长沙中心依托单位，这是别人没有的入场券 全国 大二 6–12 月">
-<div class="cardhead"><button class="star big" data-name="ASC 世界大学生超级计算机竞赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">ASC 世界大学生超级计算机竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二。仿真组可早到大一下</dd></dl></article><article class="card" id="c4" data-name="ASC 世界大学生超级计算机竞赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="6–12 月" data-text="asc 世界大学生超级计算机竞赛 系统与底层 集群部署 · mpi/openmp · 性能调优 · 功耗约束 报名 11 月–次年 1 月；初赛 1–3 月；决赛 5 月（2026 年为 5/16–20，无锡学院） 有奖金 + 企业关注。2026 冠军北大、亚军清华 集群部署、并行优化、功耗约束下的性能调优——这是“让一万张卡不崩”的缩小版演练。决赛硬约束：总功耗 ≤5 kw、单节点 ≤2 kw、≥3 个计算节点。湖大是国家超算长沙中心依托单位，这是别人没有的入场券 全国 大二 6–12 月">
+<div class="cardhead"><button class="star big" data-name="ASC 世界大学生超级计算机竞赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">ASC 世界大学生超级计算机竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">集群部署</span><span class="cap">MPI/OpenMP</span><span class="cap">性能调优</span><span class="cap">功耗约束</span></div>
+<div class="meta"><span class="cp tD">性价比 1.0</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>9</b>/10（简历 4 · 能力 4 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>报名 11 月–次年 1 月；初赛 1–3 月；决赛 5 月（2026 年为 5/16–20，无锡学院）</dd><dt>奖金 / 报酬</dt><dd>有奖金 + 企业关注。2026 冠军北大、亚军清华</dd>
 <dt>对你的价值</dt><dd class="long">集群部署、并行优化、功耗约束下的性能调优——这是“让一万张卡不崩”的缩小版演练。决赛硬约束：总功耗 ≤5 kW、单节点 ≤2 kW、≥3 个计算节点。湖大是国家超算长沙中心依托单位，这是别人没有的入场券</dd><dt>自学门槛</dt><dd>6–12 个月｜Linux + MPI/OpenMP + CUDA + 性能剖析</dd>
 <dt>入口 / 怎么报名</dt><dd>学校组队（通常 5 人 + 1 指导老师），ASC 官网 asc-events.net 报名</dd><dt>风险与代价</dt><dd>国际强队多，进决赛难；备赛占用整个寒假</dd>
-<dt>什么时候做</dt><dd>大二。先确认湖大有没有队在打（ASC26 获奖名单里没看到湖大）</dd></dl></article><article class="card" id="c5" data-name="全国大学生计算机系统能力大赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大二" data-cost="6–12 月" data-text="全国大学生计算机系统能力大赛 各赛道 3–8 月（2026：os 报名 3/18–5/28；编译 4 月启动；小米杯 3/9–5/27） 有奖金；已列入中国高等教育学会榜单竞赛 六大赛道：①操作系统设计（内核实现/功能挑战）②编译系统（实现/挑战）③数据库管理系统设计 ④cpu 设计（龙芯杯）⑤智能系统创新（小米杯）⑥智能计算创新（先导杯）。编译器和 os 是训练框架、ai 芯片的共同下层——会写 kernel 的人不少，能写编译器后端的人极少 全国 大二 6–12 月">
-<div class="cardhead"><button class="star big" data-name="全国大学生计算机系统能力大赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">全国大学生计算机系统能力大赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二。先确认湖大有没有队在打（ASC26 获奖名单里没看到湖大）</dd></dl></article><article class="card" id="c5" data-name="全国大学生计算机系统能力大赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="6–12 月" data-text="全国大学生计算机系统能力大赛 系统与底层 os 内核 · 编译器 · 数据库内核 · cpu 设计 各赛道 3–8 月（2026：os 报名 3/18–5/28；编译 4 月启动；小米杯 3/9–5/27） 有奖金；已列入中国高等教育学会榜单竞赛 六大赛道：①操作系统设计（内核实现/功能挑战）②编译系统（实现/挑战）③数据库管理系统设计 ④cpu 设计（龙芯杯）⑤智能系统创新（小米杯）⑥智能计算创新（先导杯）。编译器和 os 是训练框架、ai 芯片的共同下层——会写 kernel 的人不少，能写编译器后端的人极少 全国 大二 6–12 月">
+<div class="cardhead"><button class="star big" data-name="全国大学生计算机系统能力大赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">全国大学生计算机系统能力大赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">OS 内核</span><span class="cap">编译器</span><span class="cap">数据库内核</span><span class="cap">CPU 设计</span></div>
+<div class="meta"><span class="cp tD">性价比 1.0</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>9</b>/10（简历 4 · 能力 4 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>各赛道 3–8 月（2026：OS 报名 3/18–5/28；编译 4 月启动；小米杯 3/9–5/27）</dd><dt>奖金 / 报酬</dt><dd>有奖金；已列入中国高等教育学会榜单竞赛</dd>
 <dt>对你的价值</dt><dd class="long">六大赛道：①操作系统设计（内核实现/功能挑战）②编译系统（实现/挑战）③数据库管理系统设计 ④CPU 设计（龙芯杯）⑤智能系统创新（小米杯）⑥智能计算创新（先导杯）。编译器和 OS 是训练框架、AI 芯片的共同下层——会写 kernel 的人不少，能写编译器后端的人极少</dd><dt>自学门槛</dt><dd>6–18 个月｜C/C++ 硬功底 + CSAPP + 操作系统 + 编译原理（看赛道）</dd>
 <dt>入口 / 怎么报名</dt><dd>官网 os.educg.net 自行组队报名；本科/研究生均可</dd><dt>风险与代价</dt><dd>难度高，多数赛道一学期以上基础；代码量大</dd>
-<dt>什么时候做</dt><dd>大二下～大三。现在把 CSAPP 和 OS 学扎实就是准备</dd></dl></article><article class="card" id="c6" data-name="全国大学生集成电路创新创业大赛" data-typ="比赛" data-pri="—" data-reg="全国" data-st="大二" data-cost="12 月+" data-text="全国大学生集成电路创新创业大赛 每年 4–8 月 有奖金 芯片设计，ai 目前不能替代整个设计-验证-流片流程。这是你“芯片”选项的唯一本科入口 全国 大二 12 月+">
-<div class="cardhead"><button class="star big" data-name="全国大学生集成电路创新创业大赛" title="标记为重点">☆</button><span class="pill p—">—</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">12 月+</span><h2 class="cardtitle">全国大学生集成电路创新创业大赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二下～大三。现在把 CSAPP 和 OS 学扎实就是准备</dd></dl></article><article class="card" id="c6" data-name="全国大学生集成电路创新创业大赛" data-typ="比赛" data-pri="—" data-reg="全国" data-dir="硬件与芯片" data-st="大二" data-cost="12 月+" data-text="全国大学生集成电路创新创业大赛 硬件与芯片 数字电路 · verilog · eda · 流片流程 每年 4–8 月 有奖金 芯片设计，ai 目前不能替代整个设计-验证-流片流程。这是你“芯片”选项的唯一本科入口 全国 大二 12 月+">
+<div class="cardhead"><button class="star big" data-name="全国大学生集成电路创新创业大赛" title="标记为重点">☆</button><span class="pill p—">—</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d硬件">硬件与芯片</span><span class="stg">大二</span><span class="cst">12 月+</span><h2 class="cardtitle">全国大学生集成电路创新创业大赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">数字电路</span><span class="cap">Verilog</span><span class="cap">EDA</span><span class="cap">流片流程</span></div>
+<div class="meta"><span class="cp tE">性价比 0.5</span><span class="mi">投入约 <b>800</b> 小时</span><span class="mi">总分 <b>7</b>/10（简历 3 · 能力 3 · 现金 1）</span><span class="mi tier tE">E 长期</span><span class="mi use">是决定上限的东西，不是性价比问题——按主线规划单独排</span></div>
 <dl><dt>时间</dt><dd>每年 4–8 月</dd><dt>奖金 / 报酬</dt><dd>有奖金</dd>
 <dt>对你的价值</dt><dd class="long">芯片设计，AI 目前不能替代整个设计-验证-流片流程。这是你“芯片”选项的唯一本科入口</dd><dt>自学门槛</dt><dd>12 个月+｜数电、Verilog、EDA 工具链</dd>
 <dt>入口 / 怎么报名</dt><dd>官网报名，通常需要学院/实验室支持</dd><dt>风险与代价</dt><dd>门槛高，本科参赛多为研究生团队的辅助角色</dd>
-<dt>什么时候做</dt><dd>大二下～大三，且要确认学院有 EDA 资源</dd></dl></article><article class="card" id="c7" data-name="全国大学生数学建模竞赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="全国大学生数学建模竞赛 每年 9 月（国赛 3 天）；省赛 5–6 月 无现金奖金。证书 + 保研认可度极高 **已贬值，但没有失效**：开放式赛制，ai 可大幅替代建模、写作、代码。它的“能力证明”在缩水，“制度通行证”还在——保研体系仍认，而这个体系比市场慢 3–5 年。贬值是双峰的：国一仍有价值，省奖基本归零 全国 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="全国大学生数学建模竞赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">全国大学生数学建模竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二下～大三，且要确认学院有 EDA 资源</dd></dl></article><article class="card" id="c7" data-name="全国大学生数学建模竞赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="数学基础" data-st="大一下" data-cost="1–3 月" data-text="全国大学生数学建模竞赛 数学基础 建模 · 数值方法 · 论文写作 每年 9 月（国赛 3 天）；省赛 5–6 月 无现金奖金。证书 + 保研认可度极高 **已贬值，但没有失效**：开放式赛制，ai 可大幅替代建模、写作、代码。它的“能力证明”在缩水，“制度通行证”还在——保研体系仍认，而这个体系比市场慢 3–5 年。贬值是双峰的：国一仍有价值，省奖基本归零 全国 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="全国大学生数学建模竞赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d数学">数学基础</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">全国大学生数学建模竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">建模</span><span class="cap">数值方法</span><span class="cap">论文写作</span></div>
+<div class="meta"><span class="cp tC">性价比 2.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 4 · 能力 1 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年 9 月（国赛 3 天）；省赛 5–6 月</dd><dt>奖金 / 报酬</dt><dd>无现金奖金。证书 + 保研认可度极高</dd>
 <dt>对你的价值</dt><dd class="long">**已贬值，但没有失效**：开放式赛制，AI 可大幅替代建模、写作、代码。它的“能力证明”在缩水，“制度通行证”还在——保研体系仍认，而这个体系比市场慢 3–5 年。贬值是双峰的：国一仍有价值，省奖基本归零</dd><dt>自学门槛</dt><dd>1–2 个月｜建模方法 + LaTeX + 科技写作，入门门槛低</dd>
 <dt>入口 / 怎么报名</dt><dd>学校统一组织报名，通常配暑期集训</dd><dt>风险与代价</dt><dd>队伍质量决定一切；AI 时代评审对“模板化论文”越来越不买账</dd>
-<dt>什么时候做</dt><dd>大二。只打一次，目标国一；只能拿省奖就往后排</dd></dl></article><article class="card" id="c8" data-name="中国高校计算机大赛·大数据挑战赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="中国高校计算机大赛·大数据挑战赛 每年 4–8 月 有奖金（企业赞助） 真实数据、真实指标、真实排名。ai 能帮你写代码，但拿不到榜位——榜单是相对竞争，所有人都能用 ai 全国 大二 3–6 月">
-<div class="cardhead"><button class="star big" data-name="中国高校计算机大赛·大数据挑战赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">中国高校计算机大赛·大数据挑战赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二。只打一次，目标国一；只能拿省奖就往后排</dd></dl></article><article class="card" id="c8" data-name="中国高校计算机大赛·大数据挑战赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-dir="AI / 机器学习" data-st="大二" data-cost="3–6 月" data-text="中国高校计算机大赛·大数据挑战赛 ai / 机器学习 特征工程 · 模型调优 · 榜单竞争 每年 4–8 月 有奖金（企业赞助） 真实数据、真实指标、真实排名。ai 能帮你写代码，但拿不到榜位——榜单是相对竞争，所有人都能用 ai 全国 大二 3–6 月">
+<div class="cardhead"><button class="star big" data-name="中国高校计算机大赛·大数据挑战赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir dAI">AI / 机器学习</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">中国高校计算机大赛·大数据挑战赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">特征工程</span><span class="cap">模型调优</span><span class="cap">榜单竞争</span></div>
+<div class="meta"><span class="cp tD">性价比 1.3</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 3 · 能力 2 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>每年 4–8 月</dd><dt>奖金 / 报酬</dt><dd>有奖金（企业赞助）</dd>
 <dt>对你的价值</dt><dd class="long">真实数据、真实指标、真实排名。AI 能帮你写代码，但拿不到榜位——榜单是相对竞争，所有人都能用 AI</dd><dt>自学门槛</dt><dd>3–6 个月｜sklearn + 特征工程 + 调参</dd>
 <dt>入口 / 怎么报名</dt><dd>官网组队报名（2–4 人）</dd><dt>风险与代价</dt><dd>算力可能受限；赛题逐年变化，不总对口</dd>
-<dt>什么时候做</dt><dd>大二下，走算法方向时打</dd></dl></article><article class="card" id="c9" data-name="华为软件精英挑战赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-st="大二" data-cost="6–12 月" data-text="华为软件精英挑战赛 每年 3–5 月 奖金较高 + 决赛常有实习/校招绿色通道 企业赛里含金量最高的一档，算法与工程并重。真正价值不是奖金，是那条几乎不宣传的实习通道 全国 大二 6–12 月">
-<div class="cardhead"><button class="star big" data-name="华为软件精英挑战赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">华为软件精英挑战赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二下，走算法方向时打</dd></dl></article><article class="card" id="c9" data-name="华为软件精英挑战赛" data-typ="比赛" data-pri="P1" data-reg="全国" data-dir="算法" data-st="大二" data-cost="6–12 月" data-text="华为软件精英挑战赛 算法 算法设计 · 工程实现 · 性能优化 每年 3–5 月 奖金较高 + 决赛常有实习/校招绿色通道 企业赛里含金量最高的一档，算法与工程并重。真正价值不是奖金，是那条几乎不宣传的实习通道 全国 大二 6–12 月">
+<div class="cardhead"><button class="star big" data-name="华为软件精英挑战赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d算法">算法</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">华为软件精英挑战赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">算法设计</span><span class="cap">工程实现</span><span class="cap">性能优化</span></div>
+<div class="meta"><span class="cp tD">性价比 0.8</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>7</b>/10（简历 4 · 能力 2 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>每年 3–5 月</dd><dt>奖金 / 报酬</dt><dd>奖金较高 + 决赛常有实习/校招绿色通道</dd>
 <dt>对你的价值</dt><dd class="long">企业赛里含金量最高的一档，算法与工程并重。真正价值不是奖金，是那条几乎不宣传的实习通道</dd><dt>自学门槛</dt><dd>6 个月+｜算法 + 工程实现</dd>
 <dt>入口 / 怎么报名</dt><dd>华为官网/校招渠道报名，组队参加</dd><dt>风险与代价</dt><dd>赛程密集，与课程冲突；宣传弱，容易错过报名</dd>
-<dt>什么时候做</dt><dd>大二，作为“钱 + 实习”双线目标</dd></dl></article><article class="card" id="c10" data-name="百度之星程序设计大赛" data-typ="比赛" data-pri="P3" data-reg="全国" data-st="大一下" data-cost="3–6 月" data-text="百度之星程序设计大赛 每年 5–7 月 有奖金 a 类清单没有，但企业侧认可度不错。算法线的备选，题目质量高于多数校赛 全国 大一下 3–6 月">
-<div class="cardhead"><button class="star big" data-name="百度之星程序设计大赛" title="标记为重点">☆</button><span class="pill pP3">P3</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle">百度之星程序设计大赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，作为“钱 + 实习”双线目标</dd></dl></article><article class="card" id="c10" data-name="百度之星程序设计大赛" data-typ="比赛" data-pri="P3" data-reg="全国" data-dir="算法" data-st="大一下" data-cost="3–6 月" data-text="百度之星程序设计大赛 算法 算法设计 · 编码速度 每年 5–7 月 有奖金 a 类清单没有，但企业侧认可度不错。算法线的备选，题目质量高于多数校赛 全国 大一下 3–6 月">
+<div class="cardhead"><button class="star big" data-name="百度之星程序设计大赛" title="标记为重点">☆</button><span class="pill pP3">P3</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d算法">算法</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle">百度之星程序设计大赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">算法设计</span><span class="cap">编码速度</span></div>
+<div class="meta"><span class="cp tD">性价比 1.1</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 2 · 能力 2 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>每年 5–7 月</dd><dt>奖金 / 报酬</dt><dd>有奖金</dd>
 <dt>对你的价值</dt><dd class="long">A 类清单没有，但企业侧认可度不错。算法线的备选，题目质量高于多数校赛</dd><dt>自学门槛</dt><dd>3–6 个月｜算法基础</dd>
 <dt>入口 / 怎么报名</dt><dd>官网报名，个人赛</dd><dt>风险与代价</dt><dd>含金量不如 ACM，别当主战场</dd>
-<dt>什么时候做</dt><dd>大二，作为练手</dd></dl></article><article class="card" id="c11" data-name="Kaggle 竞赛" data-typ="比赛" data-pri="P2" data-reg="国际" data-st="大一下" data-cost="3–6 月" data-text="kaggle 竞赛 全年滚动 奖金池大（美元）；部分赛有奖牌体系 不看学校、不看清单，只看榜单排名。ml 岗位简历硬通货，且榜单是相对竞争，ai 拉不平。缺点是周期长、算力要求高 国际 大一下 3–6 月">
-<div class="cardhead"><button class="star big" data-name="Kaggle 竞赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r国际">国际</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle">Kaggle 竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，作为练手</dd></dl></article><article class="card" id="c11" data-name="Kaggle 竞赛" data-typ="比赛" data-pri="P2" data-reg="国际" data-dir="AI / 机器学习" data-st="大一下" data-cost="3–6 月" data-text="kaggle 竞赛 ai / 机器学习 特征工程 · 模型集成 · 实验管理 全年滚动 奖金池大（美元）；部分赛有奖牌体系 不看学校、不看清单，只看榜单排名。ml 岗位简历硬通货，且榜单是相对竞争，ai 拉不平。缺点是周期长、算力要求高 国际 大一下 3–6 月">
+<div class="cardhead"><button class="star big" data-name="Kaggle 竞赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r国际">国际</span><span class="dir dAI">AI / 机器学习</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle">Kaggle 竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">特征工程</span><span class="cap">模型集成</span><span class="cap">实验管理</span></div>
+<div class="meta"><span class="cp tD">性价比 1.3</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 3 · 能力 2 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>全年滚动</dd><dt>奖金 / 报酬</dt><dd>奖金池大（美元）；部分赛有奖牌体系</dd>
 <dt>对你的价值</dt><dd class="long">不看学校、不看清单，只看榜单排名。ML 岗位简历硬通货，且榜单是相对竞争，AI 拉不平。缺点是周期长、算力要求高</dd><dt>自学门槛</dt><dd>3–6 个月｜Python + sklearn/PyTorch + 特征工程</dd>
 <dt>入口 / 怎么报名</dt><dd>kaggle.com 注册即可</dd><dt>风险与代价</dt><dd>需要 GPU 算力（可用 Colab/Kaggle 免费额度）；单人冲榜很难</dd>
-<dt>什么时候做</dt><dd>大二起，长期挂一个比赛慢慢做</dd></dl></article><article class="card" id="c12" data-name="26 小时 AI 闪电黑客松（各类）" data-typ="比赛" data-pri="P2" data-reg="湖南" data-st="大一上" data-cost="0" data-text="26 小时 ai 闪电黑客松（各类） 不定期（如 11/19–20 长沙） 真金白银：如某场总奖金 10 万，一等奖 3 万×1 队、二等奖 2 万×2 队、三等奖 1 万×3 队（6 队获奖） 钱线里性价比最高的一类：现场提供算力+食宿、不用自带设备、零边际成本。但含金量低——ai 时代快闪黑客松泛滥，大厂面试官基本不认。它练的是限时交付和 demo 能力，不是研究能力 湖南 大一上 0">
-<div class="cardhead"><button class="star big" data-name="26 小时 AI 闪电黑客松（各类）" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="stg">大一上</span><span class="cst">0</span><h2 class="cardtitle">26 小时 AI 闪电黑客松（各类）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二起，长期挂一个比赛慢慢做</dd></dl></article><article class="card" id="c12" data-name="26 小时 AI 闪电黑客松（各类）" data-typ="比赛" data-pri="P2" data-reg="湖南" data-dir="应用与产品" data-st="大一上" data-cost="0" data-text="26 小时 ai 闪电黑客松（各类） 应用与产品 快速原型 · api 调用 · demo 交付 不定期（如 11/19–20 长沙） 真金白银：如某场总奖金 10 万，一等奖 3 万×1 队、二等奖 2 万×2 队、三等奖 1 万×3 队（6 队获奖） 钱线里性价比最高的一类：现场提供算力+食宿、不用自带设备、零边际成本。但含金量低——ai 时代快闪黑客松泛滥，大厂面试官基本不认。它练的是限时交付和 demo 能力，不是研究能力 湖南 大一上 0">
+<div class="cardhead"><button class="star big" data-name="26 小时 AI 闪电黑客松（各类）" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="dir d应用">应用与产品</span><span class="stg">大一上</span><span class="cst">0</span><h2 class="cardtitle">26 小时 AI 闪电黑客松（各类）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">快速原型</span><span class="cap">API 调用</span><span class="cap">Demo 交付</span></div>
+<div class="meta"><span class="cp tA">性价比 40.0</span><span class="mi">投入约 <b>6</b> 小时</span><span class="mi">总分 <b>4</b>/10（简历 1 · 能力 1 · 现金 2）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>不定期（如 11/19–20 长沙）</dd><dt>奖金 / 报酬</dt><dd>真金白银：如某场总奖金 10 万，一等奖 3 万×1 队、二等奖 2 万×2 队、三等奖 1 万×3 队（6 队获奖）</dd>
 <dt>对你的价值</dt><dd class="long">钱线里性价比最高的一类：现场提供算力+食宿、不用自带设备、零边际成本。但含金量低——AI 时代快闪黑客松泛滥，大厂面试官基本不认。它练的是限时交付和 demo 能力，不是研究能力</dd><dt>自学门槛</dt><dd>0｜会用 API 就能上</dd>
 <dt>入口 / 怎么报名</dt><dd>通常在群/公众号/海报里报名，需要 2–4 人组队（本研不限专业）</dd><dt>风险与代价</dt><dd>26 小时熬夜，之后两三天效率归零；需要队友，且要有一个能做前端/demo 的</dd>
-<dt>什么时候做</dt><dd>时间宽裕时捡。别挤掉数学竞赛/ACM 的训练时间</dd></dl></article><article class="card" id="c13" data-name="开源之夏 OSPP" data-typ="训练营" data-pri="P0" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="开源之夏 ospp 2026 起各阶段持续开放报名（不再固定窗口） **税前 3500 / 5000 元（经典模式：基础/进阶）；6000 / 8000 / 10000 元（领航模式：基础/进阶/挑战）**，另有结项证书 **本次检索的最大发现，可能是你四年里性价比最高的入口**。①它是“完成制”不是“排名制”——被选中并结项就有钱和证书，不用拿名次；②产出是真实开源贡献，代码进上游仓库，面试官能点开看；③方向完全对口：2026 年进入 2.0 时代，聚焦基础软件 + risc-v，重点覆盖操作系统、编译器、工具链、数据库、虚拟化栈、人工智能；④一个人就能干，不需要组队、不需要带队老师 全国 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="开源之夏 OSPP" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle hot">开源之夏 OSPP</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>时间宽裕时捡。别挤掉数学竞赛/ACM 的训练时间</dd></dl></article><article class="card" id="c13" data-name="开源之夏 OSPP" data-typ="训练营" data-pri="P0" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="1–3 月" data-text="开源之夏 ospp 系统与底层 开源协作 · 真实项目贡献 · git 工作流 2026 起各阶段持续开放报名（不再固定窗口） **税前 3500 / 5000 元（经典模式：基础/进阶）；6000 / 8000 / 10000 元（领航模式：基础/进阶/挑战）**，另有结项证书 **本次检索的最大发现，可能是你四年里性价比最高的入口**。①它是“完成制”不是“排名制”——被选中并结项就有钱和证书，不用拿名次；②产出是真实开源贡献，代码进上游仓库，面试官能点开看；③方向完全对口：2026 年进入 2.0 时代，聚焦基础软件 + risc-v，重点覆盖操作系统、编译器、工具链、数据库、虚拟化栈、人工智能；④一个人就能干，不需要组队、不需要带队老师 全国 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="开源之夏 OSPP" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle hot">开源之夏 OSPP</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">开源协作</span><span class="cap">真实项目贡献</span><span class="cap">Git 工作流</span></div>
+<div class="meta"><span class="cp tB">性价比 4.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>9</b>/10（简历 4 · 能力 3 · 现金 2）</span><span class="mi tier tB">B 高</span><span class="mi use">整块时间优先投这里：单位投入回报最高的一批</span></div>
 <dl><dt>时间</dt><dd>2026 起各阶段持续开放报名（不再固定窗口）</dd><dt>奖金 / 报酬</dt><dd>**税前 3500 / 5000 元（经典模式：基础/进阶）；6000 / 8000 / 10000 元（领航模式：基础/进阶/挑战）**，另有结项证书</dd>
 <dt>对你的价值</dt><dd class="long">**本次检索的最大发现，可能是你四年里性价比最高的入口**。①它是“完成制”不是“排名制”——被选中并结项就有钱和证书，不用拿名次；②产出是真实开源贡献，代码进上游仓库，面试官能点开看；③方向完全对口：2026 年进入 2.0 时代，聚焦基础软件 + RISC-V，重点覆盖操作系统、编译器、工具链、数据库、虚拟化栈、人工智能；④一个人就能干，不需要组队、不需要带队老师</dd><dt>自学门槛</dt><dd>0–3 个月｜可以边做边学，但要能独立完成一个真实项目并通过导师筛选</dd>
 <dt>入口 / 怎么报名</dt><dd>官网 summer.ospp.ac.cn；年满 18 岁在校生，专业不限、年级不限；一名学生同时最多申请 1 个项目</dd><dt>风险与代价</dt><dd>要过导师筛选，大一直接中选不易；中途退出会被列入失信名单</dd>
-<dt>什么时候做</dt><dd>**现在就动**：先去目标项目提几个小 patch，让 maintainer 认识你，再申请</dd></dl></article><article class="card" id="c14" data-name="Google Summer of Code" data-typ="训练营" data-pri="P2" data-reg="国际" data-st="大二" data-cost="6–12 月" data-text="google summer of code 3–4 月申请，5–8 月开发 约 $1500–3300 stipend 国际认可度最高的一档开源项目实习。但对大一门槛偏高：需要英文沟通、需要已有开源经验、竞争激烈 国际 大二 6–12 月">
-<div class="cardhead"><button class="star big" data-name="Google Summer of Code" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r国际">国际</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">Google Summer of Code</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>**现在就动**：先去目标项目提几个小 patch，让 maintainer 认识你，再申请</dd></dl></article><article class="card" id="c14" data-name="Google Summer of Code" data-typ="训练营" data-pri="P2" data-reg="国际" data-dir="应用与产品" data-st="大二" data-cost="6–12 月" data-text="google summer of code 应用与产品 开源协作 · 英文沟通 · 远程交付 3–4 月申请，5–8 月开发 约 $1500–3300 stipend 国际认可度最高的一档开源项目实习。但对大一门槛偏高：需要英文沟通、需要已有开源经验、竞争激烈 国际 大二 6–12 月">
+<div class="cardhead"><button class="star big" data-name="Google Summer of Code" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r国际">国际</span><span class="dir d应用">应用与产品</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">Google Summer of Code</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">开源协作</span><span class="cap">英文沟通</span><span class="cap">远程交付</span></div>
+<div class="meta"><span class="cp tD">性价比 0.9</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>8</b>/10（简历 4 · 能力 2 · 现金 2）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>3–4 月申请，5–8 月开发</dd><dt>奖金 / 报酬</dt><dd>约 $1500–3300 stipend</dd>
 <dt>对你的价值</dt><dd class="long">国际认可度最高的一档开源项目实习。但对大一门槛偏高：需要英文沟通、需要已有开源经验、竞争激烈</dd><dt>自学门槛</dt><dd>6 个月+｜英文 + 开源协作经验</dd>
 <dt>入口 / 怎么报名</dt><dd>summerofcode.withgoogle.com；需 18 岁以上</dd><dt>风险与代价</dt><dd>中签率低；时差沟通成本高</dd>
-<dt>什么时候做</dt><dd>大二以后再考虑，先用 OSPP 练手</dd></dl></article><article class="card" id="c15" data-name="InfiniTensor 大模型与人工智能系统训练营" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="infinitensor 大模型与人工智能系统训练营 夏季（每年一期） 免费 大模型 + ai 系统方向，国产框架生态。对“训练/infra”主线是直接对口，且免费、零成本试错 全国 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="InfiniTensor 大模型与人工智能系统训练营" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">InfiniTensor 大模型与人工智能系统训练营</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二以后再考虑，先用 OSPP 练手</dd></dl></article><article class="card" id="c15" data-name="InfiniTensor 大模型与人工智能系统训练营" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="AI / 机器学习" data-st="大一下" data-cost="1–3 月" data-text="infinitensor 大模型与人工智能系统训练营 ai / 机器学习 大模型系统 · 训练框架 · 分布式训练 夏季（每年一期） 免费 大模型 + ai 系统方向，国产框架生态。对“训练/infra”主线是直接对口，且免费、零成本试错 全国 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="InfiniTensor 大模型与人工智能系统训练营" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir dAI">AI / 机器学习</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">InfiniTensor 大模型与人工智能系统训练营</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">大模型系统</span><span class="cap">训练框架</span><span class="cap">分布式训练</span></div>
+<div class="meta"><span class="cp tC">性价比 3.0</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 2 · 能力 4 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>夏季（每年一期）</dd><dt>奖金 / 报酬</dt><dd>免费</dd>
 <dt>对你的价值</dt><dd class="long">大模型 + AI 系统方向，国产框架生态。对“训练/Infra”主线是直接对口，且免费、零成本试错</dd><dt>自学门槛</dt><dd>0–3 个月｜会 Python、懂点深度学习即可</dd>
 <dt>入口 / 怎么报名</dt><dd>InfiniTensor 官网 infinitensor.com 报名</dd><dt>风险与代价</dt><dd>训练营以课程+实践为主，产出分量不如 OSPP 的项目</dd>
-<dt>什么时候做</dt><dd>大一下～大二暑假，作为 Infra 入门</dd></dl></article><article class="card" id="c16" data-name="昇腾 CANN 训练营" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="昇腾 cann 训练营 常年多期 免费 华为昇腾算力栈、算子开发与推理优化。国产 gpu 生态是未来的稀缺技能，且这类训练营通常会沉淀成社区贡献记录 全国 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="昇腾 CANN 训练营" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">昇腾 CANN 训练营</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大一下～大二暑假，作为 Infra 入门</dd></dl></article><article class="card" id="c16" data-name="昇腾 CANN 训练营" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="1–3 月" data-text="昇腾 cann 训练营 系统与底层 算子开发 · npu 适配 · 推理优化 常年多期 免费 华为昇腾算力栈、算子开发与推理优化。国产 gpu 生态是未来的稀缺技能，且这类训练营通常会沉淀成社区贡献记录 全国 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="昇腾 CANN 训练营" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">昇腾 CANN 训练营</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">算子开发</span><span class="cap">NPU 适配</span><span class="cap">推理优化</span></div>
+<div class="meta"><span class="cp tC">性价比 2.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 2 · 能力 3 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>常年多期</dd><dt>奖金 / 报酬</dt><dd>免费</dd>
 <dt>对你的价值</dt><dd class="long">华为昇腾算力栈、算子开发与推理优化。国产 GPU 生态是未来的稀缺技能，且这类训练营通常会沉淀成社区贡献记录</dd><dt>自学门槛</dt><dd>0–3 个月｜C++ / Python，懂点 NPU 概念</dd>
 <dt>入口 / 怎么报名</dt><dd>华为昇腾社区 hiascend.com 开发者活动页</dd><dt>风险与代价</dt><dd>生态相对封闭，知识迁移性弱于 CUDA</dd>
-<dt>什么时候做</dt><dd>大二，作为国产算力栈的补充</dd></dl></article><article class="card" id="c17" data-name="沐曦 Transformer 实战营" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="沐曦 transformer 实战营 8 月报名，21 天 免费 在国产 gpu（沐曦）上“手搓”大模型。2026 年一期 1000+ 人报名、65% 是在校大学生，验证了它的实际热度。对理解“模型怎么在国产卡上跑起来”很有用 全国 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="沐曦 Transformer 实战营" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">沐曦 Transformer 实战营</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，作为国产算力栈的补充</dd></dl></article><article class="card" id="c17" data-name="沐曦 Transformer 实战营" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="AI / 机器学习" data-st="大一下" data-cost="1–3 月" data-text="沐曦 transformer 实战营 ai / 机器学习 大模型训练 · 国产 gpu 适配 8 月报名，21 天 免费 在国产 gpu（沐曦）上“手搓”大模型。2026 年一期 1000+ 人报名、65% 是在校大学生，验证了它的实际热度。对理解“模型怎么在国产卡上跑起来”很有用 全国 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="沐曦 Transformer 实战营" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir dAI">AI / 机器学习</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">沐曦 Transformer 实战营</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">大模型训练</span><span class="cap">国产 GPU 适配</span></div>
+<div class="meta"><span class="cp tC">性价比 2.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 2 · 能力 3 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>8 月报名，21 天</dd><dt>奖金 / 报酬</dt><dd>免费</dd>
 <dt>对你的价值</dt><dd class="long">在国产 GPU（沐曦）上“手搓”大模型。2026 年一期 1000+ 人报名、65% 是在校大学生，验证了它的实际热度。对理解“模型怎么在国产卡上跑起来”很有用</dd><dt>自学门槛</dt><dd>1–2 个月｜Python + PyTorch 基础</dd>
 <dt>入口 / 怎么报名</dt><dd>沐曦官网/开发者社区报名</dd><dt>风险与代价</dt><dd>时长 21 天，需要每天投入；偏体验，产出分量中等</dd>
-<dt>什么时候做</dt><dd>大二暑假</dd></dl></article><article class="card" id="c18" data-name="开源智算训练营 / ParkHack 青年 AI 闪电营" data-typ="活动" data-pri="P2" data-reg="湖南" data-st="大一上" data-cost="0" data-text="开源智算训练营 / parkhack 青年 ai 闪电营 11/19–20，长沙国际会议中心（世界计算大会同期） 总奖金 10 万：第一名 1 队共 3 万、第二名 2 队共 4 万、第三名 3 队共 3 万（6 队获奖）。现场提供算力与食宿，不用自带设备 **全网检索不到公开信息，是真信息差的样本**——它只在辅导员年级群/海报里流传。26 小时快闪黑客松，方向为大模型应用、agent 开发、开源项目落地。钱是真的，简历价值弱，但昆仑元是长沙本地 ai 基础设施公司、正在招算法实习生，混个脸熟可能比投简历有用 湖南 大一上 0">
-<div class="cardhead"><button class="star big" data-name="开源智算训练营 / ParkHack 青年 AI 闪电营" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t活动">活动</span><span class="reg r湖南">湖南</span><span class="stg">大一上</span><span class="cst">0</span><h2 class="cardtitle">开源智算训练营 / ParkHack 青年 AI 闪电营</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二暑假</dd></dl></article><article class="card" id="c18" data-name="开源智算训练营 / ParkHack 青年 AI 闪电营" data-typ="活动" data-pri="P2" data-reg="湖南" data-dir="应用与产品" data-st="大一上" data-cost="0" data-text="开源智算训练营 / parkhack 青年 ai 闪电营 应用与产品 agent 开发 · demo 交付 · 产品化 11/19–20，长沙国际会议中心（世界计算大会同期） 总奖金 10 万：第一名 1 队共 3 万、第二名 2 队共 4 万、第三名 3 队共 3 万（6 队获奖）。现场提供算力与食宿，不用自带设备 **全网检索不到公开信息，是真信息差的样本**——它只在辅导员年级群/海报里流传。26 小时快闪黑客松，方向为大模型应用、agent 开发、开源项目落地。钱是真的，简历价值弱，但昆仑元是长沙本地 ai 基础设施公司、正在招算法实习生，混个脸熟可能比投简历有用 湖南 大一上 0">
+<div class="cardhead"><button class="star big" data-name="开源智算训练营 / ParkHack 青年 AI 闪电营" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t活动">活动</span><span class="reg r湖南">湖南</span><span class="dir d应用">应用与产品</span><span class="stg">大一上</span><span class="cst">0</span><h2 class="cardtitle">开源智算训练营 / ParkHack 青年 AI 闪电营</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">Agent 开发</span><span class="cap">Demo 交付</span><span class="cap">产品化</span></div>
+<div class="meta"><span class="cp tA">性价比 40.0</span><span class="mi">投入约 <b>6</b> 小时</span><span class="mi">总分 <b>4</b>/10（简历 1 · 能力 1 · 现金 2）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>11/19–20，长沙国际会议中心（世界计算大会同期）</dd><dt>奖金 / 报酬</dt><dd>总奖金 10 万：第一名 1 队共 3 万、第二名 2 队共 4 万、第三名 3 队共 3 万（6 队获奖）。现场提供算力与食宿，不用自带设备</dd>
 <dt>对你的价值</dt><dd class="long">**全网检索不到公开信息，是真信息差的样本**——它只在辅导员年级群/海报里流传。26 小时快闪黑客松，方向为大模型应用、Agent 开发、开源项目落地。钱是真的，简历价值弱，但昆仑元是长沙本地 AI 基础设施公司、正在招算法实习生，混个脸熟可能比投简历有用</dd><dt>自学门槛</dt><dd>0｜会用 API、能写 demo 即可</dd>
 <dt>入口 / 怎么报名</dt><dd>辅导员年级群发的报名信息（来源：你的年级群）；2–4 人组队，本研不限专业</dd><dt>风险与代价</dt><dd>26 小时熬夜；时间紧（活动就在几天内，报名可能已截止）</dd>
-<dt>什么时候做</dt><dd>先确认还能不能报名；能报就今天组队</dd></dl></article><article class="card" id="c19" data-name="各类 AI 黑客松（支付宝 PAYATHON 等）" data-typ="活动" data-pri="P3" data-reg="全国" data-st="全年滚动" data-cost="0" data-text="各类 ai 黑客松（支付宝 payathon 等） 不定期 奖金池 20 万级（如支付宝 payathon） 练限时交付、混人脉、拿钱。共同特点：零门槛、给算力、报名在公众号/开发者社区里，不在学校清单里 全国 全年滚动 0">
-<div class="cardhead"><button class="star big" data-name="各类 AI 黑客松（支付宝 PAYATHON 等）" title="标记为重点">☆</button><span class="pill pP3">P3</span><span class="tag t活动">活动</span><span class="reg r全国">全国</span><span class="stg">全年滚动</span><span class="cst">0</span><h2 class="cardtitle">各类 AI 黑客松（支付宝 PAYATHON 等）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>先确认还能不能报名；能报就今天组队</dd></dl></article><article class="card" id="c19" data-name="各类 AI 黑客松（支付宝 PAYATHON 等）" data-typ="活动" data-pri="P3" data-reg="全国" data-dir="应用与产品" data-st="全年滚动" data-cost="0" data-text="各类 ai 黑客松（支付宝 payathon 等） 应用与产品 大模型应用 · 产品化 · 快速落地 不定期 奖金池 20 万级（如支付宝 payathon） 练限时交付、混人脉、拿钱。共同特点：零门槛、给算力、报名在公众号/开发者社区里，不在学校清单里 全国 全年滚动 0">
+<div class="cardhead"><button class="star big" data-name="各类 AI 黑客松（支付宝 PAYATHON 等）" title="标记为重点">☆</button><span class="pill pP3">P3</span><span class="tag t活动">活动</span><span class="reg r全国">全国</span><span class="dir d应用">应用与产品</span><span class="stg">全年滚动</span><span class="cst">0</span><h2 class="cardtitle">各类 AI 黑客松（支付宝 PAYATHON 等）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">大模型应用</span><span class="cap">产品化</span><span class="cap">快速落地</span></div>
+<div class="meta"><span class="cp tA">性价比 40.0</span><span class="mi">投入约 <b>6</b> 小时</span><span class="mi">总分 <b>4</b>/10（简历 1 · 能力 1 · 现金 2）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>不定期</dd><dt>奖金 / 报酬</dt><dd>奖金池 20 万级（如支付宝 PAYATHON）</dd>
 <dt>对你的价值</dt><dd class="long">练限时交付、混人脉、拿钱。共同特点：零门槛、给算力、报名在公众号/开发者社区里，不在学校清单里</dd><dt>自学门槛</dt><dd>0</dd>
 <dt>入口 / 怎么报名</dt><dd>企业开发者社区 / 公众号</dd><dt>风险与代价</dt><dd>同质化严重，含金量普遍低</dd>
-<dt>什么时候做</dt><dd>挑本地、零成本的参加</dd></dl></article><article class="card" id="c20" data-name="CCF CSP 认证" data-typ="信息差" data-pri="P0" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="ccf csp 认证 每年 3 月 / 9 月 / 12 月 报名费（约几百元，各考点不同） **对保研的直接影响超过你清单上任何一项赛事**。很多院校夏令营认 csp 成绩替代机试或给加分——大部分学生根本不知道可以拿它免机考，都在死磕 acm。它是“绕开机试排位、直接拿到可信成绩”的路 全国 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="CCF CSP 认证" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t信息差">信息差</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle hot">CCF CSP 认证</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>挑本地、零成本的参加</dd></dl></article><article class="card" id="c20" data-name="CCF CSP 认证" data-typ="信息差" data-pri="P0" data-reg="全国" data-dir="算法" data-st="大一下" data-cost="1–3 月" data-text="ccf csp 认证 算法 算法设计 · 编码速度 · 工程规范 每年 3 月 / 9 月 / 12 月 报名费（约几百元，各考点不同） **对保研的直接影响超过你清单上任何一项赛事**。很多院校夏令营认 csp 成绩替代机试或给加分——大部分学生根本不知道可以拿它免机考，都在死磕 acm。它是“绕开机试排位、直接拿到可信成绩”的路 全国 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="CCF CSP 认证" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t信息差">信息差</span><span class="reg r全国">全国</span><span class="dir d算法">算法</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle hot">CCF CSP 认证</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">算法设计</span><span class="cap">编码速度</span><span class="cap">工程规范</span></div>
+<div class="meta"><span class="cp tC">性价比 3.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>7</b>/10（简历 4 · 能力 3 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年 3 月 / 9 月 / 12 月</dd><dt>奖金 / 报酬</dt><dd>报名费（约几百元，各考点不同）</dd>
 <dt>对你的价值</dt><dd class="long">**对保研的直接影响超过你清单上任何一项赛事**。很多院校夏令营认 CSP 成绩替代机试或给加分——大部分学生根本不知道可以拿它免机考，都在死磕 ACM。它是“绕开机试排位、直接拿到可信成绩”的路</dd><dt>自学门槛</dt><dd>1–3 个月｜算法基础 + 针对性刷题</dd>
 <dt>入口 / 怎么报名</dt><dd>CCF 官网 ccf.org.cn 报名，可跨校考点</dd><dt>风险与代价</dt><dd>成绩有效期有限；高分需要刷题量</dd>
-<dt>什么时候做</dt><dd>**大一下就开始考**，攒够分数</dd></dl></article><article class="card" id="c21" data-name="PAT 浙大计算机能力测试" data-typ="信息差" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="pat 浙大计算机能力测试 多期（春/秋） 报名费 浙大夏令营/考研认可，**非浙大学生也能考**。信息差极大——外校学生基本没听说过。如果你考虑浙大（孙鹏的母校圈子在这里），这是低成本加分项 全国 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="PAT 浙大计算机能力测试" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t信息差">信息差</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">PAT 浙大计算机能力测试</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>**大一下就开始考**，攒够分数</dd></dl></article><article class="card" id="c21" data-name="PAT 浙大计算机能力测试" data-typ="信息差" data-pri="P2" data-reg="全国" data-dir="算法" data-st="大一下" data-cost="1–3 月" data-text="pat 浙大计算机能力测试 算法 算法设计 · 调试能力 多期（春/秋） 报名费 浙大夏令营/考研认可，**非浙大学生也能考**。信息差极大——外校学生基本没听说过。如果你考虑浙大（孙鹏的母校圈子在这里），这是低成本加分项 全国 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="PAT 浙大计算机能力测试" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t信息差">信息差</span><span class="reg r全国">全国</span><span class="dir d算法">算法</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">PAT 浙大计算机能力测试</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">算法设计</span><span class="cap">调试能力</span></div>
+<div class="meta"><span class="cp tC">性价比 2.0</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>4</b>/10（简历 2 · 能力 2 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>多期（春/秋）</dd><dt>奖金 / 报酬</dt><dd>报名费</dd>
 <dt>对你的价值</dt><dd class="long">浙大夏令营/考研认可，**非浙大学生也能考**。信息差极大——外校学生基本没听说过。如果你考虑浙大（孙鹏的母校圈子在这里），这是低成本加分项</dd><dt>自学门槛</dt><dd>1–3 个月</dd>
 <dt>入口 / 怎么报名</dt><dd>pat.zju.edu.cn 报名</dd><dt>风险与代价</dt><dd>只对浙大体系有效，通用性弱于 CSP</dd>
-<dt>什么时候做</dt><dd>大二，若目标含浙大</dd></dl></article><article class="card" id="c22" data-name="目标院校夏令营时间线" data-typ="信息差" data-pri="P0" data-reg="全国" data-st="大三" data-cost="—" data-text="目标院校夏令营时间线 每年 5–7 月（预推免 9 月） 免费 **升学的真正主战场，比任何赛事都重要。**各校各院时间不同且逐年提前，错过就是一年。这件事的权重高于本表所有比赛 全国 大三 —">
-<div class="cardhead"><button class="star big" data-name="目标院校夏令营时间线" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t信息差">信息差</span><span class="reg r全国">全国</span><span class="stg">大三</span><span class="cst">—</span><h2 class="cardtitle">目标院校夏令营时间线</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，若目标含浙大</dd></dl></article><article class="card" id="c22" data-name="目标院校夏令营时间线" data-typ="信息差" data-pri="P0" data-reg="全国" data-dir="通用 / 资源" data-st="大三" data-cost="—" data-text="目标院校夏令营时间线 通用 / 资源 信息搜集 · 时间规划 每年 5–7 月（预推免 9 月） 免费 **升学的真正主战场，比任何赛事都重要。**各校各院时间不同且逐年提前，错过就是一年。这件事的权重高于本表所有比赛 全国 大三 —">
+<div class="cardhead"><button class="star big" data-name="目标院校夏令营时间线" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t信息差">信息差</span><span class="reg r全国">全国</span><span class="dir d通用">通用 / 资源</span><span class="stg">大三</span><span class="cst">—</span><h2 class="cardtitle">目标院校夏令营时间线</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">信息搜集</span><span class="cap">时间规划</span></div>
+<div class="meta"><span class="cp tA">性价比 45.0</span><span class="mi">投入约 <b>4</b> 小时</span><span class="mi">总分 <b>3</b>/10（简历 3 · 能力 0 · 现金 0）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>每年 5–7 月（预推免 9 月）</dd><dt>奖金 / 报酬</dt><dd>免费</dd>
 <dt>对你的价值</dt><dd class="long">**升学的真正主战场，比任何赛事都重要。**各校各院时间不同且逐年提前，错过就是一年。这件事的权重高于本表所有比赛</dd><dt>自学门槛</dt><dd>—</dd>
 <dt>入口 / 怎么报名</dt><dd>目标院校研究生院官网 + 学院公众号；大三上开始每月查一次</dd><dt>风险与代价</dt><dd>信息分散、时间冲突、需要提前准备材料</dd>
-<dt>什么时候做</dt><dd>大三上开始，但大二就要知道它的存在</dd></dl></article><article class="card" id="c23" data-name="会议 student volunteer / travel grant" data-typ="信息差" data-pri="P4" data-reg="国际" data-st="大三" data-cost="—" data-text="会议 student volunteer / travel grant 提前 3–6 个月申请 免注册费 / 差旅资助 **现在价值≈0，我上一版列高了。**顶会 volunteer 要申请且竞争不小，大一去了听不懂论文，3–5 天基本在干活；travel grant 多数发给有论文的作者，本科生无 paper 基本拿不到。简历上写“neurips volunteer”分量很轻 国际 大三 —">
-<div class="cardhead"><button class="star big" data-name="会议 student volunteer / travel grant" title="标记为重点">☆</button><span class="pill pP4">P4</span><span class="tag t信息差">信息差</span><span class="reg r国际">国际</span><span class="stg">大三</span><span class="cst">—</span><h2 class="cardtitle">会议 student volunteer / travel grant</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大三上开始，但大二就要知道它的存在</dd></dl></article><article class="card" id="c23" data-name="会议 student volunteer / travel grant" data-typ="信息差" data-pri="P4" data-reg="国际" data-dir="通用 / 资源" data-st="大三" data-cost="—" data-text="会议 student volunteer / travel grant 通用 / 资源 学术网络 · 会议参与 提前 3–6 个月申请 免注册费 / 差旅资助 **现在价值≈0，我上一版列高了。**顶会 volunteer 要申请且竞争不小，大一去了听不懂论文，3–5 天基本在干活；travel grant 多数发给有论文的作者，本科生无 paper 基本拿不到。简历上写“neurips volunteer”分量很轻 国际 大三 —">
+<div class="cardhead"><button class="star big" data-name="会议 student volunteer / travel grant" title="标记为重点">☆</button><span class="pill pP4">P4</span><span class="tag t信息差">信息差</span><span class="reg r国际">国际</span><span class="dir d通用">通用 / 资源</span><span class="stg">大三</span><span class="cst">—</span><h2 class="cardtitle">会议 student volunteer / travel grant</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">学术网络</span><span class="cap">会议参与</span></div>
+<div class="meta"><span class="cp tA">性价比 30.0</span><span class="mi">投入约 <b>4</b> 小时</span><span class="mi">总分 <b>2</b>/10（简历 1 · 能力 1 · 现金 0）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>提前 3–6 个月申请</dd><dt>奖金 / 报酬</dt><dd>免注册费 / 差旅资助</dd>
 <dt>对你的价值</dt><dd class="long">**现在价值≈0，我上一版列高了。**顶会 volunteer 要申请且竞争不小，大一去了听不懂论文，3–5 天基本在干活；travel grant 多数发给有论文的作者，本科生无 paper 基本拿不到。简历上写“NeurIPS Volunteer”分量很轻</dd><dt>自学门槛</dt><dd>—</dd>
 <dt>入口 / 怎么报名</dt><dd>目标会议官网的 Students / Volunteer 页面</dd><dt>风险与代价</dt><dd>时间成本高，收益低</dd>
-<dt>什么时候做</dt><dd>大三，有在投论文或方向明确后再看</dd></dl></article><article class="card" id="c24" data-name="超算中心机时" data-typ="信息差" data-pri="P0" data-reg="湖南" data-st="大一下" data-cost="—" data-text="超算中心机时 常年（按年度申请） 若可申请则为免费资源 **湖大最独特的一张牌。**湖大是国家超算长沙中心的依托单位，如果本科生能拿到机时，你大学四年的 infra 训练成本几乎为零——这是清北以外大部分学校给不了的条件 湖南 大一下 —">
-<div class="cardhead"><button class="star big" data-name="超算中心机时" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t信息差">信息差</span><span class="reg r湖南">湖南</span><span class="stg">大一下</span><span class="cst">—</span><h2 class="cardtitle hot">超算中心机时</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大三，有在投论文或方向明确后再看</dd></dl></article><article class="card" id="c24" data-name="超算中心机时" data-typ="信息差" data-pri="P0" data-reg="湖南" data-dir="系统与底层" data-st="大一下" data-cost="—" data-text="超算中心机时 系统与底层 高性能计算 · 机时申请 · 资源调度 常年（按年度申请） 若可申请则为免费资源 **湖大最独特的一张牌。**湖大是国家超算长沙中心的依托单位，如果本科生能拿到机时，你大学四年的 infra 训练成本几乎为零——这是清北以外大部分学校给不了的条件 湖南 大一下 —">
+<div class="cardhead"><button class="star big" data-name="超算中心机时" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t信息差">信息差</span><span class="reg r湖南">湖南</span><span class="dir d系统">系统与底层</span><span class="stg">大一下</span><span class="cst">—</span><h2 class="cardtitle hot">超算中心机时</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">高性能计算</span><span class="cap">机时申请</span><span class="cap">资源调度</span></div>
+<div class="meta"><span class="cp tA">性价比 75.0</span><span class="mi">投入约 <b>4</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 1 · 能力 4 · 现金 0）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>常年（按年度申请）</dd><dt>奖金 / 报酬</dt><dd>若可申请则为免费资源</dd>
 <dt>对你的价值</dt><dd class="long">**湖大最独特的一张牌。**湖大是国家超算长沙中心的依托单位，如果本科生能拿到机时，你大学四年的 Infra 训练成本几乎为零——这是清北以外大部分学校给不了的条件</dd><dt>自学门槛</dt><dd>—</dd>
 <dt>入口 / 怎么报名</dt><dd>问孙鹏或组里师兄：本科生能否申请、怎么申请</dd><dt>风险与代价</dt><dd>机时通常优先给有项目的团队；需要导师背书</dd>
-<dt>什么时候做</dt><dd>**尽快问清楚**，这决定你练手的成本</dd></dl></article><article class="card" id="c25" data-name="学院内网通知" data-typ="信息差" data-pri="P3" data-reg="湖南" data-st="大一上" data-cost="—" data-text="学院内网通知 常年 — 部分通知只发内网，不进公众号、不进班群。这是“学校渠道也分层”的那一层 湖南 大一上 —">
-<div class="cardhead"><button class="star big" data-name="学院内网通知" title="标记为重点">☆</button><span class="pill pP3">P3</span><span class="tag t信息差">信息差</span><span class="reg r湖南">湖南</span><span class="stg">大一上</span><span class="cst">—</span><h2 class="cardtitle">学院内网通知</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>**尽快问清楚**，这决定你练手的成本</dd></dl></article><article class="card" id="c25" data-name="学院内网通知" data-typ="信息差" data-pri="P3" data-reg="湖南" data-dir="通用 / 资源" data-st="大一上" data-cost="—" data-text="学院内网通知 通用 / 资源 信息获取 常年 — 部分通知只发内网，不进公众号、不进班群。这是“学校渠道也分层”的那一层 湖南 大一上 —">
+<div class="cardhead"><button class="star big" data-name="学院内网通知" title="标记为重点">☆</button><span class="pill pP3">P3</span><span class="tag t信息差">信息差</span><span class="reg r湖南">湖南</span><span class="dir d通用">通用 / 资源</span><span class="stg">大一上</span><span class="cst">—</span><h2 class="cardtitle">学院内网通知</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">信息获取</span></div>
+<div class="meta"><span class="cp tA">性价比 30.0</span><span class="mi">投入约 <b>4</b> 小时</span><span class="mi">总分 <b>2</b>/10（简历 2 · 能力 0 · 现金 0）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>常年</dd><dt>奖金 / 报酬</dt><dd>—</dd>
 <dt>对你的价值</dt><dd class="long">部分通知只发内网，不进公众号、不进班群。这是“学校渠道也分层”的那一层</dd><dt>自学门槛</dt><dd>—</dd>
 <dt>入口 / 怎么报名</dt><dd>找辅导员要内网入口</dd><dt>风险与代价</dt><dd>需要记得定期看</dd>
-<dt>什么时候做</dt><dd>每周日固定看一次，5 分钟</dd></dl></article><article class="card" id="c26" data-name="辅导员年级群" data-typ="信息差" data-pri="P1" data-reg="湖南" data-st="大一上" data-cost="—" data-text="辅导员年级群 常年 — **已验证有效：这次闪电营的信息就来自这里。**你已经在正确的信息渠道里——问题从来不是“看不到”，是“看到之后要不要动” 湖南 大一上 —">
-<div class="cardhead"><button class="star big" data-name="辅导员年级群" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t信息差">信息差</span><span class="reg r湖南">湖南</span><span class="stg">大一上</span><span class="cst">—</span><h2 class="cardtitle">辅导员年级群</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>每周日固定看一次，5 分钟</dd></dl></article><article class="card" id="c26" data-name="辅导员年级群" data-typ="信息差" data-pri="P1" data-reg="湖南" data-dir="通用 / 资源" data-st="大一上" data-cost="—" data-text="辅导员年级群 通用 / 资源 信息获取 常年 — **已验证有效：这次闪电营的信息就来自这里。**你已经在正确的信息渠道里——问题从来不是“看不到”，是“看到之后要不要动” 湖南 大一上 —">
+<div class="cardhead"><button class="star big" data-name="辅导员年级群" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t信息差">信息差</span><span class="reg r湖南">湖南</span><span class="dir d通用">通用 / 资源</span><span class="stg">大一上</span><span class="cst">—</span><h2 class="cardtitle">辅导员年级群</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">信息获取</span></div>
+<div class="meta"><span class="cp tA">性价比 30.0</span><span class="mi">投入约 <b>4</b> 小时</span><span class="mi">总分 <b>2</b>/10（简历 2 · 能力 0 · 现金 0）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>常年</dd><dt>奖金 / 报酬</dt><dd>—</dd>
 <dt>对你的价值</dt><dd class="long">**已验证有效：这次闪电营的信息就来自这里。**你已经在正确的信息渠道里——问题从来不是“看不到”，是“看到之后要不要动”</dd><dt>自学门槛</dt><dd>—</dd>
 <dt>入口 / 怎么报名</dt><dd>已经在里面</dd><dt>风险与代价</dt><dd>信息噪音大，需要自己筛</dd>
-<dt>什么时候做</dt><dd>保持关注，看到相关就立刻判断要不要动</dd></dl></article><article class="card" id="c27" data-name="开源项目真实贡献（GitHub）" data-typ="信息差" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="3–6 月" data-text="开源项目真实贡献（github） 全年 无直接报酬（ospp 等有） 简历权重最高、ai 最难替代的东西。一个持续有 commit 的 github 主页，比任何“获奖证书”都硬——因为可验证、可点开、可读代码 全国 大一下 3–6 月">
-<div class="cardhead"><button class="star big" data-name="开源项目真实贡献（GitHub）" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t信息差">信息差</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle">开源项目真实贡献（GitHub）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>保持关注，看到相关就立刻判断要不要动</dd></dl></article><article class="card" id="c27" data-name="开源项目真实贡献（GitHub）" data-typ="信息差" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="3–6 月" data-text="开源项目真实贡献（github） 系统与底层 开源协作 · 代码贡献 · 代码审查 全年 无直接报酬（ospp 等有） 简历权重最高、ai 最难替代的东西。一个持续有 commit 的 github 主页，比任何“获奖证书”都硬——因为可验证、可点开、可读代码 全国 大一下 3–6 月">
+<div class="cardhead"><button class="star big" data-name="开源项目真实贡献（GitHub）" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t信息差">信息差</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle">开源项目真实贡献（GitHub）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">开源协作</span><span class="cap">代码贡献</span><span class="cap">代码审查</span></div>
+<div class="meta"><span class="cp tC">性价比 1.6</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>7</b>/10（简历 4 · 能力 3 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>全年</dd><dt>奖金 / 报酬</dt><dd>无直接报酬（OSPP 等有）</dd>
 <dt>对你的价值</dt><dd class="long">简历权重最高、AI 最难替代的东西。一个持续有 commit 的 GitHub 主页，比任何“获奖证书”都硬——因为可验证、可点开、可读代码</dd><dt>自学门槛</dt><dd>3–6 个月｜需要先能读懂一个真实项目的代码</dd>
 <dt>入口 / 怎么报名</dt><dd>从 OSPP 的目标项目开始，先提小 patch</dd><dt>风险与代价</dt><dd>没有即时反馈，容易放弃</dd>
-<dt>什么时候做</dt><dd>现在就开始，长期积累</dd></dl></article><article class="card" id="c28" data-name="一生一芯（ysyx）" data-typ="训练营" data-pri="P0" data-reg="全国" data-st="大一下" data-cost="3–6 月" data-text="一生一芯（ysyx） 常年开放，任何时间可报名 免费（部分阶段有企业奖学金） **本次检索最重要的补充。**中科院计算所发起的处理器芯片设计开放计划，本科生从零写一个能跑 linux 的 risc-v cpu。它是芯片方向最著名的“本科可参与”入口，比集创赛友好得多——因为它是开设式的、常年可进、按阶段闯关 全国 大一下 3–6 月">
-<div class="cardhead"><button class="star big" data-name="一生一芯（ysyx）" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle hot">一生一芯（ysyx）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>现在就开始，长期积累</dd></dl></article><article class="card" id="c28" data-name="一生一芯（ysyx）" data-typ="训练营" data-pri="P0" data-reg="全国" data-dir="硬件与芯片" data-st="大一下" data-cost="3–6 月" data-text="一生一芯（ysyx） 硬件与芯片 cpu 设计 · verilog · 体系结构 · 验证 常年开放，任何时间可报名 免费（部分阶段有企业奖学金） **本次检索最重要的补充。**中科院计算所发起的处理器芯片设计开放计划，本科生从零写一个能跑 linux 的 risc-v cpu。它是芯片方向最著名的“本科可参与”入口，比集创赛友好得多——因为它是开设式的、常年可进、按阶段闯关 全国 大一下 3–6 月">
+<div class="cardhead"><button class="star big" data-name="一生一芯（ysyx）" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d硬件">硬件与芯片</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle hot">一生一芯（ysyx）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">CPU 设计</span><span class="cap">Verilog</span><span class="cap">体系结构</span><span class="cap">验证</span></div>
+<div class="meta"><span class="cp tC">性价比 1.6</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>7</b>/10（简历 4 · 能力 3 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>常年开放，任何时间可报名</dd><dt>奖金 / 报酬</dt><dd>免费（部分阶段有企业奖学金）</dd>
 <dt>对你的价值</dt><dd class="long">**本次检索最重要的补充。**中科院计算所发起的处理器芯片设计开放计划，本科生从零写一个能跑 Linux 的 RISC-V CPU。它是芯片方向最著名的“本科可参与”入口，比集创赛友好得多——因为它是开设式的、常年可进、按阶段闯关</dd><dt>自学门槛</dt><dd>6–12 个月｜C/Verilog + 计算机组成 + 体系结构</dd>
 <dt>入口 / 怎么报名</dt><dd>oscpu.github.io/ysyx（官网有完整闯关路线）</dd><dt>风险与代价</dt><dd>周期长、强度大，多数人中途放弃；需要自驱</dd>
-<dt>什么时候做</dt><dd>大一下就可开始第一关。和你“芯片”选项直接对应</dd></dl></article><article class="card" id="c29" data-name="甲辰计划实习生" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="甲辰计划实习生 每年滚动开放 实习津贴（按岗位） risc-v 生态的实习计划：每年开放 2000+ 实习名额，招募 1000+ 人次学生。对你 infra/芯片线的意义是——它是“能真进项目”的通道，不是纯课程 全国 大二 3–6 月">
-<div class="cardhead"><button class="star big" data-name="甲辰计划实习生" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">甲辰计划实习生</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大一下就可开始第一关。和你“芯片”选项直接对应</dd></dl></article><article class="card" id="c29" data-name="甲辰计划实习生" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-text="甲辰计划实习生 系统与底层 linux 内核 · risc-v · 系统开发 每年滚动开放 实习津贴（按岗位） risc-v 生态的实习计划：每年开放 2000+ 实习名额，招募 1000+ 人次学生。对你 infra/芯片线的意义是——它是“能真进项目”的通道，不是纯课程 全国 大二 3–6 月">
+<div class="cardhead"><button class="star big" data-name="甲辰计划实习生" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">甲辰计划实习生</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">Linux 内核</span><span class="cap">RISC-V</span><span class="cap">系统开发</span></div>
+<div class="meta"><span class="cp tC">性价比 1.6</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>7</b>/10（简历 3 · 能力 3 · 现金 1）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年滚动开放</dd><dt>奖金 / 报酬</dt><dd>实习津贴（按岗位）</dd>
 <dt>对你的价值</dt><dd class="long">RISC-V 生态的实习计划：每年开放 2000+ 实习名额，招募 1000+ 人次学生。对你 Infra/芯片线的意义是——它是“能真进项目”的通道，不是纯课程</dd><dt>自学门槛</dt><dd>3–6 个月｜C/C++/Rust + Linux 基础</dd>
 <dt>入口 / 怎么报名</dt><dd>github.com/rv2036/weloveinterns（岗位清单在仓库里）</dd><dt>风险与代价</dt><dd>需要匹配到具体岗位；远程居多，沟通成本高</dd>
-<dt>什么时候做</dt><dd>大二，有一生一芯或 OS 基础后</dd></dl></article><article class="card" id="c30" data-name="开源操作系统训练营（opencamp）" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="开源操作系统训练营（opencamp） 每年多期，滚动开放 免费 门槛低的 os 入门训练营，正好配合“系统能力大赛-os 赛道”做准备。它的价值是**把“学操作系统”从课程变成有产出的事** 全国 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="开源操作系统训练营（opencamp）" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">开源操作系统训练营（opencamp）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，有一生一芯或 OS 基础后</dd></dl></article><article class="card" id="c30" data-name="开源操作系统训练营（opencamp）" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="1–3 月" data-text="开源操作系统训练营（opencamp） 系统与底层 os 内核 · rust/c 系统编程 每年多期，滚动开放 免费 门槛低的 os 入门训练营，正好配合“系统能力大赛-os 赛道”做准备。它的价值是**把“学操作系统”从课程变成有产出的事** 全国 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="开源操作系统训练营（opencamp）" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">开源操作系统训练营（opencamp）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">OS 内核</span><span class="cap">Rust/C 系统编程</span></div>
+<div class="meta"><span class="cp tC">性价比 2.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 2 · 能力 3 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年多期，滚动开放</dd><dt>奖金 / 报酬</dt><dd>免费</dd>
 <dt>对你的价值</dt><dd class="long">门槛低的 OS 入门训练营，正好配合“系统能力大赛-OS 赛道”做准备。它的价值是**把“学操作系统”从课程变成有产出的事**</dd><dt>自学门槛</dt><dd>1–3 个月｜Rust 或 C + 操作系统基础</dd>
 <dt>入口 / 怎么报名</dt><dd>opencamp.cn 报名</dd><dt>风险与代价</dt><dd>以课程+作业为主，产出不如 OSPP 的项目</dd>
-<dt>什么时候做</dt><dd>大一下，作为 OS 方向的第一步</dd></dl></article><article class="card" id="c31" data-name="腾讯犀牛鸟开源人才培养计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="腾讯犀牛鸟开源人才培养计划 每年一期（约 7 月截止） 奖金 + 实习机会 腾讯开源项目 + 导师带做，属于 ospp 同类的开源人才培养计划。相比 ospp，它更偏“企业项目实践”，且腾讯的实习通道价值明确 全国 大二 3–6 月">
-<div class="cardhead"><button class="star big" data-name="腾讯犀牛鸟开源人才培养计划" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">腾讯犀牛鸟开源人才培养计划</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大一下，作为 OS 方向的第一步</dd></dl></article><article class="card" id="c31" data-name="腾讯犀牛鸟开源人才培养计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-text="腾讯犀牛鸟开源人才培养计划 系统与底层 开源协作 · 企业级项目 每年一期（约 7 月截止） 奖金 + 实习机会 腾讯开源项目 + 导师带做，属于 ospp 同类的开源人才培养计划。相比 ospp，它更偏“企业项目实践”，且腾讯的实习通道价值明确 全国 大二 3–6 月">
+<div class="cardhead"><button class="star big" data-name="腾讯犀牛鸟开源人才培养计划" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">腾讯犀牛鸟开源人才培养计划</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">开源协作</span><span class="cap">企业级项目</span></div>
+<div class="meta"><span class="cp tD">性价比 1.3</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 3 · 能力 2 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>每年一期（约 7 月截止）</dd><dt>奖金 / 报酬</dt><dd>奖金 + 实习机会</dd>
 <dt>对你的价值</dt><dd class="long">腾讯开源项目 + 导师带做，属于 OSPP 同类的开源人才培养计划。相比 OSPP，它更偏“企业项目实践”，且腾讯的实习通道价值明确</dd><dt>自学门槛</dt><dd>3–6 个月｜能读代码 + 会用 Git</dd>
 <dt>入口 / 怎么报名</dt><dd>opensource.tencent.com/summer-of-code</dd><dt>风险与代价</dt><dd>竞争、名额有限；项目偏腾讯自家生态</dd>
-<dt>什么时候做</dt><dd>大二，与 OSPP 二选一或错开</dd></dl></article><article class="card" id="c32" data-name="LFX Mentorship（Linux 基金会）" data-typ="训练营" data-pri="P2" data-reg="国际" data-st="大二" data-cost="6–12 月" data-text="lfx mentorship（linux 基金会） 每年 3 期（春/夏/秋） 有 stipend（约 $3000–6600 / 期，视项目） linux foundation 旗下项目的导师制实习，国际认可度高。云计算/内核/容器方向的项目很多，对你 infra 线对口 国际 大二 6–12 月">
-<div class="cardhead"><button class="star big" data-name="LFX Mentorship（Linux 基金会）" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r国际">国际</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">LFX Mentorship（Linux 基金会）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，与 OSPP 二选一或错开</dd></dl></article><article class="card" id="c32" data-name="LFX Mentorship（Linux 基金会）" data-typ="训练营" data-pri="P2" data-reg="国际" data-dir="系统与底层" data-st="大二" data-cost="6–12 月" data-text="lfx mentorship（linux 基金会） 系统与底层 linux 内核 · 云原生 · 分布式系统 每年 3 期（春/夏/秋） 有 stipend（约 $3000–6600 / 期，视项目） linux foundation 旗下项目的导师制实习，国际认可度高。云计算/内核/容器方向的项目很多，对你 infra 线对口 国际 大二 6–12 月">
+<div class="cardhead"><button class="star big" data-name="LFX Mentorship（Linux 基金会）" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r国际">国际</span><span class="dir d系统">系统与底层</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">LFX Mentorship（Linux 基金会）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">Linux 内核</span><span class="cap">云原生</span><span class="cap">分布式系统</span></div>
+<div class="meta"><span class="cp tD">性价比 1.0</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>9</b>/10（简历 4 · 能力 3 · 现金 2）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>每年 3 期（春/夏/秋）</dd><dt>奖金 / 报酬</dt><dd>有 stipend（约 $3000–6600 / 期，视项目）</dd>
 <dt>对你的价值</dt><dd class="long">Linux Foundation 旗下项目的导师制实习，国际认可度高。云计算/内核/容器方向的项目很多，对你 Infra 线对口</dd><dt>自学门槛</dt><dd>6 个月+｜英文 + Linux + 至少一门系统语言</dd>
 <dt>入口 / 怎么报名</dt><dd>lfx.linuxfoundation.org 申请</dd><dt>风险与代价</dt><dd>全英文、竞争激烈；时差沟通</dd>
-<dt>什么时候做</dt><dd>大二下～大三，英文过关后</dd></dl></article><article class="card" id="c33" data-name="天池 / DataFountain / 和鲸" data-typ="比赛" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="3–6 月" data-text="天池 / datafountain / 和鲸 全年滚动 有奖金（各平台不同） 国内数据竞赛的三大平台，生态多、赛题密。相比 kaggle，它们的中文语境和国内企业赛题更贴近国内求职 全国 大一下 3–6 月">
-<div class="cardhead"><button class="star big" data-name="天池 / DataFountain / 和鲸" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle">天池 / DataFountain / 和鲸</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二下～大三，英文过关后</dd></dl></article><article class="card" id="c33" data-name="天池 / DataFountain / 和鲸" data-typ="比赛" data-pri="P2" data-reg="全国" data-dir="AI / 机器学习" data-st="大一下" data-cost="3–6 月" data-text="天池 / datafountain / 和鲸 ai / 机器学习 数据建模 · 特征工程 全年滚动 有奖金（各平台不同） 国内数据竞赛的三大平台，生态多、赛题密。相比 kaggle，它们的中文语境和国内企业赛题更贴近国内求职 全国 大一下 3–6 月">
+<div class="cardhead"><button class="star big" data-name="天池 / DataFountain / 和鲸" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir dAI">AI / 机器学习</span><span class="stg">大一下</span><span class="cst">3–6 月</span><h2 class="cardtitle">天池 / DataFountain / 和鲸</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">数据建模</span><span class="cap">特征工程</span></div>
+<div class="meta"><span class="cp tD">性价比 1.1</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 2 · 能力 2 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>全年滚动</dd><dt>奖金 / 报酬</dt><dd>有奖金（各平台不同）</dd>
 <dt>对你的价值</dt><dd class="long">国内数据竞赛的三大平台，生态多、赛题密。相比 Kaggle，它们的中文语境和国内企业赛题更贴近国内求职</dd><dt>自学门槛</dt><dd>3–6 个月｜sklearn/PyTorch + 特征工程</dd>
 <dt>入口 / 怎么报名</dt><dd>tianchi.aliyun.com / datafountain.cn / heywhale.com</dd><dt>风险与代价</dt><dd>赛题质量参差，需要自己挑</dd>
-<dt>什么时候做</dt><dd>大二，作为 Kaggle 的国内替代</dd></dl></article><article class="card" id="c34" data-name="KDD Cup" data-typ="比赛" data-pri="P2" data-reg="国际" data-st="大三" data-cost="6–12 月" data-text="kdd cup 每年一届（通常 3–8 月） 有奖金 国际顶级数据挖掘竞赛，学术与工业双认可。比 kaggle 更难、更偏研究，获奖对“研究员”路线的信号价值高于普通 kaggle 赛 国际 大三 6–12 月">
-<div class="cardhead"><button class="star big" data-name="KDD Cup" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r国际">国际</span><span class="stg">大三</span><span class="cst">6–12 月</span><h2 class="cardtitle">KDD Cup</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，作为 Kaggle 的国内替代</dd></dl></article><article class="card" id="c34" data-name="KDD Cup" data-typ="比赛" data-pri="P2" data-reg="国际" data-dir="AI / 机器学习" data-st="大三" data-cost="6–12 月" data-text="kdd cup ai / 机器学习 数据挖掘 · 研究级建模 · 论文级实验 每年一届（通常 3–8 月） 有奖金 国际顶级数据挖掘竞赛，学术与工业双认可。比 kaggle 更难、更偏研究，获奖对“研究员”路线的信号价值高于普通 kaggle 赛 国际 大三 6–12 月">
+<div class="cardhead"><button class="star big" data-name="KDD Cup" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r国际">国际</span><span class="dir dAI">AI / 机器学习</span><span class="stg">大三</span><span class="cst">6–12 月</span><h2 class="cardtitle">KDD Cup</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">数据挖掘</span><span class="cap">研究级建模</span><span class="cap">论文级实验</span></div>
+<div class="meta"><span class="cp tE">性价比 0.7</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 3 · 能力 3 · 现金 0）</span><span class="mi tier tE">E 长期</span><span class="mi use">是决定上限的东西，不是性价比问题——按主线规划单独排</span></div>
 <dl><dt>时间</dt><dd>每年一届（通常 3–8 月）</dd><dt>奖金 / 报酬</dt><dd>有奖金</dd>
 <dt>对你的价值</dt><dd class="long">国际顶级数据挖掘竞赛，学术与工业双认可。比 Kaggle 更难、更偏研究，获奖对“研究员”路线的信号价值高于普通 Kaggle 赛</dd><dt>自学门槛</dt><dd>6 个月+|ML 理论 + 工程 + 英文论文能力</dd>
 <dt>入口 / 怎么报名</dt><dd>kdd.org/kdd-cup</dd><dt>风险与代价</dt><dd>门槛高，需要团队；对本科生偏难</dd>
-<dt>什么时候做</dt><dd>大二下～大三，有 ML 基础后</dd></dl></article><article class="card" id="c35" data-name="嵌入式芯片与系统设计竞赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-st="大二" data-cost="6–12 月" data-text="嵌入式芯片与系统设计竞赛 应用赛道 3–8 月 / ic 设计 7–12 月 / fpga 8–12 月 有奖金 嵌入式、fpga、ic 设计三条赛道，是“芯片”方向除了集创赛之外的另一条本科可参与路径 全国 大二 6–12 月">
-<div class="cardhead"><button class="star big" data-name="嵌入式芯片与系统设计竞赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">嵌入式芯片与系统设计竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二下～大三，有 ML 基础后</dd></dl></article><article class="card" id="c35" data-name="嵌入式芯片与系统设计竞赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-dir="硬件与芯片" data-st="大二" data-cost="6–12 月" data-text="嵌入式芯片与系统设计竞赛 硬件与芯片 fpga · 嵌入式 · ic 设计 应用赛道 3–8 月 / ic 设计 7–12 月 / fpga 8–12 月 有奖金 嵌入式、fpga、ic 设计三条赛道，是“芯片”方向除了集创赛之外的另一条本科可参与路径 全国 大二 6–12 月">
+<div class="cardhead"><button class="star big" data-name="嵌入式芯片与系统设计竞赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d硬件">硬件与芯片</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">嵌入式芯片与系统设计竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">FPGA</span><span class="cap">嵌入式</span><span class="cap">IC 设计</span></div>
+<div class="meta"><span class="cp tE">性价比 0.7</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 2 · 能力 3 · 现金 1）</span><span class="mi tier tE">E 长期</span><span class="mi use">是决定上限的东西，不是性价比问题——按主线规划单独排</span></div>
 <dl><dt>时间</dt><dd>应用赛道 3–8 月 / IC 设计 7–12 月 / FPGA 8–12 月</dd><dt>奖金 / 报酬</dt><dd>有奖金</dd>
 <dt>对你的价值</dt><dd class="long">嵌入式、FPGA、IC 设计三条赛道，是“芯片”方向除了集创赛之外的另一条本科可参与路径</dd><dt>自学门槛</dt><dd>6 个月+｜数电 + FPGA/Verilog + 嵌入式</dd>
 <dt>入口 / 怎么报名</dt><dd>socchina.net</dd><dt>风险与代价</dt><dd>跨行但仍在理工科内；设备依赖</dd>
-<dt>什么时候做</dt><dd>大二，若走芯片方向</dd></dl></article><article class="card" id="c36" data-name="开放原子开源大赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="开放原子开源大赛 不定期（生态多） 有奖金 开放原子基金会主办的开源赛，赛道覆盖操作系统、数据库、编译器——与你的 infra 主线吻合，且知道的人少 全国 大二 3–6 月">
-<div class="cardhead"><button class="star big" data-name="开放原子开源大赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">开放原子开源大赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，若走芯片方向</dd></dl></article><article class="card" id="c36" data-name="开放原子开源大赛" data-typ="比赛" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-text="开放原子开源大赛 系统与底层 os · 数据库 · 编译器 不定期（生态多） 有奖金 开放原子基金会主办的开源赛，赛道覆盖操作系统、数据库、编译器——与你的 infra 主线吻合，且知道的人少 全国 大二 3–6 月">
+<div class="cardhead"><button class="star big" data-name="开放原子开源大赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">开放原子开源大赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">OS</span><span class="cap">数据库</span><span class="cap">编译器</span></div>
+<div class="meta"><span class="cp tD">性价比 1.3</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 2 · 能力 3 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>不定期（生态多）</dd><dt>奖金 / 报酬</dt><dd>有奖金</dd>
 <dt>对你的价值</dt><dd class="long">开放原子基金会主办的开源赛，赛道覆盖操作系统、数据库、编译器——与你的 Infra 主线吻合，且知道的人少</dd><dt>自学门槛</dt><dd>3–6 个月｜开源协作 + 项目代码</dd>
 <dt>入口 / 怎么报名</dt><dd>competition.atomgit.com</dd><dt>风险与代价</dt><dd>赛程不固定，需要盯公告</dd>
-<dt>什么时候做</dt><dd>大二，作为 OSPP 之外的补充</dd></dl></article><article class="card" id="c37" data-name="CCF CCSP（大学生计算机系统与程序设计竞赛）" data-typ="比赛" data-pri="P0" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="ccf ccsp（大学生计算机系统与程序设计竞赛） 每年 10 月（2026：10/21，成都西华大学；报名 9/9–10/11） 前 15 名现金或等额物质奖励；金银铜奖证书（获奖率约前 60%，不超 300 人） **唯一同时考“编程能力 + 计算机系统能力”的机考**：5 题 500 分，一整天。真正的价值在于它的入场券——**必须用 csp 认证 ≥200 分的成绩才能报名**。这把你表里的「ccf csp」和它连成一条链：**csp → ccsp → 简历/保研**。知道这条链的人非常少 全国 大二 3–6 月">
-<div class="cardhead"><button class="star big" data-name="CCF CCSP（大学生计算机系统与程序设计竞赛）" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle hot">CCF CCSP（大学生计算机系统与程序设计竞赛）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，作为 OSPP 之外的补充</dd></dl></article><article class="card" id="c37" data-name="CCF CCSP（大学生计算机系统与程序设计竞赛）" data-typ="比赛" data-pri="P0" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-text="ccf ccsp（大学生计算机系统与程序设计竞赛） 系统与底层 系统能力 · 编程能力 · 性能分析 每年 10 月（2026：10/21，成都西华大学；报名 9/9–10/11） 前 15 名现金或等额物质奖励；金银铜奖证书（获奖率约前 60%，不超 300 人） **唯一同时考“编程能力 + 计算机系统能力”的机考**：5 题 500 分，一整天。真正的价值在于它的入场券——**必须用 csp 认证 ≥200 分的成绩才能报名**。这把你表里的「ccf csp」和它连成一条链：**csp → ccsp → 简历/保研**。知道这条链的人非常少 全国 大二 3–6 月">
+<div class="cardhead"><button class="star big" data-name="CCF CCSP（大学生计算机系统与程序设计竞赛）" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t比赛">比赛</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle hot">CCF CCSP（大学生计算机系统与程序设计竞赛）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">系统能力</span><span class="cap">编程能力</span><span class="cap">性能分析</span></div>
+<div class="meta"><span class="cp tC">性价比 1.6</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>7</b>/10（简历 4 · 能力 3 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年 10 月（2026：10/21，成都西华大学；报名 9/9–10/11）</dd><dt>奖金 / 报酬</dt><dd>前 15 名现金或等额物质奖励；金银铜奖证书（获奖率约前 60%，不超 300 人）</dd>
 <dt>对你的价值</dt><dd class="long">**唯一同时考“编程能力 + 计算机系统能力”的机考**：5 题 500 分，一整天。真正的价值在于它的入场券——**必须用 CSP 认证 ≥200 分的成绩才能报名**。这把你表里的「CCF CSP」和它连成一条链：**CSP → CCSP → 简历/保研**。知道这条链的人非常少</dd><dt>自学门槛</dt><dd>3–6 个月｜算法 + 系统（OS/体系结构）双修</dd>
 <dt>入口 / 怎么报名</dt><dd>ccf.org.cn/ccsp；按第 37–43 次 CSP 最好成绩 + 分数高低 + 报名顺序录取</dd><dt>风险与代价</dt><dd>名额有限、先到先得，要早报；12 小时机考，体力和专注度是硬门槛</dd>
-<dt>什么时候做</dt><dd>大二。先用大一把 CSP 考到 200+</dd></dl></article><article class="card" id="c38" data-name="湖南省大学生计算机程序设计竞赛" data-typ="比赛" data-pri="P1" data-reg="湖南" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生计算机程序设计竞赛 每年一届（第 22 届为 2026）；校赛选拔 → 省赛 证书为主 省级算法赛，获奖率高，是 acm 的跳板。**校级选拔是唯一入口**，所以真正的动作是盯学院的校赛通知，不是盯省赛官网 湖南 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="湖南省大学生计算机程序设计竞赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生计算机程序设计竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二。先用大一把 CSP 考到 200+</dd></dl></article><article class="card" id="c38" data-name="湖南省大学生计算机程序设计竞赛" data-typ="比赛" data-pri="P1" data-reg="湖南" data-dir="算法" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生计算机程序设计竞赛 算法 算法设计 · 编码速度 每年一届（第 22 届为 2026）；校赛选拔 → 省赛 证书为主 省级算法赛，获奖率高，是 acm 的跳板。**校级选拔是唯一入口**，所以真正的动作是盯学院的校赛通知，不是盯省赛官网 湖南 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="湖南省大学生计算机程序设计竞赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="dir d算法">算法</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生计算机程序设计竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">算法设计</span><span class="cap">编码速度</span></div>
+<div class="meta"><span class="cp tC">性价比 2.0</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>4</b>/10（简历 2 · 能力 2 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年一届（第 22 届为 2026）；校赛选拔 → 省赛</dd><dt>奖金 / 报酬</dt><dd>证书为主</dd>
 <dt>对你的价值</dt><dd class="long">省级算法赛，获奖率高，是 ACM 的跳板。**校级选拔是唯一入口**，所以真正的动作是盯学院的校赛通知，不是盯省赛官网</dd><dt>自学门槛</dt><dd>1–3 个月｜算法基础</dd>
 <dt>入口 / 怎么报名</dt><dd>学院/教务处组织校赛，校内选拔后代表学校参赛</dd><dt>风险与代价</dt><dd>含金量低于 ACM；名额受学校限制</dd>
-<dt>什么时候做</dt><dd>大一下，拿第一块省级奖牌</dd></dl></article><article class="card" id="c39" data-name="湖南省大学生计算机创新作品赛" data-typ="比赛" data-pri="P2" data-reg="湖南" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生计算机创新作品赛 每年（“海峡两岸暨港澳地区大学生计算机创新作品赛”湖南省赛） 证书为主 作品赛，可提交技术作品。省级平台，门槛低于国赛 湖南 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="湖南省大学生计算机创新作品赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生计算机创新作品赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大一下，拿第一块省级奖牌</dd></dl></article><article class="card" id="c39" data-name="湖南省大学生计算机创新作品赛" data-typ="比赛" data-pri="P2" data-reg="湖南" data-dir="应用与产品" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生计算机创新作品赛 应用与产品 作品开发 · 演示设计 每年（“海峡两岸暨港澳地区大学生计算机创新作品赛”湖南省赛） 证书为主 作品赛，可提交技术作品。省级平台，门槛低于国赛 湖南 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="湖南省大学生计算机创新作品赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="dir d应用">应用与产品</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生计算机创新作品赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">作品开发</span><span class="cap">演示设计</span></div>
+<div class="meta"><span class="cp tD">性价比 1.0</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>2</b>/10（简历 1 · 能力 1 · 现金 0）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>每年（“海峡两岸暨港澳地区大学生计算机创新作品赛”湖南省赛）</dd><dt>奖金 / 报酬</dt><dd>证书为主</dd>
 <dt>对你的价值</dt><dd class="long">作品赛，可提交技术作品。省级平台，门槛低于国赛</dd><dt>自学门槛</dt><dd>1–3 个月｜能做出一个可演示的作品</dd>
 <dt>入口 / 怎么报名</dt><dd>学院组织报名</dd><dt>风险与代价</dt><dd>作品赛在 AI 时代贬值明显（demo 可被 AI 生成大半）</dd>
-<dt>什么时候做</dt><dd>可选，时间宽裕时做</dd></dl></article><article class="card" id="c40" data-name="湖南省大学生数学建模竞赛" data-typ="比赛" data-pri="P1" data-reg="湖南" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生数学建模竞赛 每年 5–6 月（国赛在 9 月） 证书为主 数模国赛的免费预演，同一套准备。省级获奖概率高，可作为第一块“建模”奖牌 湖南 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="湖南省大学生数学建模竞赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生数学建模竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>可选，时间宽裕时做</dd></dl></article><article class="card" id="c40" data-name="湖南省大学生数学建模竞赛" data-typ="比赛" data-pri="P1" data-reg="湖南" data-dir="数学基础" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生数学建模竞赛 数学基础 建模 · 论文写作 每年 5–6 月（国赛在 9 月） 证书为主 数模国赛的免费预演，同一套准备。省级获奖概率高，可作为第一块“建模”奖牌 湖南 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="湖南省大学生数学建模竞赛" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="dir d数学">数学基础</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生数学建模竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">建模</span><span class="cap">论文写作</span></div>
+<div class="meta"><span class="cp tC">性价比 1.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>3</b>/10（简历 2 · 能力 1 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年 5–6 月（国赛在 9 月）</dd><dt>奖金 / 报酬</dt><dd>证书为主</dd>
 <dt>对你的价值</dt><dd class="long">数模国赛的免费预演，同一套准备。省级获奖概率高，可作为第一块“建模”奖牌</dd><dt>自学门槛</dt><dd>1–2 个月｜与国赛共用</dd>
 <dt>入口 / 怎么报名</dt><dd>学院统一组织报名</dd><dt>风险与代价</dt><dd>同数模，贬值双峰：省级奖基本归零</dd>
-<dt>什么时候做</dt><dd>大一下～大二，和国赛一起准备</dd></dl></article><article class="card" id="c41" data-name="中国机器人及人工智能大赛（湖南省赛区）" data-typ="比赛" data-pri="P2" data-reg="湖南" data-st="大二" data-cost="6–12 月" data-text="中国机器人及人工智能大赛（湖南省赛区） 每年，省赛 → 国赛 证书 + 国赛资格 湖南大学有参赛记录（机械院有获奖）。省赛是进国赛的通道，且对具身智能方向是正资产 湖南 大二 6–12 月">
-<div class="cardhead"><button class="star big" data-name="中国机器人及人工智能大赛（湖南省赛区）" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">中国机器人及人工智能大赛（湖南省赛区）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大一下～大二，和国赛一起准备</dd></dl></article><article class="card" id="c41" data-name="中国机器人及人工智能大赛（湖南省赛区）" data-typ="比赛" data-pri="P2" data-reg="湖南" data-dir="机器人与具身" data-st="大二" data-cost="6–12 月" data-text="中国机器人及人工智能大赛（湖南省赛区） 机器人与具身 机器人系统 · 控制 · 感知 每年，省赛 → 国赛 证书 + 国赛资格 湖南大学有参赛记录（机械院有获奖）。省赛是进国赛的通道，且对具身智能方向是正资产 湖南 大二 6–12 月">
+<div class="cardhead"><button class="star big" data-name="中国机器人及人工智能大赛（湖南省赛区）" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="dir d机器人">机器人与具身</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">中国机器人及人工智能大赛（湖南省赛区）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">机器人系统</span><span class="cap">控制</span><span class="cap">感知</span></div>
+<div class="meta"><span class="cp tE">性价比 0.6</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 2 · 能力 2 · 现金 1）</span><span class="mi tier tE">E 长期</span><span class="mi use">是决定上限的东西，不是性价比问题——按主线规划单独排</span></div>
 <dl><dt>时间</dt><dd>每年，省赛 → 国赛</dd><dt>奖金 / 报酬</dt><dd>证书 + 国赛资格</dd>
 <dt>对你的价值</dt><dd class="long">湖南大学有参赛记录（机械院有获奖）。省赛是进国赛的通道，且对具身智能方向是正资产</dd><dt>自学门槛</dt><dd>3–6 个月｜机器人/控制/视觉基础</dd>
 <dt>入口 / 怎么报名</dt><dd>学院组队 + 指导老师，省赛由省赛区组委会组织</dd><dt>风险与代价</dt><dd>需要实体设备与场地；周期长</dd>
-<dt>什么时候做</dt><dd>大二，和 RoboCup 二选一</dd></dl></article><article class="card" id="c42" data-name="湖南省大学生物联网应用创新设计竞赛" data-typ="比赛" data-pri="P2" data-reg="湖南" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生物联网应用创新设计竞赛 每年（a 类清单内） 证书为主 省属 a 类清单赛事，省级平台。技术深度一般，但省级认可度稳定 湖南 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="湖南省大学生物联网应用创新设计竞赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生物联网应用创新设计竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二，和 RoboCup 二选一</dd></dl></article><article class="card" id="c42" data-name="湖南省大学生物联网应用创新设计竞赛" data-typ="比赛" data-pri="P2" data-reg="湖南" data-dir="应用与产品" data-st="大一下" data-cost="1–3 月" data-text="湖南省大学生物联网应用创新设计竞赛 应用与产品 嵌入式开发 · 系统集成 每年（a 类清单内） 证书为主 省属 a 类清单赛事，省级平台。技术深度一般，但省级认可度稳定 湖南 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="湖南省大学生物联网应用创新设计竞赛" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t比赛">比赛</span><span class="reg r湖南">湖南</span><span class="dir d应用">应用与产品</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">湖南省大学生物联网应用创新设计竞赛</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">嵌入式开发</span><span class="cap">系统集成</span></div>
+<div class="meta"><span class="cp tC">性价比 1.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>3</b>/10（简历 1 · 能力 2 · 现金 0）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>每年（A 类清单内）</dd><dt>奖金 / 报酬</dt><dd>证书为主</dd>
 <dt>对你的价值</dt><dd class="long">省属 A 类清单赛事，省级平台。技术深度一般，但省级认可度稳定</dd><dt>自学门槛</dt><dd>1–3 个月</dd>
 <dt>入口 / 怎么报名</dt><dd>学院组织报名</dd><dt>风险与代价</dt><dd>与训练/Infra 主线距较远</dd>
-<dt>什么时候做</dt><dd>可选</dd></dl></article><article class="card" id="c43" data-name="openEuler 开源实习" data-typ="训练营" data-pri="P0" data-reg="全国" data-st="大一上" data-cost="1–3 月" data-text="openeuler 开源实习 随时报名；签 6 个月劳务合同，按积分结算 **积分制阶梯发放：10 分 ¥500 / 20 分 ¥1,000 / 30 分 ¥1,500 / 45 分 ¥2,750 / 60 分 ¥4,000 / 80 分 ¥6,000 / 100 分 ¥8,000**；6 个月内满 60 分可开实习证明 **大一现在就能开始的“开源版兼职”。**无专业、年级限制，随时报名；积分制意味着你可以从最小的任务做起——先拿 ¥500 再往上爬，不需要一次性完成一个完整项目。任务全在 linux / 云原生 / os 方向，和你 infra 主线直接对口 全国 大一上 1–3 月">
-<div class="cardhead"><button class="star big" data-name="openEuler 开源实习" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大一上</span><span class="cst">1–3 月</span><h2 class="cardtitle hot">openEuler 开源实习</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>可选</dd></dl></article><article class="card" id="c43" data-name="openEuler 开源实习" data-typ="训练营" data-pri="P0" data-reg="全国" data-dir="系统与底层" data-st="大一上" data-cost="1–3 月" data-text="openeuler 开源实习 系统与底层 linux 内核 · 云原生 · 开源协作 随时报名；签 6 个月劳务合同，按积分结算 **积分制阶梯发放：10 分 ¥500 / 20 分 ¥1,000 / 30 分 ¥1,500 / 45 分 ¥2,750 / 60 分 ¥4,000 / 80 分 ¥6,000 / 100 分 ¥8,000**；6 个月内满 60 分可开实习证明 **大一现在就能开始的“开源版兼职”。**无专业、年级限制，随时报名；积分制意味着你可以从最小的任务做起——先拿 ¥500 再往上爬，不需要一次性完成一个完整项目。任务全在 linux / 云原生 / os 方向，和你 infra 主线直接对口 全国 大一上 1–3 月">
+<div class="cardhead"><button class="star big" data-name="openEuler 开源实习" title="标记为重点">☆</button><span class="pill pP0">P0</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大一上</span><span class="cst">1–3 月</span><h2 class="cardtitle hot">openEuler 开源实习</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">Linux 内核</span><span class="cap">云原生</span><span class="cap">开源协作</span></div>
+<div class="meta"><span class="cp tB">性价比 4.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>9</b>/10（简历 4 · 能力 3 · 现金 2）</span><span class="mi tier tB">B 高</span><span class="mi use">整块时间优先投这里：单位投入回报最高的一批</span></div>
 <dl><dt>时间</dt><dd>随时报名；签 6 个月劳务合同，按积分结算</dd><dt>奖金 / 报酬</dt><dd>**积分制阶梯发放：10 分 ¥500 / 20 分 ¥1,000 / 30 分 ¥1,500 / 45 分 ¥2,750 / 60 分 ¥4,000 / 80 分 ¥6,000 / 100 分 ¥8,000**；6 个月内满 60 分可开实习证明</dd>
 <dt>对你的价值</dt><dd class="long">**大一现在就能开始的“开源版兼职”。**无专业、年级限制，随时报名；积分制意味着你可以从最小的任务做起——先拿 ¥500 再往上爬，不需要一次性完成一个完整项目。任务全在 Linux / 云原生 / OS 方向，和你 Infra 主线直接对口</dd><dt>自学门槛</dt><dd>0–3 个月｜会 Git + 一门系统语言（C / Rust / Python）就能认领第一个任务</dd>
 <dt>入口 / 怎么报名</dt><dd>openeuler.openatom.cn/zh/internship/；在 AtomGit 找 Issue，评论 /intern-assign 认领，再发邮件给导师审核（附简历 + 开发方案）</dd><dt>风险与代价</dt><dd>每人同时最多认领 2 个任务；每个任务只能一人认领，好任务抢得快；6 个月内不满 60 分拿不到实习证明</dd>
-<dt>什么时候做</dt><dd>**现在**。本周就能注册并认领第一个任务</dd></dl></article><article class="card" id="c44" data-name="openKylin 源动力实习生计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大一下" data-cost="1–3 月" data-text="openkylin 源动力实习生计划 滚动开放 现金激励（按任务结算） 国产桌面操作系统社区的线上实训 + 现金激励。和 openeuler 同类，但生态更小、任务更少，适合当备选 全国 大一下 1–3 月">
-<div class="cardhead"><button class="star big" data-name="openKylin 源动力实习生计划" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">openKylin 源动力实习生计划</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>**现在**。本周就能注册并认领第一个任务</dd></dl></article><article class="card" id="c44" data-name="openKylin 源动力实习生计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大一下" data-cost="1–3 月" data-text="openkylin 源动力实习生计划 系统与底层 桌面 os · linux 应用开发 滚动开放 现金激励（按任务结算） 国产桌面操作系统社区的线上实训 + 现金激励。和 openeuler 同类，但生态更小、任务更少，适合当备选 全国 大一下 1–3 月">
+<div class="cardhead"><button class="star big" data-name="openKylin 源动力实习生计划" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大一下</span><span class="cst">1–3 月</span><h2 class="cardtitle">openKylin 源动力实习生计划</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">桌面 OS</span><span class="cap">Linux 应用开发</span></div>
+<div class="meta"><span class="cp tC">性价比 2.5</span><span class="mi">投入约 <b>120</b> 小时</span><span class="mi">总分 <b>5</b>/10（简历 2 · 能力 2 · 现金 1）</span><span class="mi tier tC">C 中</span><span class="mi use">值得做，但要接受它是慢功夫</span></div>
 <dl><dt>时间</dt><dd>滚动开放</dd><dt>奖金 / 报酬</dt><dd>现金激励（按任务结算）</dd>
 <dt>对你的价值</dt><dd class="long">国产桌面操作系统社区的线上实训 + 现金激励。和 openEuler 同类，但生态更小、任务更少，适合当备选</dd><dt>自学门槛</dt><dd>0–3 个月｜Linux 基础 + Git</dd>
 <dt>入口 / 怎么报名</dt><dd>openkylin.top 社区公告</dd><dt>风险与代价</dt><dd>任务量明显少于 openEuler，抢任务更靠运气</dd>
-<dt>什么时候做</dt><dd>大一下，作为 openEuler 的备份</dd></dl></article><article class="card" id="c45" data-name="中国科学院“科创计划”（大学生创新实践训练计划）" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大二" data-cost="—" data-text="中国科学院“科创计划”（大学生创新实践训练计划） 每年秋季报名（软件所 2026 年为 10/28 发公告） 项目经费（中科院支持） **中科院系统给本科生开的“进所做课题”通道。**关键在：中科院软件所既是科创计划的主办方，也是 ospp 的主办方——同一批人、同一个单位。这条路走顺了就是：科创计划 → ospp → 保研推荐信 全国 大二 —">
-<div class="cardhead"><button class="star big" data-name="中国科学院“科创计划”（大学生创新实践训练计划）" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">—</span><h2 class="cardtitle">中国科学院“科创计划”（大学生创新实践训练计划）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大一下，作为 openEuler 的备份</dd></dl></article><article class="card" id="c45" data-name="中国科学院“科创计划”（大学生创新实践训练计划）" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="AI / 机器学习" data-st="大二" data-cost="—" data-text="中国科学院“科创计划”（大学生创新实践训练计划） ai / 机器学习 科研训练 · 实验设计 · 按课题定 每年秋季报名（软件所 2026 年为 10/28 发公告） 项目经费（中科院支持） **中科院系统给本科生开的“进所做课题”通道。**关键在：中科院软件所既是科创计划的主办方，也是 ospp 的主办方——同一批人、同一个单位。这条路走顺了就是：科创计划 → ospp → 保研推荐信 全国 大二 —">
+<div class="cardhead"><button class="star big" data-name="中国科学院“科创计划”（大学生创新实践训练计划）" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir dAI">AI / 机器学习</span><span class="stg">大二</span><span class="cst">—</span><h2 class="cardtitle">中国科学院“科创计划”（大学生创新实践训练计划）</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">科研训练</span><span class="cap">实验设计</span><span class="cap">按课题定</span></div>
+<div class="meta"><span class="cp tA">性价比 135.0</span><span class="mi">投入约 <b>4</b> 小时</span><span class="mi">总分 <b>9</b>/10（简历 4 · 能力 4 · 现金 1）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>每年秋季报名（软件所 2026 年为 10/28 发公告）</dd><dt>奖金 / 报酬</dt><dd>项目经费（中科院支持）</dd>
 <dt>对你的价值</dt><dd class="long">**中科院系统给本科生开的“进所做课题”通道。**关键在：中科院软件所既是科创计划的主办方，也是 OSPP 的主办方——同一批人、同一个单位。这条路走顺了就是：科创计划 → OSPP → 保研推荐信</dd><dt>自学门槛</dt><dd>中｜硬门槛是**专业排名前 20%**，且只有大二、大三能报</dd>
 <dt>入口 / 怎么报名</dt><dd>中科院各所研究生部官网公告（软件所 iscas.ac.cn）；需自行联系所里导师</dd><dt>风险与代价</dt><dd>排名前 20% 是硬门槛；需要自己找到接收的导师</dd>
-<dt>什么时候做</dt><dd>大二。现在要做的只有一件事：把 GPA 拉进前 20%</dd></dl></article><article class="card" id="c46" data-name="国家自然科学基金 青年学生基础研究项目" data-typ="训练营" data-pri="P1" data-reg="全国" data-st="大三" data-cost="—" data-text="国家自然科学基金 青年学生基础研究项目 每年（由学校科研管理部门组织申报） 国自然资助（数万元级） **绝大多数本科生不知道本科生能申国自然。**2024 年起国自然试点青年学生基础研究项目，资助对象含本科生。它的真实作用不是那笔钱，是“你本科阶段有过国家级科研项目”这个标签——在保研面试里分量很重 全国 大三 —">
-<div class="cardhead"><button class="star big" data-name="国家自然科学基金 青年学生基础研究项目" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大三</span><span class="cst">—</span><h2 class="cardtitle">国家自然科学基金 青年学生基础研究项目</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二。现在要做的只有一件事：把 GPA 拉进前 20%</dd></dl></article><article class="card" id="c46" data-name="国家自然科学基金 青年学生基础研究项目" data-typ="训练营" data-pri="P1" data-reg="全国" data-dir="通用 / 资源" data-st="大三" data-cost="—" data-text="国家自然科学基金 青年学生基础研究项目 通用 / 资源 科研项目申报 · 学术写作 每年（由学校科研管理部门组织申报） 国自然资助（数万元级） **绝大多数本科生不知道本科生能申国自然。**2024 年起国自然试点青年学生基础研究项目，资助对象含本科生。它的真实作用不是那笔钱，是“你本科阶段有过国家级科研项目”这个标签——在保研面试里分量很重 全国 大三 —">
+<div class="cardhead"><button class="star big" data-name="国家自然科学基金 青年学生基础研究项目" title="标记为重点">☆</button><span class="pill pP1">P1</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d通用">通用 / 资源</span><span class="stg">大三</span><span class="cst">—</span><h2 class="cardtitle">国家自然科学基金 青年学生基础研究项目</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">科研项目申报</span><span class="cap">学术写作</span></div>
+<div class="meta"><span class="cp tA">性价比 90.0</span><span class="mi">投入约 <b>4</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 3 · 能力 2 · 现金 1）</span><span class="mi tier tA">A 捡漏</span><span class="mi use">零碎时间顺手做，几小时换真收益——但别指望它变强</span></div>
 <dl><dt>时间</dt><dd>每年（由学校科研管理部门组织申报）</dd><dt>奖金 / 报酬</dt><dd>国自然资助（数万元级）</dd>
 <dt>对你的价值</dt><dd class="long">**绝大多数本科生不知道本科生能申国自然。**2024 年起国自然试点青年学生基础研究项目，资助对象含本科生。它的真实作用不是那笔钱，是“你本科阶段有过国家级科研项目”这个标签——在保研面试里分量很重</dd><dt>自学门槛</dt><dd>高｜需要依托单位（学校）+ 导师牵头 + 已有研究基础</dd>
 <dt>入口 / 怎么报名</dt><dd>通过学校科研管理部门申报，必须由导师牵头</dd><dt>风险与代价</dt><dd>没有导师和产出基本申不到；本科生命中率低</dd>
-<dt>什么时候做</dt><dd>大二下～大三，跟着组里老师申</dd></dl></article><article class="card" id="c47" data-name="Outreachy" data-typ="训练营" data-pri="P2" data-reg="国际" data-st="大二" data-cost="6–12 月" data-text="outreachy 每年 2 期（约 5 月、12 月开放申请） **$7,000 stipend（约 ¥5 万）** 国际开源实习，stipend 是同类型里最高的。但它的定位偏向“多样性”候选人和已有开源经验者，对大一不友好 国际 大二 6–12 月">
-<div class="cardhead"><button class="star big" data-name="Outreachy" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r国际">国际</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">Outreachy</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二下～大三，跟着组里老师申</dd></dl></article><article class="card" id="c47" data-name="Outreachy" data-typ="训练营" data-pri="P2" data-reg="国际" data-dir="应用与产品" data-st="大二" data-cost="6–12 月" data-text="outreachy 应用与产品 开源协作 · 英文沟通 每年 2 期（约 5 月、12 月开放申请） **$7,000 stipend（约 ¥5 万）** 国际开源实习，stipend 是同类型里最高的。但它的定位偏向“多样性”候选人和已有开源经验者，对大一不友好 国际 大二 6–12 月">
+<div class="cardhead"><button class="star big" data-name="Outreachy" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r国际">国际</span><span class="dir d应用">应用与产品</span><span class="stg">大二</span><span class="cst">6–12 月</span><h2 class="cardtitle">Outreachy</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">开源协作</span><span class="cap">英文沟通</span></div>
+<div class="meta"><span class="cp tD">性价比 0.9</span><span class="mi">投入约 <b>540</b> 小时</span><span class="mi">总分 <b>8</b>/10（简历 4 · 能力 2 · 现金 2）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>每年 2 期（约 5 月、12 月开放申请）</dd><dt>奖金 / 报酬</dt><dd>**$7,000 stipend（约 ¥5 万）**</dd>
 <dt>对你的价值</dt><dd class="long">国际开源实习，stipend 是同类型里最高的。但它的定位偏向“多样性”候选人和已有开源经验者，对大一不友好</dd><dt>自学门槛</dt><dd>高｜英文 + 已有开源贡献记录</dd>
 <dt>入口 / 怎么报名</dt><dd>outreachy.org</dd><dt>风险与代价</dt><dd>竞争激烈；时差沟通成本；需要先有开源履历</dd>
-<dt>什么时候做</dt><dd>大二下以后，先攒一段开源经历再申</dd></dl></article><article class="card" id="c48" data-name="昇腾众智计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-st="大二" data-cost="3–6 月" data-text="昇腾众智计划 滚动开放 悬赏制（按任务结算） 华为昇腾生态的任务悬赏，主要做算子开发、ai 框架适配。和你哥哥的算子方向接壤，也和昇腾训练营互补 全国 大二 3–6 月">
-<div class="cardhead"><button class="star big" data-name="昇腾众智计划" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">昇腾众智计划</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<dt>什么时候做</dt><dd>大二下以后，先攒一段开源经历再申</dd></dl></article><article class="card" id="c48" data-name="昇腾众智计划" data-typ="训练营" data-pri="P2" data-reg="全国" data-dir="系统与底层" data-st="大二" data-cost="3–6 月" data-text="昇腾众智计划 系统与底层 算子开发 · npu 适配 · 框架移植 滚动开放 悬赏制（按任务结算） 华为昇腾生态的任务悬赏，主要做算子开发、ai 框架适配。和你哥哥的算子方向接壤，也和昇腾训练营互补 全国 大二 3–6 月">
+<div class="cardhead"><button class="star big" data-name="昇腾众智计划" title="标记为重点">☆</button><span class="pill pP2">P2</span><span class="tag t训练营">训练营</span><span class="reg r全国">全国</span><span class="dir d系统">系统与底层</span><span class="stg">大二</span><span class="cst">3–6 月</span><h2 class="cardtitle">昇腾众智计划</h2><a class="back" href="#tocTop">↑ 目录</a></div>
+<div class="caps"><span class="cap">算子开发</span><span class="cap">NPU 适配</span><span class="cap">框架移植</span></div>
+<div class="meta"><span class="cp tD">性价比 1.3</span><span class="mi">投入约 <b>270</b> 小时</span><span class="mi">总分 <b>6</b>/10（简历 2 · 能力 3 · 现金 1）</span><span class="mi tier tD">D 偏低</span><span class="mi use">只有确定要走那条线才投；否则时间会被吃掉</span></div>
 <dl><dt>时间</dt><dd>滚动开放</dd><dt>奖金 / 报酬</dt><dd>悬赏制（按任务结算）</dd>
 <dt>对你的价值</dt><dd class="long">华为昇腾生态的任务悬赏，主要做算子开发、AI 框架适配。和你哥哥的算子方向接壤，也和昇腾训练营互补</dd><dt>自学门槛</dt><dd>中｜C++ / Python + 了解 NPU 基本概念</dd>
 <dt>入口 / 怎么报名</dt><dd>hiascend.com 昇腾社区</dd><dt>风险与代价</dt><dd>生态相对封闭，知识迁移性弱于 CUDA</dd>
 <dt>什么时候做</dt><dd>大二，作为国产算力栈的实践</dd></dl></article></main>
+</div>
+<div id="view-cp" class="hide">
+<nav class="toc"><table class="cptable">
+<thead><tr><th style="width:40px">#</th><th style="width:74px">档位</th><th>名称</th><th style="width:100px">主方向</th><th style="width:70px">投入(h)</th><th style="width:80px">简历·能力·现金</th><th style="width:56px">总分</th><th style="width:70px">性价比</th><th style="width:300px">怎么用</th></tr></thead>
+<tbody><tr class="cprow" data-id="c45">
+<td class="rk">1</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">中国科学院“科创计划”（大学生创新实践训练计划）</td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td class="num">4</td><td class="num">4·4·1</td>
+<td class="num b">9</td><td class="num"><span class="cp tA">135.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c46">
+<td class="rk">2</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">国家自然科学基金 青年学生基础研究项目</td><td><span class="dir d通用">通用 / 资源</span></td>
+<td class="num">4</td><td class="num">3·2·1</td>
+<td class="num b">6</td><td class="num"><span class="cp tA">90.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c24">
+<td class="rk">3</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">超算中心机时</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">4</td><td class="num">1·4·0</td>
+<td class="num b">5</td><td class="num"><span class="cp tA">75.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c22">
+<td class="rk">4</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">目标院校夏令营时间线</td><td><span class="dir d通用">通用 / 资源</span></td>
+<td class="num">4</td><td class="num">3·0·0</td>
+<td class="num b">3</td><td class="num"><span class="cp tA">45.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c12">
+<td class="rk">5</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">26 小时 AI 闪电黑客松（各类）</td><td><span class="dir d应用">应用与产品</span></td>
+<td class="num">6</td><td class="num">1·1·2</td>
+<td class="num b">4</td><td class="num"><span class="cp tA">40.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c18">
+<td class="rk">6</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">开源智算训练营 / ParkHack 青年 AI 闪电营</td><td><span class="dir d应用">应用与产品</span></td>
+<td class="num">6</td><td class="num">1·1·2</td>
+<td class="num b">4</td><td class="num"><span class="cp tA">40.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c19">
+<td class="rk">7</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">各类 AI 黑客松（支付宝 PAYATHON 等）</td><td><span class="dir d应用">应用与产品</span></td>
+<td class="num">6</td><td class="num">1·1·2</td>
+<td class="num b">4</td><td class="num"><span class="cp tA">40.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c23">
+<td class="rk">8</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">会议 student volunteer / travel grant</td><td><span class="dir d通用">通用 / 资源</span></td>
+<td class="num">4</td><td class="num">1·1·0</td>
+<td class="num b">2</td><td class="num"><span class="cp tA">30.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c25">
+<td class="rk">9</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">学院内网通知</td><td><span class="dir d通用">通用 / 资源</span></td>
+<td class="num">4</td><td class="num">2·0·0</td>
+<td class="num b">2</td><td class="num"><span class="cp tA">30.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c26">
+<td class="rk">10</td><td><span class="tierTag tA">A 捡漏</span></td>
+<td class="nm">辅导员年级群</td><td><span class="dir d通用">通用 / 资源</span></td>
+<td class="num">4</td><td class="num">2·0·0</td>
+<td class="num b">2</td><td class="num"><span class="cp tA">30.0</span></td>
+<td class="use">零碎时间顺手做，几小时换真收益——但别指望它变强</td></tr><tr class="cprow" data-id="c13">
+<td class="rk">11</td><td><span class="tierTag tB">B 高</span></td>
+<td class="nm">开源之夏 OSPP</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">120</td><td class="num">4·3·2</td>
+<td class="num b">9</td><td class="num"><span class="cp tB">4.5</span></td>
+<td class="use">整块时间优先投这里：单位投入回报最高的一批</td></tr><tr class="cprow" data-id="c43">
+<td class="rk">12</td><td><span class="tierTag tB">B 高</span></td>
+<td class="nm">openEuler 开源实习</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">120</td><td class="num">4·3·2</td>
+<td class="num b">9</td><td class="num"><span class="cp tB">4.5</span></td>
+<td class="use">整块时间优先投这里：单位投入回报最高的一批</td></tr><tr class="cprow" data-id="c20">
+<td class="rk">13</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">CCF CSP 认证</td><td><span class="dir d算法">算法</span></td>
+<td class="num">120</td><td class="num">4·3·0</td>
+<td class="num b">7</td><td class="num"><span class="cp tC">3.5</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c0">
+<td class="rk">14</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">全国大学生数学竞赛</td><td><span class="dir d数学">数学基础</span></td>
+<td class="num">120</td><td class="num">4·2·0</td>
+<td class="num b">6</td><td class="num"><span class="cp tC">3.0</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c15">
+<td class="rk">15</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">InfiniTensor 大模型与人工智能系统训练营</td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td class="num">120</td><td class="num">2·4·0</td>
+<td class="num b">6</td><td class="num"><span class="cp tC">3.0</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c1">
+<td class="rk">16</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">湖南省大学生数学竞赛</td><td><span class="dir d数学">数学基础</span></td>
+<td class="num">120</td><td class="num">3·2·0</td>
+<td class="num b">5</td><td class="num"><span class="cp tC">2.5</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c7">
+<td class="rk">17</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">全国大学生数学建模竞赛</td><td><span class="dir d数学">数学基础</span></td>
+<td class="num">120</td><td class="num">4·1·0</td>
+<td class="num b">5</td><td class="num"><span class="cp tC">2.5</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c16">
+<td class="rk">18</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">昇腾 CANN 训练营</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">120</td><td class="num">2·3·0</td>
+<td class="num b">5</td><td class="num"><span class="cp tC">2.5</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c17">
+<td class="rk">19</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">沐曦 Transformer 实战营</td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td class="num">120</td><td class="num">2·3·0</td>
+<td class="num b">5</td><td class="num"><span class="cp tC">2.5</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c30">
+<td class="rk">20</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">开源操作系统训练营（opencamp）</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">120</td><td class="num">2·3·0</td>
+<td class="num b">5</td><td class="num"><span class="cp tC">2.5</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c44">
+<td class="rk">21</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">openKylin 源动力实习生计划</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">120</td><td class="num">2·2·1</td>
+<td class="num b">5</td><td class="num"><span class="cp tC">2.5</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c21">
+<td class="rk">22</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">PAT 浙大计算机能力测试</td><td><span class="dir d算法">算法</span></td>
+<td class="num">120</td><td class="num">2·2·0</td>
+<td class="num b">4</td><td class="num"><span class="cp tC">2.0</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c38">
+<td class="rk">23</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">湖南省大学生计算机程序设计竞赛</td><td><span class="dir d算法">算法</span></td>
+<td class="num">120</td><td class="num">2·2·0</td>
+<td class="num b">4</td><td class="num"><span class="cp tC">2.0</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c27">
+<td class="rk">24</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">开源项目真实贡献（GitHub）</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">270</td><td class="num">4·3·0</td>
+<td class="num b">7</td><td class="num"><span class="cp tC">1.6</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c28">
+<td class="rk">25</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">一生一芯（ysyx）</td><td><span class="dir d硬件">硬件与芯片</span></td>
+<td class="num">270</td><td class="num">4·3·0</td>
+<td class="num b">7</td><td class="num"><span class="cp tC">1.6</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c29">
+<td class="rk">26</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">甲辰计划实习生</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">270</td><td class="num">3·3·1</td>
+<td class="num b">7</td><td class="num"><span class="cp tC">1.6</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c37">
+<td class="rk">27</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">CCF CCSP（大学生计算机系统与程序设计竞赛）</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">270</td><td class="num">4·3·0</td>
+<td class="num b">7</td><td class="num"><span class="cp tC">1.6</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c40">
+<td class="rk">28</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">湖南省大学生数学建模竞赛</td><td><span class="dir d数学">数学基础</span></td>
+<td class="num">120</td><td class="num">2·1·0</td>
+<td class="num b">3</td><td class="num"><span class="cp tC">1.5</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c42">
+<td class="rk">29</td><td><span class="tierTag tC">C 中</span></td>
+<td class="nm">湖南省大学生物联网应用创新设计竞赛</td><td><span class="dir d应用">应用与产品</span></td>
+<td class="num">120</td><td class="num">1·2·0</td>
+<td class="num b">3</td><td class="num"><span class="cp tC">1.5</span></td>
+<td class="use">值得做，但要接受它是慢功夫</td></tr><tr class="cprow" data-id="c8">
+<td class="rk">30</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">中国高校计算机大赛·大数据挑战赛</td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td class="num">270</td><td class="num">3·2·1</td>
+<td class="num b">6</td><td class="num"><span class="cp tD">1.3</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c11">
+<td class="rk">31</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">Kaggle 竞赛</td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td class="num">270</td><td class="num">3·2·1</td>
+<td class="num b">6</td><td class="num"><span class="cp tD">1.3</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c31">
+<td class="rk">32</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">腾讯犀牛鸟开源人才培养计划</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">270</td><td class="num">3·2·1</td>
+<td class="num b">6</td><td class="num"><span class="cp tD">1.3</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c36">
+<td class="rk">33</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">开放原子开源大赛</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">270</td><td class="num">2·3·1</td>
+<td class="num b">6</td><td class="num"><span class="cp tD">1.3</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c48">
+<td class="rk">34</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">昇腾众智计划</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">270</td><td class="num">2·3·1</td>
+<td class="num b">6</td><td class="num"><span class="cp tD">1.3</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c10">
+<td class="rk">35</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">百度之星程序设计大赛</td><td><span class="dir d算法">算法</span></td>
+<td class="num">270</td><td class="num">2·2·1</td>
+<td class="num b">5</td><td class="num"><span class="cp tD">1.1</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c33">
+<td class="rk">36</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">天池 / DataFountain / 和鲸</td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td class="num">270</td><td class="num">2·2·1</td>
+<td class="num b">5</td><td class="num"><span class="cp tD">1.1</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c4">
+<td class="rk">37</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">ASC 世界大学生超级计算机竞赛</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">540</td><td class="num">4·4·1</td>
+<td class="num b">9</td><td class="num"><span class="cp tD">1.0</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c5">
+<td class="rk">38</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">全国大学生计算机系统能力大赛</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">540</td><td class="num">4·4·1</td>
+<td class="num b">9</td><td class="num"><span class="cp tD">1.0</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c32">
+<td class="rk">39</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">LFX Mentorship（Linux 基金会）</td><td><span class="dir d系统">系统与底层</span></td>
+<td class="num">540</td><td class="num">4·3·2</td>
+<td class="num b">9</td><td class="num"><span class="cp tD">1.0</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c39">
+<td class="rk">40</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">湖南省大学生计算机创新作品赛</td><td><span class="dir d应用">应用与产品</span></td>
+<td class="num">120</td><td class="num">1·1·0</td>
+<td class="num b">2</td><td class="num"><span class="cp tD">1.0</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c14">
+<td class="rk">41</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">Google Summer of Code</td><td><span class="dir d应用">应用与产品</span></td>
+<td class="num">540</td><td class="num">4·2·2</td>
+<td class="num b">8</td><td class="num"><span class="cp tD">0.9</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c47">
+<td class="rk">42</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">Outreachy</td><td><span class="dir d应用">应用与产品</span></td>
+<td class="num">540</td><td class="num">4·2·2</td>
+<td class="num b">8</td><td class="num"><span class="cp tD">0.9</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c3">
+<td class="rk">43</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">中国机器人大赛暨 RoboCup 中国赛</td><td><span class="dir d机器人">机器人与具身</span></td>
+<td class="num">540</td><td class="num">3·3·1</td>
+<td class="num b">7</td><td class="num"><span class="cp tD">0.8</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c9">
+<td class="rk">44</td><td><span class="tierTag tD">D 偏低</span></td>
+<td class="nm">华为软件精英挑战赛</td><td><span class="dir d算法">算法</span></td>
+<td class="num">540</td><td class="num">4·2·1</td>
+<td class="num b">7</td><td class="num"><span class="cp tD">0.8</span></td>
+<td class="use">只有确定要走那条线才投；否则时间会被吃掉</td></tr><tr class="cprow" data-id="c2">
+<td class="rk">45</td><td><span class="tierTag tE">E 长期</span></td>
+<td class="nm">ACM-ICPC</td><td><span class="dir d算法">算法</span></td>
+<td class="num">540</td><td class="num">4·2·0</td>
+<td class="num b">6</td><td class="num"><span class="cp tE">0.7</span></td>
+<td class="use">是决定上限的东西，不是性价比问题——按主线规划单独排</td></tr><tr class="cprow" data-id="c34">
+<td class="rk">46</td><td><span class="tierTag tE">E 长期</span></td>
+<td class="nm">KDD Cup</td><td><span class="dir dAI">AI / 机器学习</span></td>
+<td class="num">540</td><td class="num">3·3·0</td>
+<td class="num b">6</td><td class="num"><span class="cp tE">0.7</span></td>
+<td class="use">是决定上限的东西，不是性价比问题——按主线规划单独排</td></tr><tr class="cprow" data-id="c35">
+<td class="rk">47</td><td><span class="tierTag tE">E 长期</span></td>
+<td class="nm">嵌入式芯片与系统设计竞赛</td><td><span class="dir d硬件">硬件与芯片</span></td>
+<td class="num">540</td><td class="num">2·3·1</td>
+<td class="num b">6</td><td class="num"><span class="cp tE">0.7</span></td>
+<td class="use">是决定上限的东西，不是性价比问题——按主线规划单独排</td></tr><tr class="cprow" data-id="c41">
+<td class="rk">48</td><td><span class="tierTag tE">E 长期</span></td>
+<td class="nm">中国机器人及人工智能大赛（湖南省赛区）</td><td><span class="dir d机器人">机器人与具身</span></td>
+<td class="num">540</td><td class="num">2·2·1</td>
+<td class="num b">5</td><td class="num"><span class="cp tE">0.6</span></td>
+<td class="use">是决定上限的东西，不是性价比问题——按主线规划单独排</td></tr><tr class="cprow" data-id="c6">
+<td class="rk">49</td><td><span class="tierTag tE">E 长期</span></td>
+<td class="nm">全国大学生集成电路创新创业大赛</td><td><span class="dir d硬件">硬件与芯片</span></td>
+<td class="num">800</td><td class="num">3·3·1</td>
+<td class="num b">7</td><td class="num"><span class="cp tE">0.5</span></td>
+<td class="use">是决定上限的东西，不是性价比问题——按主线规划单独排</td></tr></tbody></table></nav>
+<div class="note">
+<b>怎么算的：</b>1 个月 = 每天 2 小时 × 30 天 = 60 小时。总分 = 简历(0–4) + 能力(0–4) + 现金(0–2)，满分 10。性价比 = 总分 ÷ (小时 ÷ 60)，即「每投入 60 小时换多少分」。<br>
+<b>A 档的“4 小时”是增量成本</b>，不含前置条件（排名、产出、身份）。<b>D/E 档不要用性价比衡量</b>——ASC、系统能力大赛总分 9 分却排 37、38，因为它们是长期投入。
+</div>
+</div>
 <script>
 const rows=[...document.querySelectorAll('tr.tocrow')],cards=[...document.querySelectorAll('article.card')];
+const cps=[...document.querySelectorAll('tr.cprow')];
 const q=document.getElementById('q'),cnt=document.getElementById('cnt');
 const fb=document.getElementById('fb'),actbar=document.getElementById('actbar'),tagsEl=document.getElementById('tags');
 const clr=document.getElementById('clear'),tog=document.getElementById('tog');
 const mkt=document.getElementById('mkt'),mkn=document.getElementById('mkn');
-const KIND={typ:'类型',reg:'地区',st:'阶段',cost:'自学',pri:'优先级'};
+const KIND={dir:'方向',typ:'类型',reg:'地区',st:'阶段',cost:'自学',pri:'优先级'};
 const MK='cis_marks_v2';
-let active={typ:new Set(),pri:new Set(),reg:new Set(),st:new Set(),cost:new Set()};
-let marks=new Set();
-try{marks=new Set(JSON.parse(localStorage.getItem(MK)||'[]'))}catch(e){marks=new Set()}
-let onlyMark=false;
+let active={dir:new Set(),typ:new Set(),pri:new Set(),reg:new Set(),st:new Set(),cost:new Set()};
+let marks=new Set(); try{marks=new Set(JSON.parse(localStorage.getItem(MK)||'[]'))}catch(e){}
+let onlyMark=false, view='list';
 function saveMarks(){try{localStorage.setItem(MK,JSON.stringify([...marks]))}catch(e){}}
 function paintMarks(){
-  document.querySelectorAll('.star').forEach(b=>{
-    const on=marks.has(b.dataset.name);
-    b.classList.toggle('on',on); b.textContent=on?'★':'☆';
-    b.setAttribute('aria-pressed',on?'true':'false');
-  });
+  document.querySelectorAll('.star').forEach(b=>{const on=marks.has(b.dataset.name);
+    b.classList.toggle('on',on);b.textContent=on?'★':'☆';});
   rows.forEach(r=>r.classList.toggle('marked',marks.has(r.dataset.name)));
   cards.forEach(c=>c.classList.toggle('marked',marks.has(c.dataset.name)));
-  mkn.textContent=marks.size;
-  mkt.classList.toggle('on',onlyMark);
+  mkn.textContent=marks.size; mkt.classList.toggle('on',onlyMark);
 }
 document.addEventListener('click',e=>{
   const b=e.target.closest('.star'); if(!b) return;
   e.stopPropagation(); e.preventDefault();
-  const n=b.dataset.name;
-  if(marks.has(n)) marks.delete(n); else marks.add(n);
+  const n=b.dataset.name; if(marks.has(n)) marks.delete(n); else marks.add(n);
   saveMarks(); paintMarks(); apply();
 });
 mkt.addEventListener('click',()=>{onlyMark=!onlyMark;paintMarks();apply()});
-if(window.innerWidth>820){fb.classList.add('open');tog.classList.add('open');tog.textContent='筛选 ▴'}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  view=t.dataset.v;
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));
+  document.getElementById('view-list').classList.toggle('hide',view!=='list');
+  document.getElementById('view-cp').classList.toggle('hide',view!=='cp');
+  document.querySelector('.tabs').scrollIntoView({block:'start'});
+  setTimeout(syncH,60);
+}));
+if(window.innerWidth>900){fb.classList.add('open');tog.classList.add('open');tog.textContent='筛选 ▴'}
 tog.addEventListener('click',()=>{fb.classList.toggle('open');const on=fb.classList.contains('open');
  tog.classList.toggle('open',on);tog.textContent=on?'筛选 ▴':'筛选 ▾';syncH()});
 document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
@@ -576,15 +1055,13 @@ clr.addEventListener('click',()=>{
   render();apply();
 });
 function render(){
-  const items=[];
-  ['typ','reg','st','cost','pri'].forEach(k=>active[k].forEach(v=>items.push({k,v})));
+  const items=[]; ['dir','typ','reg','st','cost','pri'].forEach(k=>active[k].forEach(v=>items.push({k,v})));
   clr.style.display=items.length?'inline-block':'none';
   if(!items.length){actbar.style.display='none';tagsEl.innerHTML='';syncH();return}
   actbar.style.display='flex';
   tagsEl.innerHTML=items.map(o=>`<span class="atag"><span class="kind">${KIND[o.k]}</span>${o.v}<button data-k="${o.k}" data-v="${o.v}">×</button></span>`).join('');
   tagsEl.querySelectorAll('button').forEach(b=>b.addEventListener('click',e=>{
-    e.stopPropagation();
-    const k=b.dataset.k,v=b.dataset.v; active[k].delete(v);
+    e.stopPropagation(); const k=b.dataset.k,v=b.dataset.v; active[k].delete(v);
     document.querySelectorAll(`.chip[data-k="${k}"][data-v="${v}"]`).forEach(c=>c.classList.remove('on'));
     render();apply();
   }));
@@ -594,7 +1071,7 @@ function apply(){
   const t=q.value.trim().toLowerCase();let n=0;
   rows.forEach((r,i)=>{
     let good=true;
-    for(const k of ['typ','pri','reg','st','cost']){
+    for(const k of ['dir','typ','pri','reg','st','cost']){
       const s=active[k]; if(s.size && !s.has(r.dataset[k])){good=false;break}
     }
     if(good && onlyMark && !marks.has(r.dataset.name)) good=false;
@@ -607,14 +1084,22 @@ function syncH(){
   document.documentElement.style.setProperty('--fh',fb.offsetHeight+'px');
   fb.classList.toggle('stuck',fb.getBoundingClientRect().top<=0&&window.scrollY>4);
 }
-q.addEventListener('input',()=>{apply()});
+q.addEventListener('input',apply);
 window.addEventListener('scroll',syncH,{passive:true});
 window.addEventListener('resize',syncH);
 window.addEventListener('load',syncH);
-rows.forEach(r=>r.addEventListener('click',()=>{
-  const el=document.getElementById(r.dataset.id);
+function jump(id){
+  if(view!=='list'){
+    document.querySelector('.tab[data-v="list"]').click();
+    setTimeout(()=>jump2(id),30);
+  } else jump2(id);
+}
+function jump2(id){
+  const el=document.getElementById(id); if(!el) return;
   el.scrollIntoView({behavior:'smooth',block:'start'});
   el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');
-}));
+}
+rows.forEach(r=>r.addEventListener('click',()=>jump(r.dataset.id)));
+cps.forEach(r=>r.addEventListener('click',()=>jump(r.dataset.id)));
 paintMarks();apply();render();syncH();
 </script></body></html>
